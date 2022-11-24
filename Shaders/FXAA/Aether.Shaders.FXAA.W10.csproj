@@ -136,6 +136,9 @@
     <EmbeddedResource Include="Resources\FXAAGreenLumaHigh.dx11.mgfxo.9" />
     <EmbeddedResource Include="Resources\FXAAGreenLumaLow.dx11.mgfxo.9" />
     <EmbeddedResource Include="Resources\FXAAGreenLumaMedium.dx11.mgfxo.9" />
+    <EmbeddedResource Include="Resources\FXAAGreenLumaHigh.dx11.mgfxo.10" />
+    <EmbeddedResource Include="Resources\FXAAGreenLumaLow.dx11.mgfxo.10" />
+    <EmbeddedResource Include="Resources\FXAAGreenLumaMedium.dx11.mgfxo.10" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">

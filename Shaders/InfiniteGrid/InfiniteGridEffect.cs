@@ -54,7 +54,7 @@ namespace nkast.Aether.Shaders
             // Detect MG version
             var version = "";
 #if !XNA
-            version = ".9";
+            version = ".10";
             var mgVersion = GetAssembly(typeof(Effect)).GetName().Version;
             if (mgVersion.Major == 3)
             {
@@ -63,7 +63,11 @@ namespace nkast.Aether.Shaders
                 if (mgVersion.Minor == 7)
                     version = ".8";
                 if (mgVersion.Minor == 8)
+                {
                     version = ".9";
+                    if (mgVersion.Build == 1 || mgVersion.Build >= 9100)
+                        version = ".10";
+                }
             }
 #endif
 
