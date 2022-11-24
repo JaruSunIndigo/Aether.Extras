@@ -2,7 +2,7 @@
 # tainicom.Aether.Animation.*
 
 Play animated 3D models and support for CPU animation.
-CPU animation is optimized using unsafe code, writing directly to mapped VertexBuffer memory using reflection (DirectX) and unmanaged/C++ code (WP8.0). 
+CPU animation is optimized using unsafe code, writing directly to mapped VertexBuffer memory using reflection (DirectX).
 
 ## Importers
 

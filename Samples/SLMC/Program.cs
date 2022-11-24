@@ -2,7 +2,6 @@ using System;
 
 namespace Samples.SLMC
 {
-#if WINDOWS || XBOX || LINUX
     public static class Program
     {
         [STAThread]
@@ -14,6 +13,5 @@ namespace Samples.SLMC
             }
         }
     }
-#endif
 }
 

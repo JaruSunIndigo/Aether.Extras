@@ -21,7 +21,7 @@ namespace tainicom.Aether.Shaders
 {
     public class FXAAGreenLumaMediumEffect : FXAAEffect 
     {
-#if ((MG && WINDOWS) || W8_1 || W10)
+#if ((MG && WINDOWS) || W10)
         static readonly String resourceName = "tainicom.Aether.Shaders.Resources.FXAAGreenLumaMedium.dx11.mgfxo";
 #elif (XNA && WINDOWS)
         static readonly String resourceName = "tainicom.Aether.Shaders.Resources.FXAAGreenLumaMedium.xna.WinHiDef";

@@ -44,11 +44,7 @@ namespace tainicom.Aether.Animation
             base(graphicsDevice, vertexDeclaration, vertexCount, bufferUsage)
         {            
             #if MAPPEDMEM
-            #if W8_1
-            FieldInfo _bufferInfo = typeof(VertexBuffer).GetTypeInfo().GetDeclaredField("_buffer");
-            #else
             FieldInfo _bufferInfo = typeof(VertexBuffer).GetField("_buffer", BindingFlags.Instance | BindingFlags.NonPublic);
-            #endif
             _buffer = _bufferInfo.GetValue(this) as SharpDX.Direct3D11.Buffer;
             #endif
 

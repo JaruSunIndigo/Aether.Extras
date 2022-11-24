@@ -36,7 +36,7 @@ namespace tainicom.Aether.Shaders
         #region Fields
 
 
-#if ((MG && WINDOWS) || W8_1 || W10)
+#if ((MG && WINDOWS) || W10)
         static readonly String resourceName = "tainicom.Aether.Shaders.Resources.DeferredBasicEffect.dx11.mgfxo";
 #else
         static readonly String resourceName = "tainicom.Aether.Shaders.Resources.DeferredBasicEffect.xna.WinReach";
@@ -81,7 +81,7 @@ namespace tainicom.Aether.Shaders
 
         private static Assembly GetAssembly(Type type)
         {            
-            #if W8_1 || W10 
+            #if W10 
             return type.GetTypeInfo().Assembly;
             #else
             return type.Assembly;
@@ -116,7 +116,7 @@ namespace tainicom.Aether.Shaders
 
          public DeferredBasicEffect(GraphicsDevice graphicsDevice)
             : base(graphicsDevice, 
-#if NETFX_CORE || WP8
+#if NETFX_CORE
             LoadEffectResourceStream(resourceName), true
 #else
             LoadEffectResource(resourceName)

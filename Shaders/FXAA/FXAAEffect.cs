@@ -87,7 +87,7 @@ namespace tainicom.Aether.Shaders
 
         private static Assembly GetAssembly(Type type)
         {            
-            #if W8_1 || W10 
+            #if W10 
             return type.GetTypeInfo().Assembly;
             #else
             return type.Assembly;

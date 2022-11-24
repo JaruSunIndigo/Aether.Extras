@@ -42,7 +42,7 @@ namespace tainicom.Aether.Shaders
         static readonly String ResourceName = "tainicom.Aether.Shaders.Resources.InfiniteGridEffect";
 #if XNA
         static readonly String PlatformName = ".xna";
-#elif ((MG && WINDOWS) || W8_1 || W10)
+#elif ((MG && WINDOWS) || W10)
          static readonly String PlatformName = ".dx11.mgfxo";
 #endif
 
@@ -86,7 +86,7 @@ namespace tainicom.Aether.Shaders
         
         private static Assembly GetAssembly(Type type)
         {            
-            #if W8_1 || W10 
+            #if W10 
             return type.GetTypeInfo().Assembly;
             #else
             return type.Assembly;
