@@ -58,10 +58,6 @@ namespace nkast.Aether.Shaders
             var mgVersion = GetAssembly(typeof(Effect)).GetName().Version;
             if (mgVersion.Major == 3)
             {
-                if (mgVersion.Minor == 4)
-                    version = ".6";
-                if (mgVersion.Minor == 5)
-                    version = ".7";
                 if (mgVersion.Minor == 6)
                     version = ".8";
                 if (mgVersion.Minor == 7)

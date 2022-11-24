@@ -45,8 +45,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\InfiniteGridEffect.HiDef.dx11.mgfxo.7" />
-    <EmbeddedResource Include="Resources\InfiniteGridEffect.Reach.dx11.mgfxo.7" />
     <EmbeddedResource Include="Resources\InfiniteGridEffect.HiDef.dx11.mgfxo.8" />
     <EmbeddedResource Include="Resources\InfiniteGridEffect.Reach.dx11.mgfxo.8" />
     <EmbeddedResource Include="Resources\InfiniteGridEffect.HiDef.dx11.mgfxo.9" />

@@ -47,12 +47,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\FXAAGreenLumaHigh.dx11.mgfxo.6" />
-    <EmbeddedResource Include="Resources\FXAAGreenLumaLow.dx11.mgfxo.6" />
-    <EmbeddedResource Include="Resources\FXAAGreenLumaMedium.dx11.mgfxo.6" />
-    <EmbeddedResource Include="Resources\FXAAGreenLumaHigh.dx11.mgfxo.7" />
-    <EmbeddedResource Include="Resources\FXAAGreenLumaLow.dx11.mgfxo.7" />
-    <EmbeddedResource Include="Resources\FXAAGreenLumaMedium.dx11.mgfxo.7" />
     <EmbeddedResource Include="Resources\FXAAGreenLumaHigh.dx11.mgfxo.8" />
     <EmbeddedResource Include="Resources\FXAAGreenLumaLow.dx11.mgfxo.8" />
     <EmbeddedResource Include="Resources\FXAAGreenLumaMedium.dx11.mgfxo.8" />
