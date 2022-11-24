@@ -20,11 +20,11 @@ using Microsoft.Xna.Framework.Content.Pipeline;
 using Microsoft.Xna.Framework.Content.Pipeline.Graphics;
 using Microsoft.Xna.Framework.Content.Pipeline.Processors;
 using Microsoft.Xna.Framework.Graphics;
-using tainicom.Aether.Content.Pipeline.Animation;
-using tainicom.Aether.Content.Pipeline.Serialization;
-using tainicom.Aether.Content.Pipeline.Graphics;
+using nkast.Aether.Content.Pipeline.Animation;
+using nkast.Aether.Content.Pipeline.Serialization;
+using nkast.Aether.Content.Pipeline.Graphics;
 
-namespace tainicom.Aether.Content.Pipeline.Processors
+namespace nkast.Aether.Content.Pipeline.Processors
 {
     [ContentProcessor(DisplayName = "CPU AnimatedModel - Aether")]
     class CpuAnimatedModelProcessor : DynamicModelProcessor, IContentProcessor

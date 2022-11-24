@@ -16,7 +16,7 @@
 #include <stdint.h>
 
 
-namespace tainicom
+namespace nkast
 {
 	namespace Aether
 	{

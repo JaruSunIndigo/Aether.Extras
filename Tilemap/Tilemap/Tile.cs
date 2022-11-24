@@ -17,7 +17,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace tainicom.Aether.Graphics
+namespace nkast.Aether.Graphics
 {
     public class Tile
     {

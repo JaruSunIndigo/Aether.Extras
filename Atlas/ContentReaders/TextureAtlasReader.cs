@@ -18,9 +18,9 @@ using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using tainicom.Aether.Graphics;
+using nkast.Aether.Graphics;
 
-namespace tainicom.Aether.Graphics.Content
+namespace nkast.Aether.Graphics.Content
 {
     public class TextureAtlasReader : ContentTypeReader<TextureAtlas>
     {

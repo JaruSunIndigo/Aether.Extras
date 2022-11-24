@@ -20,7 +20,7 @@ using Microsoft.Xna.Framework.Content.Pipeline.Graphics;
 using Microsoft.Xna.Framework.Content.Pipeline.Processors;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace tainicom.Aether.Content.Pipeline.Processors
+namespace nkast.Aether.Content.Pipeline.Processors
 {
     [ContentProcessor(DisplayName = "GPU AnimatedModel - Aether")]
     public class GpuAnimatedModelProcessor : ModelProcessor

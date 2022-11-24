@@ -8,7 +8,7 @@
     <ProjectGuid>{FBBDE2BA-F9F3-4041-8584-2C912C235E26}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>tainicom.Aether.Shaders</RootNamespace>
+    <RootNamespace>nkast.Aether.Shaders</RootNamespace>
     <AssemblyName>Aether.Shaders.FXAA</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

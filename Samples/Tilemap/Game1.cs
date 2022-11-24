@@ -3,8 +3,8 @@ using System.IO;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using tainicom.Aether.Graphics;
-using tainicom.Aether.Shaders;
+using nkast.Aether.Graphics;
+using nkast.Aether.Shaders;
 
 namespace Samples.Atlas
 {

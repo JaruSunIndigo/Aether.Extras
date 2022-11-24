@@ -18,10 +18,10 @@ using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework.Content.Pipeline;
 using Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler;
-using tainicom.Aether.Content.Pipeline.Animation;
+using nkast.Aether.Content.Pipeline.Animation;
 
 
-namespace tainicom.Aether.Content.Pipeline.Serialization
+namespace nkast.Aether.Content.Pipeline.Serialization
 {
     [ContentTypeWriter]
     class ClipWriter : ContentTypeWriter<ClipContent>
@@ -66,12 +66,12 @@ namespace tainicom.Aether.Content.Pipeline.Serialization
 
         public override string GetRuntimeType(TargetPlatform targetPlatform)
         {
-            return "tainicom.Aether.Animation.Clip, Aether.Animation";
+            return "nkast.Aether.Animation.Clip, Aether.Animation";
         }
 
         public override string GetRuntimeReader(TargetPlatform targetPlatform)
         {
-            return "tainicom.Aether.Animation.Content.ClipReader, Aether.Animation";
+            return "nkast.Aether.Animation.Content.ClipReader, Aether.Animation";
         }
     }
     

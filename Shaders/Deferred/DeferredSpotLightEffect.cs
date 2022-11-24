@@ -20,7 +20,7 @@ using System.Reflection;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace tainicom.Aether.Shaders
+namespace nkast.Aether.Shaders
 {
     public class DeferredSpotLightEffect : Effect, IEffectMatrices
     {
@@ -53,9 +53,9 @@ namespace tainicom.Aether.Shaders
 
 
 #if ((MG && WINDOWS) || W10)
-        static readonly String resourceName = "tainicom.Aether.Shaders.Resources.DeferredSpotLight.dx11.mgfxo";
+        static readonly String resourceName = "nkast.Aether.Shaders.Resources.DeferredSpotLight.dx11.mgfxo";
 #else
-        static readonly String resourceName = "tainicom.Aether.Shaders.Resources.DeferredSpotLight.xna.WinReach";
+        static readonly String resourceName = "nkast.Aether.Shaders.Resources.DeferredSpotLight.xna.WinReach";
 #endif
 
         internal static byte[] LoadEffectResource(string name)

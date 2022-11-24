@@ -6,7 +6,7 @@
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProjectGuid>{CA1564C9-D4A6-4454-A6B6-7B4E907DF8C0}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>tainicom.Aether.Shaders</RootNamespace>
+    <RootNamespace>nkast.Aether.Shaders</RootNamespace>
     <AssemblyName>Aether.Shaders.Tilemap</AssemblyName>
     <TargetFrameworkProfile>Profile328</TargetFrameworkProfile>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>

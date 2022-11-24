@@ -18,7 +18,7 @@ using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 
-namespace tainicom.Aether.Animation
+namespace nkast.Aether.Animation
 {
     public struct Keyframe
     {

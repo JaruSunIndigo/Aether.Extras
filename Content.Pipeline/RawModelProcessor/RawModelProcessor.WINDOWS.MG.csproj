@@ -8,7 +8,7 @@
     <ProjectGuid>{48E4029A-115C-4DC2-AF3A-0AB94F36BFC0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>tainicom.Aether.Content.Pipeline</RootNamespace>
+    <RootNamespace>nkast.Aether.Content.Pipeline</RootNamespace>
     <AssemblyName>Aether.Content.Pipeline.RawModelProcessor</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

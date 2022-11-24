@@ -21,7 +21,7 @@ using Microsoft.Xna.Framework.Content.Pipeline;
 using Microsoft.Xna.Framework.Content.Pipeline.Graphics;
 using Microsoft.Xna.Framework.Content.Pipeline.Processors;
 
-namespace tainicom.Aether.Content.Pipeline
+namespace nkast.Aether.Content.Pipeline
 {
     [ContentProcessor(DisplayName = "AtlasProcessor - Aether")]
     public class AtlasProcessor : TextureProcessor, IContentProcessor

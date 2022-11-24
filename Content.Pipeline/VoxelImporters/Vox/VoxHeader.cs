@@ -17,7 +17,7 @@
 using System;
 using Microsoft.Xna.Framework.Content.Pipeline;
 
-namespace tainicom.Aether.Content.Pipeline
+namespace nkast.Aether.Content.Pipeline
 {
     struct VoxHeader
     {

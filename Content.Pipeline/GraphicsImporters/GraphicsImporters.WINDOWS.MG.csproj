@@ -8,7 +8,7 @@
     <ProjectGuid>{400DC7B2-739D-4156-916D-2F2E1920310D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>tainicom.Aether.Content.Pipeline</RootNamespace>
+    <RootNamespace>nkast.Aether.Content.Pipeline</RootNamespace>
     <AssemblyName>Aether.Content.Pipeline.GraphicsImporters</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

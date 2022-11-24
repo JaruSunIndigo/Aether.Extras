@@ -22,7 +22,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Graphics.PackedVector;
 using System.ComponentModel;
 
-namespace tainicom.Aether.Content.Pipeline
+namespace nkast.Aether.Content.Pipeline
 {
     [ContentProcessor(DisplayName = "SLMCProcessor - Aether")]
     public class SLMCProcessor : ContentProcessor<TextureContent, TextureContent>

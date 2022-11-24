@@ -16,9 +16,9 @@
 
 using System.Collections.Generic;
 using Microsoft.Xna.Framework.Graphics;
-using tainicom.Aether.Shaders;
+using nkast.Aether.Shaders;
 
-namespace tainicom.Aether.Graphics
+namespace nkast.Aether.Graphics
 {
     public class Tilemap
     {

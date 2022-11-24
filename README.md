@@ -14,13 +14,13 @@ VertexBuffer & IndexBuffers, make them Dynamic and WriteOnly.
 * 'AtlasImporter' - Import sprite atlas. Supports .tmx files. Mipmaps are generated individually for each sprite, no color-leak.
 * 'VoxelModelImporter' - Import .vox files as 3D Models.
 
-## tainicom.Aether.Animation
+## nkast.Aether.Animation
 
 Play animated 3D models and support for CPU animation.
 CPU animation is optimized using unsafe code, writing directly to mapped VertexBuffer memory using reflection (DirectX). 
 
 
-## tainicom.Aether.Shaders
+## nkast.Aether.Shaders
 
 * 'FXAA' - MonoGame port of NVIDIA's FXAA 3.11 shader.
 * 'Deferred' - Deferred rendering.

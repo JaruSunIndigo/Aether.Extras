@@ -24,7 +24,7 @@ using Microsoft.Xna.Framework.Content.Pipeline;
 using Microsoft.Xna.Framework.Content.Pipeline.Graphics;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace tainicom.Aether.Content.Pipeline
+namespace nkast.Aether.Content.Pipeline
 {
     [ContentImporter(".tmx", DisplayName = "Tilemap Importer - Aether", DefaultProcessor = "TilemapProcessor")]
     public class TilemapImporter : ContentImporter<TilemapContent>

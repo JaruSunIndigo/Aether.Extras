@@ -8,7 +8,7 @@
     <ProjectGuid>{08296A2E-BECF-4DB9-A518-8A613D07B80E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>tainicom.Aether.Shaders</RootNamespace>
+    <RootNamespace>nkast.Aether.Shaders</RootNamespace>
     <AssemblyName>Aether.Shaders.InfiniteGrid</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

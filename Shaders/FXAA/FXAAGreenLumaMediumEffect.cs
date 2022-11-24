@@ -17,14 +17,14 @@
 using System;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace tainicom.Aether.Shaders
+namespace nkast.Aether.Shaders
 {
     public class FXAAGreenLumaMediumEffect : FXAAEffect 
     {
 #if ((MG && WINDOWS) || W10)
-        static readonly String resourceName = "tainicom.Aether.Shaders.Resources.FXAAGreenLumaMedium.dx11.mgfxo";
+        static readonly String resourceName = "nkast.Aether.Shaders.Resources.FXAAGreenLumaMedium.dx11.mgfxo";
 #elif (XNA && WINDOWS)
-        static readonly String resourceName = "tainicom.Aether.Shaders.Resources.FXAAGreenLumaMedium.xna.WinHiDef";
+        static readonly String resourceName = "nkast.Aether.Shaders.Resources.FXAAGreenLumaMedium.xna.WinHiDef";
 #endif
 
         public FXAAGreenLumaMediumEffect(GraphicsDevice graphicsDevice)

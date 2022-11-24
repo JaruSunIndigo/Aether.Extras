@@ -20,7 +20,7 @@ using Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 
-namespace tainicom.Aether.Content.Pipeline.Serialization
+namespace nkast.Aether.Content.Pipeline.Serialization
 {
     [ContentTypeWriter]
     class TextureAtlasWriter : ContentTypeWriter<TilemapContent>
@@ -48,7 +48,7 @@ namespace tainicom.Aether.Content.Pipeline.Serialization
         
         public override string GetRuntimeReader(TargetPlatform targetPlatform)
         {
-            return "tainicom.Aether.Graphics.Content.TilemapReader, Aether.Tilemap";
+            return "nkast.Aether.Graphics.Content.TilemapReader, Aether.Tilemap";
         }
         
     }

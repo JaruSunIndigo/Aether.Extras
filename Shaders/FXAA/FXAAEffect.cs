@@ -20,7 +20,7 @@ using System.Reflection;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace tainicom.Aether.Shaders
+namespace nkast.Aether.Shaders
 {
     public class FXAAEffect : Effect , IEffectMatrices
     {

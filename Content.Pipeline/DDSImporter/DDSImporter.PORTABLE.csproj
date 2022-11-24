@@ -10,7 +10,7 @@
     <ProjectGuid>{84F55AF5-6C7F-416F-A497-ECDC70682625}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>tainicom.Aether.Content.Pipeline</RootNamespace>
+    <RootNamespace>nkast.Aether.Content.Pipeline</RootNamespace>
     <AssemblyName>Aether.Content.Pipeline.DDSImporter</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

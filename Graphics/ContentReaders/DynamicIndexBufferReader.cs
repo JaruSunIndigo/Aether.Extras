@@ -17,7 +17,7 @@
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace tainicom.Aether.Graphics.Content
+namespace nkast.Aether.Graphics.Content
 {
     public class DynamicIndexBufferReader : ContentTypeReader<DynamicIndexBuffer>
     {

@@ -6,7 +6,7 @@
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProjectGuid>{94963AFA-FAC3-42A0-A2B2-4DA3A7F604D8}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>tainicom.Aether.Graphics</RootNamespace>
+    <RootNamespace>nkast.Aether.Graphics</RootNamespace>
     <AssemblyName>Aether.Tilemap</AssemblyName>
     <TargetFrameworkProfile>Profile328</TargetFrameworkProfile>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>

@@ -18,11 +18,11 @@
 #include "..\VertexPositionNormalTextureData.h"
 
 using namespace Platform;
-using namespace tainicom::Aether::Native::Animation::Data;
-using namespace tainicom::Aether::Native::Animation::VertexTypes;
+using namespace nkast::Aether::Native::Animation::Data;
+using namespace nkast::Aether::Native::Animation::VertexTypes;
 
 
-namespace tainicom
+namespace nkast
 {
 	namespace Aether
 	{

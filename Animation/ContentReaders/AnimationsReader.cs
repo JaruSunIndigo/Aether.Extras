@@ -19,7 +19,7 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 
-namespace tainicom.Aether.Animation.Content
+namespace nkast.Aether.Animation.Content
 {
     public class AnimationsReader : ContentTypeReader<Animations>
     {

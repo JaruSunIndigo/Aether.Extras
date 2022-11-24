@@ -7,7 +7,7 @@
     <ProjectGuid>{E3A26131-F69A-4DD1-87B9-A7E3DEE255AA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>tainicom.Aether.Shaders</RootNamespace>
+    <RootNamespace>nkast.Aether.Shaders</RootNamespace>
     <AssemblyName>Aether.Shaders.Deferred</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>

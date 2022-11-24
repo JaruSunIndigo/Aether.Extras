@@ -20,7 +20,7 @@ using System.Reflection;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace tainicom.Aether.Shaders
+namespace nkast.Aether.Shaders
 {
     public class TilemapEffect : Effect, IEffectMatrices
     {
@@ -64,9 +64,9 @@ namespace tainicom.Aether.Shaders
         EffectDirtyFlags dirtyFlags = EffectDirtyFlags.All;
 
 #if ((MG && WINDOWS) || W10)
-        static readonly String resourceName = "tainicom.Aether.Shaders.Resources.TilemapEffect.dx11.mgfxo";
+        static readonly String resourceName = "nkast.Aether.Shaders.Resources.TilemapEffect.dx11.mgfxo";
 #else
-        static readonly String resourceName = "tainicom.Aether.Shaders.Resources.TilemapEffect.xna.WinReach";
+        static readonly String resourceName = "nkast.Aether.Shaders.Resources.TilemapEffect.xna.WinReach";
 #endif
 
         internal static byte[] LoadEffectResource(string name)

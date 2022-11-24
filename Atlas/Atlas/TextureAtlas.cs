@@ -17,7 +17,7 @@
 using System.Collections.Generic;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace tainicom.Aether.Graphics
+namespace nkast.Aether.Graphics
 {
     public class TextureAtlas
     {

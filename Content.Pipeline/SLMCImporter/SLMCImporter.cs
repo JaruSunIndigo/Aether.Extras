@@ -24,7 +24,7 @@ using Microsoft.Xna.Framework.Content.Pipeline;
 using Microsoft.Xna.Framework.Content.Pipeline.Graphics;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace tainicom.Aether.Content.Pipeline
+namespace nkast.Aether.Content.Pipeline
 {
     [ContentImporter(".slmc", DisplayName = "SLMC Importer - Aether", DefaultProcessor = "SLMCProcessor")]
     public class SLMCImporter : ContentImporter<TextureContent>

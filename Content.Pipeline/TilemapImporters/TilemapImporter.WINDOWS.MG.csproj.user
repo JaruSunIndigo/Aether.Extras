@@ -13,6 +13,6 @@
     <StartAction>Program</StartAction>
     <StartProgram>C:\Program Files %28x86%29\MSBuild\MonoGame\v3.0\Tools\MGCB.exe</StartProgram>
     <StartArguments>/reference:..\..\bin\Debug\Windows\Aether.Content.Pipeline.TilemapImporter.dll /importer:TilemapImporter /processor:TilemapProcessor /build:tilemapNoMipmap.tmx</StartArguments>
-    <StartWorkingDirectory>P:\tainicom\Aether.Extras\Samples\TilemapContent</StartWorkingDirectory>
+    <StartWorkingDirectory>P:\nkast\Aether.Extras\Samples\TilemapContent</StartWorkingDirectory>
   </PropertyGroup>
 </Project>

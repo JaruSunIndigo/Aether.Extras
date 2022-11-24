@@ -17,7 +17,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace tainicom.Aether.Content.Pipeline.Graphics
+namespace nkast.Aether.Content.Pipeline.Graphics
 {
     public class DynamicIndexBufferContent: Collection<int>
     {

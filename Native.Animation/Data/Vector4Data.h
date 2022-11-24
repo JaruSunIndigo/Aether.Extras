@@ -15,7 +15,7 @@
 #pragma once
 
 
-namespace tainicom
+namespace nkast
 {
 	namespace Aether
 	{

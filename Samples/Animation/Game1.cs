@@ -4,8 +4,8 @@ using System.Globalization;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using tainicom.Aether.Animation;
-using tainicom.Aether.Shaders.Components;
+using nkast.Aether.Animation;
+using nkast.Aether.Shaders.Components;
 
 namespace Samples.Animation
 {

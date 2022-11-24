@@ -21,9 +21,9 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content.Pipeline;
 using Microsoft.Xna.Framework.Content.Pipeline.Graphics;
 using Microsoft.Xna.Framework.Graphics;
-using tainicom.Aether.Content.Pipeline.Animation;
+using nkast.Aether.Content.Pipeline.Animation;
 
-namespace tainicom.Aether.Content.Pipeline.Processors
+namespace nkast.Aether.Content.Pipeline.Processors
 {
     [ContentProcessor(DisplayName = "Animation - Aether")]
     class AnimationsProcessor : ContentProcessor<NodeContent, AnimationsContent>

@@ -1,5 +1,5 @@
 
-# tainicom.Aether.Animation.*
+# nkast.Aether.Animation.*
 
 Play animated 3D models and support for CPU animation.
 CPU animation is optimized using unsafe code, writing directly to mapped VertexBuffer memory using reflection (DirectX).

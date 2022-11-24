@@ -16,9 +16,9 @@
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using tainicom.Aether.Graphics;
+using nkast.Aether.Graphics;
 
-namespace tainicom.Aether.Animation
+namespace nkast.Aether.Animation
 {
     public static class Extensions
     {

@@ -20,11 +20,11 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{22c72dc0-022d-4d1b-b738-c764f67421ea}</ProjectGuid>
-    <RootNamespace>tainicom.Aether.Native.Animation</RootNamespace>
+    <RootNamespace>nkast.Aether.Native.Animation</RootNamespace>
     <DefaultLanguage>en-US</DefaultLanguage>
     <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
     <WinMDAssembly>true</WinMDAssembly>
-    <ProjectName>tainicom.Aether.Native.Animation</ProjectName>
+    <ProjectName>nkast.Aether.Native.Animation</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

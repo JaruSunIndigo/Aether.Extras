@@ -20,7 +20,7 @@ using System.Reflection;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace tainicom.Aether.Shaders
+namespace nkast.Aether.Shaders
 {
     public class InfiniteGridEffect : Effect //, IEffectMatrices
     {
@@ -39,7 +39,7 @@ namespace tainicom.Aether.Shaders
 
         #region Fields
 
-        static readonly String ResourceName = "tainicom.Aether.Shaders.Resources.InfiniteGridEffect";
+        static readonly String resourceName = "nkast.Aether.Shaders.Resources.InfiniteGridEffect";
 #if XNA
         static readonly String PlatformName = ".xna";
 #elif ((MG && WINDOWS) || W10)

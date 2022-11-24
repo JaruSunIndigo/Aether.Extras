@@ -16,7 +16,7 @@
 
 using System;
 
-namespace tainicom.Aether.Content.Pipeline
+namespace nkast.Aether.Content.Pipeline
 {
 
     public enum SLMCOutputFormat

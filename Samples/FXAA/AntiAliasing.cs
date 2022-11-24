@@ -1,5 +1,5 @@
 ﻿using System;
-using tainicom.Aether.Shaders;
+using nkast.Aether.Shaders;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 

@@ -19,7 +19,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace tainicom.Aether.Shaders.Components
+namespace nkast.Aether.Shaders.Components
 {
     public partial class InfiniteGridComponent : IDrawable, IGameComponent
     {   

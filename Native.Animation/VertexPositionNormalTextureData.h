@@ -17,10 +17,10 @@
 #include "Data/Vector3Data.h"
 #include "Data/Vector2Data.h"
 
-using namespace tainicom::Aether::Native::Animation::Data;
+using namespace nkast::Aether::Native::Animation::Data;
 
 
-namespace tainicom
+namespace nkast
 {
 	namespace Aether
 	{

@@ -21,9 +21,9 @@ using System.ComponentModel;
 using Microsoft.Xna.Framework.Content.Pipeline;
 using Microsoft.Xna.Framework.Content.Pipeline.Graphics;
 using Microsoft.Xna.Framework.Content.Pipeline.Processors;
-using tainicom.Aether.Content.Pipeline.Graphics;
+using nkast.Aether.Content.Pipeline.Graphics;
 
-namespace tainicom.Aether.Content.Pipeline.Serialization
+namespace nkast.Aether.Content.Pipeline.Serialization
 {
     [ContentProcessor(DisplayName = "DynamicModel - Aether")]
     public class DynamicModelProcessor : ModelProcessor, IContentProcessor

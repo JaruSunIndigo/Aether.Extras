@@ -19,9 +19,9 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Graphics.PackedVector;
-using tainicom.Aether.Graphics;
+using nkast.Aether.Graphics;
 
-namespace tainicom.Aether.Animation.Content
+namespace nkast.Aether.Animation.Content
 {
     public class CpuAnimatedVertexBufferReader : ContentTypeReader<CpuAnimatedVertexBuffer>
     {

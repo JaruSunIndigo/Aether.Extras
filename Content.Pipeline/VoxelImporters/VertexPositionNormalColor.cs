@@ -18,7 +18,7 @@ using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace tainicom.Aether.Content.Pipeline
+namespace nkast.Aether.Content.Pipeline
 {
     public struct VertexPositionNormalColor : IVertexType, IEquatable<VertexPositionNormalColor>
     {

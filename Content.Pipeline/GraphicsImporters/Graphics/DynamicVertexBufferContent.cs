@@ -16,7 +16,7 @@
 
 using Microsoft.Xna.Framework.Content.Pipeline.Processors;
 
-namespace tainicom.Aether.Content.Pipeline.Graphics
+namespace nkast.Aether.Content.Pipeline.Graphics
 {
     public class DynamicVertexBufferContent: VertexBufferContent 
     {

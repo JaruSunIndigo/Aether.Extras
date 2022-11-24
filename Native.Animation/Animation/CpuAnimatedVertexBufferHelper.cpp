@@ -21,23 +21,23 @@
 //using namespace DirectX;
 using namespace Platform;
 using namespace Platform::Collections;
-using namespace tainicom::Aether::Native::Animation;
-using namespace tainicom::Aether::Native::Animation::Data;
+using namespace nkast::Aether::Native::Animation;
+using namespace nkast::Aether::Native::Animation::Data;
 
 
-tainicom::Aether::Native::Animation::CpuAnimatedVertexBufferHelper::CpuAnimatedVertexBufferHelper(void)
+nkast::Aether::Native::Animation::CpuAnimatedVertexBufferHelper::CpuAnimatedVertexBufferHelper(void)
 {
 	_cpuVertices = nullptr;
 	_cpuVerticesLength = 0;
 }
 
-tainicom::Aether::Native::Animation::CpuAnimatedVertexBufferHelper::~CpuAnimatedVertexBufferHelper(void)
+nkast::Aether::Native::Animation::CpuAnimatedVertexBufferHelper::~CpuAnimatedVertexBufferHelper(void)
 {
 	delete _cpuVertices;
 	_cpuVerticesLength = 0;
 }
 
-void tainicom::Aether::Native::Animation::CpuAnimatedVertexBufferHelper::SetCpuVertices(const Platform::Array<VertexIndicesWeightsPositionNormal>^ cpuVertices)
+void nkast::Aether::Native::Animation::CpuAnimatedVertexBufferHelper::SetCpuVertices(const Platform::Array<VertexIndicesWeightsPositionNormal>^ cpuVertices)
 {
 	_cpuVerticesLength = cpuVertices->Length;
 	_cpuVertices = new VertexIndicesWeightsPositionNormal[_cpuVerticesLength = cpuVertices->Length];
@@ -48,7 +48,7 @@ void tainicom::Aether::Native::Animation::CpuAnimatedVertexBufferHelper::SetCpuV
 	return;
 }
 
-void tainicom::Aether::Native::Animation::CpuAnimatedVertexBufferHelper::UpdateVertices(
+void nkast::Aether::Native::Animation::CpuAnimatedVertexBufferHelper::UpdateVertices(
 	int64 pBoneTransforms, int64 pGpuVertices, int startIndex, int elementCount)
 {
 	MatrixData* pBone = (MatrixData*)pBoneTransforms;
@@ -57,7 +57,7 @@ void tainicom::Aether::Native::Animation::CpuAnimatedVertexBufferHelper::UpdateV
 }
 
 
-void tainicom::Aether::Native::Animation::CpuAnimatedVertexBufferHelper::UpdateVertices(
+void nkast::Aether::Native::Animation::CpuAnimatedVertexBufferHelper::UpdateVertices(
 	MatrixData* pBoneTransforms, VertexPositionNormalTextureData* pGpuVertices, int startIndex, int elementCount)
 {
 	VertexPositionNormalTextureData* vout = pGpuVertices;

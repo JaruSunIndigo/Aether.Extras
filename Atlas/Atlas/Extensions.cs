@@ -15,7 +15,7 @@
 #endregion
 
 using Microsoft.Xna.Framework;
-using tainicom.Aether.Graphics;
+using nkast.Aether.Graphics;
 
 namespace Microsoft.Xna.Framework.Graphics
 {

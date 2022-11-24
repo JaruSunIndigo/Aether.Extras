@@ -15,9 +15,9 @@
 #endregion
 
 using Microsoft.Xna.Framework.Content.Pipeline.Processors;
-using tainicom.Aether.Content.Pipeline.Graphics;
+using nkast.Aether.Content.Pipeline.Graphics;
 
-namespace tainicom.Aether.Content.Pipeline.Animation
+namespace nkast.Aether.Content.Pipeline.Animation
 {
     public class CpuAnimatedVertexBufferContent : DynamicVertexBufferContent
     {

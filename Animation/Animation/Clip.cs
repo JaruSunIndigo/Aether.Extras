@@ -16,7 +16,7 @@
 
 using System;
 
-namespace tainicom.Aether.Animation
+namespace nkast.Aether.Animation
 {
     public class Clip
     {

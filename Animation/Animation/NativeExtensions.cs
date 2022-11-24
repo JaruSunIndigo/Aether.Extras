@@ -15,9 +15,9 @@
 #endregion
 
 using Microsoft.Xna.Framework;
-using tainicom.Aether.Graphics;
+using nkast.Aether.Graphics;
 
-namespace tainicom.Aether.Animation
+namespace nkast.Aether.Animation
 {
     internal static class NativeExtensions
     {        

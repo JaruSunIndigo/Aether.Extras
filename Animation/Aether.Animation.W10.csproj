@@ -7,7 +7,7 @@
     <ProjectGuid>{A312F64C-A5D4-4B28-A250-3A75CD5C4952}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>tainicom.Aether.Animation</RootNamespace>
+    <RootNamespace>nkast.Aether.Animation</RootNamespace>
     <AssemblyName>Aether.Animation</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>

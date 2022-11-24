@@ -18,10 +18,10 @@ using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using tainicom.Aether.Graphics;
-using tainicom.Aether.Shaders;
+using nkast.Aether.Graphics;
+using nkast.Aether.Shaders;
 
-namespace tainicom.Aether.Graphics.Content
+namespace nkast.Aether.Graphics.Content
 {
     public class TilemapReader : ContentTypeReader<Tilemap>
     {

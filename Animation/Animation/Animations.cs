@@ -18,7 +18,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 
-namespace tainicom.Aether.Animation
+namespace nkast.Aether.Animation
 {    
     public class Animations
     {

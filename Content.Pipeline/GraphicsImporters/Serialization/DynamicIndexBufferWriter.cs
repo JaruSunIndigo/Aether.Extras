@@ -17,9 +17,9 @@
 using System;
 using Microsoft.Xna.Framework.Content.Pipeline;
 using Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler;
-using tainicom.Aether.Content.Pipeline.Graphics;
+using nkast.Aether.Content.Pipeline.Graphics;
 
-namespace tainicom.Aether.Content.Pipeline.Serialization
+namespace nkast.Aether.Content.Pipeline.Serialization
 {
     [ContentTypeWriter]
     class DynamicIndexBufferWriter : ContentTypeWriter<DynamicIndexBufferContent>
@@ -64,7 +64,7 @@ namespace tainicom.Aether.Content.Pipeline.Serialization
         
         public override string GetRuntimeReader(TargetPlatform targetPlatform)
         {
-            return "tainicom.Aether.Graphics.Content.DynamicIndexBufferReader, Aether.Graphics";
+            return "nkast.Aether.Graphics.Content.DynamicIndexBufferReader, Aether.Graphics";
         }
         
     }

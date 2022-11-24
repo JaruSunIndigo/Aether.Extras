@@ -16,7 +16,7 @@
 
 using System;
 
-namespace tainicom.Aether.Content.Pipeline.Animation
+namespace nkast.Aether.Content.Pipeline.Animation
 {
     public class ClipContent
     {
