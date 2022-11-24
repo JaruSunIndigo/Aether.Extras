@@ -23,7 +23,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\bin\Debug\W10\</OutputPath>
+    <OutputPath>..\Artifacts\Debug\uap\</OutputPath>
     <DefineConstants>TRACE;DEBUG;W10 MAPPEDMEM</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -34,7 +34,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\bin\Release\W10\</OutputPath>
+    <OutputPath>..\Artifacts\Release\uap\</OutputPath>
     <DefineConstants>TRACE;W10 MAPPEDMEM</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -44,7 +44,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
     <PlatformTarget>ARM</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\bin\Debug\W10\ARM\</OutputPath>
+    <OutputPath>..\Artifacts\Debug\uap\ARM\</OutputPath>
     <DefineConstants>TRACE;DEBUG;W10 MAPPEDMEM</DefineConstants>
     <NoWarn>;2008</NoWarn>
     <DebugType>full</DebugType>
@@ -56,7 +56,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
     <PlatformTarget>ARM</PlatformTarget>
-    <OutputPath>..\bin\Release\W10\ARM\</OutputPath>
+    <OutputPath>..\Artifacts\Release\uap\ARM\</OutputPath>
     <DefineConstants>TRACE;W10 MAPPEDMEM</DefineConstants>
     <Optimize>true</Optimize>
     <NoWarn>;2008</NoWarn>
@@ -70,7 +70,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\bin\Debug\W10\x64\</OutputPath>
+    <OutputPath>..\Artifacts\Debug\uap\x64\</OutputPath>
     <DefineConstants>TRACE;DEBUG;W10 MAPPEDMEM</DefineConstants>
     <NoWarn>;2008</NoWarn>
     <DebugType>full</DebugType>
@@ -82,7 +82,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <PlatformTarget>x64</PlatformTarget>
-    <OutputPath>..\bin\Release\W10\x64\</OutputPath>
+    <OutputPath>..\Artifacts\Release\uap\x64\</OutputPath>
     <DefineConstants>TRACE;W10 MAPPEDMEM</DefineConstants>
     <Optimize>true</Optimize>
     <NoWarn>;2008</NoWarn>
@@ -96,7 +96,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\bin\Debug\W10\x86\</OutputPath>
+    <OutputPath>..\Artifacts\Debug\uap\x86\</OutputPath>
     <DefineConstants>TRACE;DEBUG;W10 MAPPEDMEM</DefineConstants>
     <NoWarn>;2008</NoWarn>
     <DebugType>full</DebugType>
@@ -108,7 +108,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <PlatformTarget>x86</PlatformTarget>
-    <OutputPath>..\bin\Release\W10\x86\</OutputPath>
+    <OutputPath>..\Artifacts\Release\uap\x86\</OutputPath>
     <DefineConstants>TRACE;W10 MAPPEDMEM</DefineConstants>
     <Optimize>true</Optimize>
     <NoWarn>;2008</NoWarn>

@@ -10,7 +10,7 @@
 
 #-------------------------------- References --------------------------------#
 
-/reference:..\..\bin\Debug\Windows\Aether.Content.Pipeline.TilemapImporter.dll
+/reference:..\..\Artifacts\Debug\net4\Aether.Content.Pipeline.TilemapImporter.dll
 
 #---------------------------------- Content ---------------------------------#
 
