@@ -39,7 +39,7 @@ namespace nkast.Aether.Shaders
 
         #region Fields
 
-        static readonly String resourceName = "nkast.Aether.Shaders.Resources.InfiniteGridEffect";
+        static readonly String ResourceName = "nkast.Aether.Shaders.Resources.InfiniteGridEffect";
 #if XNA
         static readonly String PlatformName = ".xna";
 #elif ((MG && WINDOWS) || W10)
