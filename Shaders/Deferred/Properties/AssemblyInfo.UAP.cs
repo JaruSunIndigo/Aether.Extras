@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyProduct("Aether.Shaders.Deferred")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyCopyright("Copyright ©  Kastellanos Nikolaos 2014-2016")]
+[assembly: AssemblyCopyright("Copyright © Kastellanos Nikolaos 2014-2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

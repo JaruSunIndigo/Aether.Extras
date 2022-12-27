@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyConfiguration ("")]
 [assembly: AssemblyCompany ("")]
 [assembly: AssemblyProduct ("Aether.Tilemap")]
-[assembly: AssemblyCopyright ("Copyright ©  Kastellanos Nikolaos 2021")]
+[assembly: AssemblyCopyright ("Copyright © Kastellanos Nikolaos 2021-2022")]
 [assembly: AssemblyTrademark ("")]
 [assembly: AssemblyCulture ("")]
 

@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Aether.Content.Pipeline.Graphics")]
-[assembly: AssemblyCopyright("Copyright ©  Kastellanos Nikolaos 2016")]
+[assembly: AssemblyCopyright("Copyright © Kastellanos Nikolaos 2016-2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

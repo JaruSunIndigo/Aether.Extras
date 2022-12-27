@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyConfiguration ("")]
 [assembly: AssemblyCompany ("")]
 [assembly: AssemblyProduct ("Aether.Atlas")]
-[assembly: AssemblyCopyright ("Copyright ©  Kastellanos Nikolaos 2016")]
+[assembly: AssemblyCopyright ("Copyright © Kastellanos Nikolaos 2016-2022")]
 [assembly: AssemblyTrademark ("")]
 [assembly: AssemblyCulture ("")]
 
