@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <ProjectGuid>{0586BA88-7CBC-493B-9B9F-B1AE7089ECDC}</ProjectGuid>
+    <ProjectGuid>{6AD3101D-258F-4B90-ADEF-BCA6E89D8128}</ProjectGuid>
     <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Samples.Tilemap</RootNamespace>
-    <AssemblyName>Samples.Tilemap</AssemblyName>
+    <RootNamespace>Samples.FXAA</RootNamespace>
+    <AssemblyName>Samples.FXAA</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
     <XnaPlatform>Windows</XnaPlatform>
     <XnaProfile>Reach</XnaProfile>
-    <XnaCrossPlatformGroupID>FD62A179-B0DF-4ED3-898B-F1081CB0D364</XnaCrossPlatformGroupID>
+    <XnaCrossPlatformGroupID>37BFBD85-8F1B-4620-A082-139DF8F4AFA3</XnaCrossPlatformGroupID>
     <XnaOutputType>Game</XnaOutputType>
     <ApplicationIcon>Game.ico</ApplicationIcon>
     <Thumbnail>GameThumbnail.png</Thumbnail>
@@ -38,7 +38,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\Windows\XNA\</OutputPath>
+    <OutputPath>bin\Debug\XNA\</OutputPath>
     <DefineConstants>TRACE;DEBUG;WINDOWS XNA</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -50,7 +50,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\Windows\XNA\</OutputPath>
+    <OutputPath>bin\Release\XNA\</OutputPath>
     <DefineConstants>TRACE;WINDOWS XNA</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -68,9 +68,12 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeferredRendering.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
+    <Compile Include="QuadRenderer.cs" />
+    <Compile Include="Spaceship.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />
@@ -79,21 +82,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Atlas\Aether.Atlas.WINDOWS.XNA.csproj">
-      <Project>{644629BB-1A4E-4932-8E50-4F93BC938794}</Project>
-      <Name>Aether.Atlas.WINDOWS.XNA</Name>
+    <ProjectReference Include="..\..\Shaders\Deferred\Aether.Shaders.Deferred.NET4.XNA.csproj">
+      <Project>{B82B862D-C728-4A10-8A56-65D688E022C8}</Project>
+      <Name>Aether.Shaders.Deferred.NET4.XNA</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Shaders\Tilemap\Aether.Shaders.Tilemap.WINDOWS.XNA.csproj">
-      <Project>{AB2B4C7E-0FCA-4CFE-8837-E3E3374249F6}</Project>
-      <Name>Aether.Shaders.Tilemap.WINDOWS.XNA</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Tilemap\Aether.Tilemap.WINDOWS.XNA.csproj">
-      <Project>{746551BA-FB64-43B0-8479-0506B930D3E5}</Project>
-      <Name>Aether.Tilemap.WINDOWS.XNA</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TilemapContent\Samples.TilemapContent.contentproj">
-      <Project>{CC95FC77-31DC-4120-895C-4764ED092F4E}</Project>
-      <Name>Samples.TilemapContent %28Content%29</Name>
+    <ProjectReference Include="..\DeferredContent\Samples.DeferredContent.contentproj">
+      <Project>{FEFA33C9-E197-458C-845E-5FA513C38DF4}</Project>
+      <Name>Samples.DeferredContent %28Content%29</Name>
       <XnaReferenceType>Content</XnaReferenceType>
     </ProjectReference>
   </ItemGroup>

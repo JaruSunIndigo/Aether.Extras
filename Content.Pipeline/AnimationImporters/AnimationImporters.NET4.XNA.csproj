@@ -62,9 +62,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GraphicsImporters\GraphicsImporters.WINDOWS.XNA.csproj">
+    <ProjectReference Include="..\GraphicsImporters\GraphicsImporters.NET4.XNA.csproj">
       <Project>{565ACF47-7E36-435E-8727-2AFB39E61134}</Project>
-      <Name>GraphicsImporters.WINDOWS.XNA</Name>
+      <Name>GraphicsImporters.NET4.XNA</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

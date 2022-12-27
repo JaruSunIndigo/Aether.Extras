@@ -6,11 +6,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4F224B03-7499-4EE0-A072-7CD7FC266E2A}</ProjectGuid>
+    <ProjectGuid>{E605A7E1-EAE9-4EBF-941D-D88A6C1DC568}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Samples.FXAA</RootNamespace>
-    <AssemblyName>Samples.FXAA</AssemblyName>
+    <RootNamespace>Samples.Atlas</RootNamespace>
+    <AssemblyName>Samples.Atlas</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MonoGamePlatform>Windows</MonoGamePlatform>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -24,7 +24,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>bin\Debug\Windows\MG\</OutputPath>
     <DefineConstants>TRACE;DEBUG;WINDOWS MG</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,7 +34,7 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>bin\Release\Windows\MG\</OutputPath>
     <DefineConstants>TRACE;WINDOWS MG</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
@@ -43,11 +43,9 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="AntiAliasing.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Spaceship.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
@@ -59,16 +57,16 @@
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <MonoGameContentReference Include="..\FXAAContent\Samples.FXAAContent.mgcb">
+    <MonoGameContentReference Include="..\AtlasContent\Samples.AtlasContent.mgcb">
       <Link>Content\Content.mgcb</Link>
     </MonoGameContentReference>
     <None Include="app.config" />
     <None Include="app.manifest" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Shaders\FXAA\Aether.Shaders.FXAA.WINDOWS.MG.csproj">
-      <Project>{fbbde2ba-f9f3-4041-8584-2c912c235e26}</Project>
-      <Name>Aether.Shaders.FXAA.WINDOWS.MG</Name>
+    <ProjectReference Include="..\..\Atlas\Aether.Atlas.NET4.csproj">
+      <Project>{c7522b5e-b255-4fb6-a17a-9e6d217aebd2}</Project>
+      <Name>Aether.Atlas.NET4</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

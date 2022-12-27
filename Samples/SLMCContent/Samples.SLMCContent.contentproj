@@ -34,9 +34,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Content.Pipeline\SLMCImporter\SLMCImporter.WINDOWS.XNA.csproj">
+    <ProjectReference Include="..\..\Content.Pipeline\SLMCImporter\SLMCImporter.NET4.XNA.csproj">
       <Project>{497B1130-EB63-4057-BC40-F60D6FFA50CA}</Project>
-      <Name>SLMCImporter.WINDOWS.XNA</Name>
+      <Name>SLMCImporter.NET4.XNA</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

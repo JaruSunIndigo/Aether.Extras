@@ -49,13 +49,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Content.Pipeline\AtlasImporter\AtlasImporter.WINDOWS.XNA.csproj">
+    <ProjectReference Include="..\..\Content.Pipeline\AtlasImporter\AtlasImporter.NET4.XNA.csproj">
       <Project>{90E6017D-198B-4470-BF9B-8B8791C295CC}</Project>
-      <Name>AtlasImporter.WINDOWS.XNA</Name>
+      <Name>AtlasImporter.NET4.XNA</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Content.Pipeline\TilemapImporters\TilemapImporter.WINDOWS.XNA.csproj">
+    <ProjectReference Include="..\..\Content.Pipeline\TilemapImporters\TilemapImporter.NET4.XNA.csproj">
       <Project>{B5FAF2D1-7164-4956-9474-0F4B19706DE8}</Project>
-      <Name>TilemapImporter.WINDOWS.XNA</Name>
+      <Name>TilemapImporter.NET4.XNA</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

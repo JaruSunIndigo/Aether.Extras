@@ -49,9 +49,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Content.Pipeline\AtlasImporter\AtlasImporter.WINDOWS.XNA.csproj">
+    <ProjectReference Include="..\..\Content.Pipeline\AtlasImporter\AtlasImporter.NET4.XNA.csproj">
       <Project>{90E6017D-198B-4470-BF9B-8B8791C295CC}</Project>
-      <Name>AtlasImporter.WINDOWS.XNA</Name>
+      <Name>AtlasImporter.NET4.XNA</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

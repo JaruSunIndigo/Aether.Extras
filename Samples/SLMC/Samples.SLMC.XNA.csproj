@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <ProjectGuid>{8C971E86-ACD6-45E6-A4C2-7E0C556152FE}</ProjectGuid>
+    <ProjectGuid>{47F16ADE-1B63-476A-81AB-454C46ABD974}</ProjectGuid>
     <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Samples.Animation</RootNamespace>
-    <AssemblyName>Samples.Animation</AssemblyName>
+    <RootNamespace>Samples.SLMC</RootNamespace>
+    <AssemblyName>Samples.SLMC</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
     <XnaPlatform>Windows</XnaPlatform>
     <XnaProfile>Reach</XnaProfile>
-    <XnaCrossPlatformGroupID>3ce7bf7d-3694-4886-8afc-85d4a4a487c7</XnaCrossPlatformGroupID>
+    <XnaCrossPlatformGroupID>{82877B4-95D2-4472-856A-A1803243FA06</XnaCrossPlatformGroupID>
     <XnaOutputType>Game</XnaOutputType>
     <ApplicationIcon>Game.ico</ApplicationIcon>
     <Thumbnail>GameThumbnail.png</Thumbnail>
@@ -38,7 +38,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\Windows\XNA\</OutputPath>
+    <OutputPath>bin\Debug\XNA\</OutputPath>
     <DefineConstants>TRACE;DEBUG;WINDOWS XNA</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -50,7 +50,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\Windows\XNA\</OutputPath>
+    <OutputPath>bin\Release\XNA\</OutputPath>
     <DefineConstants>TRACE;WINDOWS XNA</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -63,13 +63,9 @@
     <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
     <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
     <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
-    <Reference Include="Microsoft.Xna.Framework.GamerServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
     <Reference Include="mscorlib" />
     <Reference Include="System" />
-    <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -83,22 +79,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Animation\Aether.Animation.WINDOWS.XNA.csproj">
-      <Project>{1BD2DBC0-D366-42F7-9369-F566CCD01C03}</Project>
-      <Name>Aether.Animation.WINDOWS.XNA</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Graphics\Aether.Graphics.WINDOWS.XNA.csproj">
-      <Project>{838D803F-F140-4763-A378-56DC27EDD5F3}</Project>
-      <Name>Aether.Graphics.WINDOWS.XNA</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Shaders\InfiniteGrid\Aether.Shaders.InfiniteGrid.WINDOWS.XNA.csproj">
-      <Project>{908EC8FF-B0ED-478A-B486-702E578AF64A}</Project>
-      <Name>Aether.Shaders.InfiniteGrid.WINDOWS.XNA</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\AnimationContent\Samples.AnimationContent.contentproj">
-      <Name>Samples.AnimationContent %28Content%29</Name>
+    <ProjectReference Include="..\SLMCContent\Samples.SLMCContent.contentproj">
+      <Project>{99A5C5A9-03E3-41C6-A121-EF423F6CEB23}</Project>
+      <Name>Samples.SLMCContent %28Content%29</Name>
       <XnaReferenceType>Content</XnaReferenceType>
-      <Project>{B02966BF-88BC-41B2-80EF-8F8C5F98FA98}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

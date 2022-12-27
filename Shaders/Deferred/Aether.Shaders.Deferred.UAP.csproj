@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CD84CAD7-12A5-47DA-82C9-A2953B9FFBF0}</ProjectGuid>
+    <ProjectGuid>{E3A26131-F69A-4DD1-87B9-A7E3DEE255AA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>nkast.Aether.Shaders</RootNamespace>
-    <AssemblyName>Aether.Shaders.FXAA</AssemblyName>
+    <AssemblyName>Aether.Shaders.Deferred</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.17763.0</TargetPlatformVersion>
@@ -120,25 +120,32 @@
     <GenerateLibraryLayout>true</GenerateLibraryLayout>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="FXAAEffect.cs" />
-    <Compile Include="FXAAGreenLumaHighEffect.cs" />
-    <Compile Include="FXAAGreenLumaLowEffect.cs" />
-    <Compile Include="FXAAGreenLumaMediumEffect.cs" />
+    <Compile Include="DeferredBasicEffect.cs" />
+    <Compile Include="DeferredClearGBufferEffect.cs" />
+    <Compile Include="DeferredCombineEffect.cs" />
+    <Compile Include="DeferredPointLightEffect.cs" />
+    <Compile Include="DeferredSpotLightEffect.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.W10.cs" />
-    <Content Include="Properties\Aether.Shaders.FXAA.rd.xml" />
+    <Compile Include="Properties\AssemblyInfo.UAP.cs" />
+    <Content Include="Properties\Aether.Shaders.Deferred.rd.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\FXAAGreenLumaHigh.dx11.mgfxo.8" />
-    <EmbeddedResource Include="Resources\FXAAGreenLumaLow.dx11.mgfxo.8" />
-    <EmbeddedResource Include="Resources\FXAAGreenLumaMedium.dx11.mgfxo.8" />
-    <EmbeddedResource Include="Resources\FXAAGreenLumaHigh.dx11.mgfxo.9" />
-    <EmbeddedResource Include="Resources\FXAAGreenLumaLow.dx11.mgfxo.9" />
-    <EmbeddedResource Include="Resources\FXAAGreenLumaMedium.dx11.mgfxo.9" />
-    <EmbeddedResource Include="Resources\FXAAGreenLumaHigh.dx11.mgfxo.10" />
-    <EmbeddedResource Include="Resources\FXAAGreenLumaLow.dx11.mgfxo.10" />
-    <EmbeddedResource Include="Resources\FXAAGreenLumaMedium.dx11.mgfxo.10" />
+    <EmbeddedResource Include="Resources\DeferredBasicEffect.dx11.mgfxo.8" />
+    <EmbeddedResource Include="Resources\DeferredClearGBuffer.dx11.mgfxo.8" />
+    <EmbeddedResource Include="Resources\DeferredCombine.dx11.mgfxo.8" />
+    <EmbeddedResource Include="Resources\DeferredPointLight.dx11.mgfxo.8" />
+    <EmbeddedResource Include="Resources\DeferredSpotLight.dx11.mgfxo.8" />
+    <EmbeddedResource Include="Resources\DeferredBasicEffect.dx11.mgfxo.9" />
+    <EmbeddedResource Include="Resources\DeferredClearGBuffer.dx11.mgfxo.9" />
+    <EmbeddedResource Include="Resources\DeferredCombine.dx11.mgfxo.9" />
+    <EmbeddedResource Include="Resources\DeferredPointLight.dx11.mgfxo.9" />
+    <EmbeddedResource Include="Resources\DeferredSpotLight.dx11.mgfxo.9" />
+    <EmbeddedResource Include="Resources\DeferredBasicEffect.dx11.mgfxo.10" />
+    <EmbeddedResource Include="Resources\DeferredClearGBuffer.dx11.mgfxo.10" />
+    <EmbeddedResource Include="Resources\DeferredCombine.dx11.mgfxo.10" />
+    <EmbeddedResource Include="Resources\DeferredPointLight.dx11.mgfxo.10" />
+    <EmbeddedResource Include="Resources\DeferredSpotLight.dx11.mgfxo.10" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">

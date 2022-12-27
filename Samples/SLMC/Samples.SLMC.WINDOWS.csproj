@@ -6,11 +6,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{E605A7E1-EAE9-4EBF-941D-D88A6C1DC568}</ProjectGuid>
+    <ProjectGuid>{DC1BD888-3D11-4557-AC59-8271DC991ED1}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Samples.Atlas</RootNamespace>
-    <AssemblyName>Samples.Atlas</AssemblyName>
+    <RootNamespace>Samples.SLMC</RootNamespace>
+    <AssemblyName>Samples.SLMC</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MonoGamePlatform>Windows</MonoGamePlatform>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -24,7 +24,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>bin\Debug\Windows\MG\</OutputPath>
     <DefineConstants>TRACE;DEBUG;WINDOWS MG</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,7 +34,7 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>bin\Release\Windows\MG\</OutputPath>
     <DefineConstants>TRACE;WINDOWS MG</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
@@ -57,17 +57,13 @@
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <MonoGameContentReference Include="..\AtlasContent\Samples.AtlasContent.mgcb">
+    <MonoGameContentReference Include="..\SLMCContent\Samples.SLMCContent.mgcb">
       <Link>Content\Content.mgcb</Link>
     </MonoGameContentReference>
     <None Include="app.config" />
     <None Include="app.manifest" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Atlas\Aether.Atlas.WINDOWS.MG.csproj">
-      <Project>{c7522b5e-b255-4fb6-a17a-9e6d217aebd2}</Project>
-      <Name>Aether.Atlas.WINDOWS.MG</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />

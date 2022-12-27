@@ -49,13 +49,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Content.Pipeline\AnimationImporters\AnimationImporters.WINDOWS.XNA.csproj">
+    <ProjectReference Include="..\..\Content.Pipeline\AnimationImporters\AnimationImporters.NET4.XNA.csproj">
       <Project>{E22F02E7-6799-4C14-B9B3-B461D6E9AB6E}</Project>
-      <Name>AnimationImporters.WINDOWS.XNA</Name>
+      <Name>AnimationImporters.NET4.XNA</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Content.Pipeline\GraphicsImporters\GraphicsImporters.WINDOWS.XNA.csproj">
+    <ProjectReference Include="..\..\Content.Pipeline\GraphicsImporters\GraphicsImporters.NET4.XNA.csproj">
       <Project>{565ACF47-7E36-435E-8727-2AFB39E61134}</Project>
-      <Name>GraphicsImporters.WINDOWS.XNA</Name>
+      <Name>GraphicsImporters.NET4.XNA</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />

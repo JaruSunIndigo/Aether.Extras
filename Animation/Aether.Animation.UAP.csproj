@@ -131,7 +131,7 @@
     <Compile Include="Graphics\VertexTypes\VertexIndicesWeightsPositionNormal.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.W10.cs" />
+    <Compile Include="Properties\AssemblyInfo.UAP.cs" />
     <Content Include="Properties\Aether.Animation.rd.xml" />
   </ItemGroup>
   <ItemGroup>

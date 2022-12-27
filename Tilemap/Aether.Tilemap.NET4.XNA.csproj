@@ -65,9 +65,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Shaders\Tilemap\Aether.Shaders.Tilemap.WINDOWS.XNA.csproj">
+    <ProjectReference Include="..\Shaders\Tilemap\Aether.Shaders.Tilemap.NET4.XNA.csproj">
       <Project>{AB2B4C7E-0FCA-4CFE-8837-E3E3374249F6}</Project>
-      <Name>Aether.Shaders.Tilemap.WINDOWS.XNA</Name>
+      <Name>Aether.Shaders.Tilemap.NET4.XNA</Name>
       <Private>False</Private>
     </ProjectReference>
   </ItemGroup>

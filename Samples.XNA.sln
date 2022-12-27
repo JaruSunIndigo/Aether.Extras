@@ -1,61 +1,61 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphicsImporters.WINDOWS.XNA", "Content.Pipeline\GraphicsImporters\GraphicsImporters.WINDOWS.XNA.csproj", "{565ACF47-7E36-435E-8727-2AFB39E61134}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphicsImporters.NET4.XNA", "Content.Pipeline\GraphicsImporters\GraphicsImporters.NET4.XNA.csproj", "{565ACF47-7E36-435E-8727-2AFB39E61134}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Graphics.WINDOWS.XNA", "Graphics\Aether.Graphics.WINDOWS.XNA.csproj", "{838D803F-F140-4763-A378-56DC27EDD5F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Graphics.NET4.XNA", "Graphics\Aether.Graphics.NET4.XNA.csproj", "{838D803F-F140-4763-A378-56DC27EDD5F3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aether.Content.Pipeline", "Aether.Content.Pipeline", "{F6B6E505-6037-49E4-9060-8B29A7B99BC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimationImporters.WINDOWS.XNA", "Content.Pipeline\AnimationImporters\AnimationImporters.WINDOWS.XNA.csproj", "{E22F02E7-6799-4C14-B9B3-B461D6E9AB6E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimationImporters.NET4.XNA", "Content.Pipeline\AnimationImporters\AnimationImporters.NET4.XNA.csproj", "{E22F02E7-6799-4C14-B9B3-B461D6E9AB6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TilemapImporter.WINDOWS.XNA", "Content.Pipeline\TilemapImporters\TilemapImporter.WINDOWS.XNA.csproj", "{B5FAF2D1-7164-4956-9474-0F4B19706DE8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TilemapImporter.NET4.XNA", "Content.Pipeline\TilemapImporters\TilemapImporter.NET4.XNA.csproj", "{B5FAF2D1-7164-4956-9474-0F4B19706DE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Animation.WINDOWS.XNA", "Animation\Aether.Animation.WINDOWS.XNA.csproj", "{1BD2DBC0-D366-42F7-9369-F566CCD01C03}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Animation.NET4.XNA", "Animation\Aether.Animation.NET4.XNA.csproj", "{1BD2DBC0-D366-42F7-9369-F566CCD01C03}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aether.Shaders", "Aether.Shaders", "{EFC7A27C-C20B-4BE7-8B3A-2B109991D704}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Shaders.FXAA.WINDOWS.XNA", "Shaders\FXAA\Aether.Shaders.FXAA.WINDOWS.XNA.csproj", "{89E0198E-7298-411A-B5C1-61F2754A3F80}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Shaders.FXAA.NET4.XNA", "Shaders\FXAA\Aether.Shaders.FXAA.NET4.XNA.csproj", "{89E0198E-7298-411A-B5C1-61F2754A3F80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Shaders.Deferred.WINDOWS.XNA", "Shaders\Deferred\Aether.Shaders.Deferred.WINDOWS.XNA.csproj", "{B82B862D-C728-4A10-8A56-65D688E022C8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Shaders.Deferred.NET4.XNA", "Shaders\Deferred\Aether.Shaders.Deferred.NET4.XNA.csproj", "{B82B862D-C728-4A10-8A56-65D688E022C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Shaders.Tilemap.WINDOWS.XNA", "Shaders\Tilemap\Aether.Shaders.Tilemap.WINDOWS.XNA.csproj", "{AB2B4C7E-0FCA-4CFE-8837-E3E3374249F6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Shaders.Tilemap.NET4.XNA", "Shaders\Tilemap\Aether.Shaders.Tilemap.NET4.XNA.csproj", "{AB2B4C7E-0FCA-4CFE-8837-E3E3374249F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtlasImporter.WINDOWS.XNA", "Content.Pipeline\AtlasImporter\AtlasImporter.WINDOWS.XNA.csproj", "{90E6017D-198B-4470-BF9B-8B8791C295CC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtlasImporter.NET4.XNA", "Content.Pipeline\AtlasImporter\AtlasImporter.NET4.XNA.csproj", "{90E6017D-198B-4470-BF9B-8B8791C295CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Atlas.WINDOWS.XNA", "Atlas\Aether.Atlas.WINDOWS.XNA.csproj", "{644629BB-1A4E-4932-8E50-4F93BC938794}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Atlas.NET4.XNA", "Atlas\Aether.Atlas.NET4.XNA.csproj", "{644629BB-1A4E-4932-8E50-4F93BC938794}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Shaders.InfiniteGrid.WINDOWS.XNA", "Shaders\InfiniteGrid\Aether.Shaders.InfiniteGrid.WINDOWS.XNA.csproj", "{908EC8FF-B0ED-478A-B486-702E578AF64A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Shaders.InfiniteGrid.NET4.XNA", "Shaders\InfiniteGrid\Aether.Shaders.InfiniteGrid.NET4.XNA.csproj", "{908EC8FF-B0ED-478A-B486-702E578AF64A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{45FFB286-52CE-4EB7-8ACE-8B6FBD18D616}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Animation.WINDOWS.XNA", "Samples\Animation\Samples.Animation.WINDOWS.XNA.csproj", "{8C971E86-ACD6-45E6-A4C2-7E0C556152FE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Animation.XNA", "Samples\Animation\Samples.Animation.XNA.csproj", "{8C971E86-ACD6-45E6-A4C2-7E0C556152FE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.AnimationContent", "Samples\AnimationContent\Samples.AnimationContent.contentproj", "{B02966BF-88BC-41B2-80EF-8F8C5F98FA98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.FXAA.WINDOWS.XNA", "Samples\FXAA\Samples.FXAA.WINDOWS.XNA.csproj", "{E48F0BAF-BA9B-418B-9B35-8EF212E56C62}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.FXAA.XNA", "Samples\FXAA\Samples.FXAA.XNA.csproj", "{E48F0BAF-BA9B-418B-9B35-8EF212E56C62}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.FXAAContent", "Samples\FXAAContent\Samples.FXAAContent.contentproj", "{578BBDBD-874B-4738-B956-93AAADD67D60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Deferred.WINDOWS.XNA", "Samples\Deferred\Samples.Deferred.WINDOWS.XNA.csproj", "{6AD3101D-258F-4B90-ADEF-BCA6E89D8128}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Deferred.XNA", "Samples\Deferred\Samples.Deferred.XNA.csproj", "{6AD3101D-258F-4B90-ADEF-BCA6E89D8128}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.DeferredContent", "Samples\DeferredContent\Samples.DeferredContent.contentproj", "{FEFA33C9-E197-458C-845E-5FA513C38DF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Atlas.WINDOWS.XNA", "Samples\Atlas\Samples.Atlas.WINDOWS.XNA.csproj", "{0499C7DC-EBF2-4F77-871B-1EC613B379D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Atlas.XNA", "Samples\Atlas\Samples.Atlas.XNA.csproj", "{0499C7DC-EBF2-4F77-871B-1EC613B379D9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.AtlasContent", "Samples\AtlasContent\Samples.AtlasContent.contentproj", "{4CA82D0E-2414-460C-9A70-2DA3C3AF96B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SLMCImporter.WINDOWS.XNA", "Content.Pipeline\SLMCImporter\SLMCImporter.WINDOWS.XNA.csproj", "{497B1130-EB63-4057-BC40-F60D6FFA50CA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SLMCImporter.NET4.XNA", "Content.Pipeline\SLMCImporter\SLMCImporter.NET4.XNA.csproj", "{497B1130-EB63-4057-BC40-F60D6FFA50CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.SLMC.WINDOWS.XNA", "Samples\SLMC\Samples.SLMC.WINDOWS.XNA.csproj", "{47F16ADE-1B63-476A-81AB-454C46ABD974}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.SLMC.XNA", "Samples\SLMC\Samples.SLMC.XNA.csproj", "{47F16ADE-1B63-476A-81AB-454C46ABD974}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.SLMCContent", "Samples\SLMCContent\Samples.SLMCContent.contentproj", "{99A5C5A9-03E3-41C6-A121-EF423F6CEB23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Tilemap.WINDOWS.XNA", "Samples\Tilemap\Samples.Tilemap.WINDOWS.XNA.csproj", "{0586BA88-7CBC-493B-9B9F-B1AE7089ECDC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Tilemap.XNA", "Samples\Tilemap\Samples.Tilemap.XNA.csproj", "{0586BA88-7CBC-493B-9B9F-B1AE7089ECDC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.TilemapContent", "Samples\TilemapContent\Samples.TilemapContent.contentproj", "{CC95FC77-31DC-4120-895C-4764ED092F4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Tilemap.WINDOWS.XNA", "Tilemap\Aether.Tilemap.WINDOWS.XNA.csproj", "{746551BA-FB64-43B0-8479-0506B930D3E5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Tilemap.NET4.XNA", "Tilemap\Aether.Tilemap.NET4.XNA.csproj", "{746551BA-FB64-43B0-8479-0506B930D3E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
