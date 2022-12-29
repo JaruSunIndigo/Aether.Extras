@@ -73,13 +73,16 @@ namespace nkast.Aether.Content.Pipeline
                 var tsxFilename = tilesetNode.Attributes["source"].Value;
                 var baseDirectory = Path.GetDirectoryName(filename);
                 tsxFilename = Path.Combine(baseDirectory, tsxFilename);
-                output.Tileset = ImportTSX(tsxFilename, context);
+
+                var tileset = ImportTSX(tsxFilename, context);
+                output.Tileset = tileset;
                 context.AddDependency(tsxFilename);
             }
             else
             {
                 var rootDirectory = Path.GetDirectoryName(filename);
-                output.Tileset = ImportTileset(tilesetNode, context, rootDirectory);
+                var tileset = ImportTileset(tilesetNode, context, rootDirectory);
+                output.Tileset = tileset;
             }
 
             XmlNode layerNode = map["layer"];
@@ -106,9 +109,9 @@ namespace nkast.Aether.Content.Pipeline
         {
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(tsxFilename);
-            XmlNode tileset = xmlDoc.DocumentElement;
+            XmlNode tilesetNode = xmlDoc.DocumentElement;
             var baseDirectory = Path.GetDirectoryName(tsxFilename);
-            return ImportTileset(tileset, context, baseDirectory);
+            return ImportTileset(tilesetNode, context, baseDirectory);
         }
 
         private static TilesetContent ImportTileset(XmlNode tilesetNode, ContentImporterContext context, string baseDirectory)
@@ -162,8 +165,7 @@ namespace nkast.Aether.Content.Pipeline
                 source.DstBounds.Location = Point.Zero;
                 source.DstBounds.Width = textureContent.Mipmaps[0].Width;
                 source.DstBounds.Height = textureContent.Mipmaps[0].Height;
-
-
+                
                 var transKeyColor = imageNode.GetAttributeAsColor("trans");
                 if (transKeyColor != null)
                     foreach (var mips in textureContent.Faces)
@@ -172,6 +174,7 @@ namespace nkast.Aether.Content.Pipeline
 
                 if (tileId != tileset.SourceTiles.Count-1)
                     throw new InvalidContentException("Invalid id");
+
                 tileset.SourceTiles.Add(source);
             }
 

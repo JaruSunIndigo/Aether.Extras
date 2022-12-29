@@ -64,22 +64,25 @@ namespace nkast.Aether.Content.Pipeline
             output.Width = output.MapColumns * output.TileWidth;
             output.Height = output.MapRows * output.TileHeight;
 
-            XmlNode tileset = map["tileset"];
-            output.Firstgid = GetAttributeAsInt(tileset, "firstgid").Value;
+            XmlNode tilesetNode = map["tileset"];
+            output.Firstgid = GetAttributeAsInt(tilesetNode, "firstgid").Value;
 
-            if (tileset.Attributes["source"] != null)
+            if (tilesetNode.Attributes["source"] != null)
             {
-                var tsxFilename = tileset.Attributes["source"].Value;
+                var tsxFilename = tilesetNode.Attributes["source"].Value;
                 var baseDirectory = Path.GetDirectoryName(filename);
                 tsxFilename = Path.Combine(baseDirectory, tsxFilename);
-                var sourceSprites = ImportTSX(tsxFilename, context);
+
+                var tileset = ImportTSX(tsxFilename, context);
+                var sourceSprites = SourceSpritesFromTileset(tileset);
                 output.SourceSprites.AddRange(sourceSprites);
                 context.AddDependency(tsxFilename);
             }
             else
             {
                 var rootDirectory = Path.GetDirectoryName(filename);
-                var sourceSprites = ImportTileset(tileset, context, rootDirectory);
+                var tileset = ImportTileset(tilesetNode, context, rootDirectory);
+                var sourceSprites = SourceSpritesFromTileset(tileset);
                 output.SourceSprites.AddRange(sourceSprites);
             }
 
@@ -103,21 +106,31 @@ namespace nkast.Aether.Content.Pipeline
             return output;
         }
 
-        private static List<SpriteContent> ImportTileset(XmlNode tileset, ContentImporterContext context, string baseDirectory)
+        private static TilesetContent ImportTSX(string tsxFilename, ContentImporterContext context)
         {
-            List<SpriteContent> images = new List<SpriteContent>();
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.Load(tsxFilename);
+            XmlNode tilesetNode = xmlDoc.DocumentElement;
+            var baseDirectory = Path.GetDirectoryName(tsxFilename);
+            return ImportTileset(tilesetNode, context, baseDirectory);
+        }
 
-            if (tileset["tileoffset"] != null)
+        private static TilesetContent ImportTileset(XmlNode tilesetNode, ContentImporterContext context, string baseDirectory)
+        {
+            TilesetContent tileset = new TilesetContent();
+
+            if (tilesetNode["tileoffset"] != null)
                 throw new InvalidContentException("tileoffset is not supported.");
 
-            foreach (XmlNode tileNode in tileset.ChildNodes)
+            tileset.TileWidth = GetAttributeAsInt(tilesetNode, "tilewidth").Value;
+            tileset.tileHeight = GetAttributeAsInt(tilesetNode, "tileheight").Value;
+
+            foreach (XmlNode tileNode in tilesetNode.ChildNodes)
             {
                 if (tileNode.Name != "tile") continue;
                 var tileId = GetAttributeAsInt(tileNode, "id").Value;
-                if (tileId != images.Count)
-                    throw new InvalidContentException("Invalid id");
+                
                 XmlNode imageNode = tileNode["image"];
-
 
                 //var format = GetAttribute(imageNode, "format");
                 var imageSource = GetAttribute(imageNode, "source");
@@ -126,11 +139,11 @@ namespace nkast.Aether.Content.Pipeline
                 var textureContent = (Texture2DContent)txImporter.Import(fullImageSource, context);
                 textureContent.Name = Path.GetFileNameWithoutExtension(fullImageSource);
 
-                var source = new SpriteContent();
-                source.Texture = textureContent;
-                source.Bounds.Location = Point.Zero;
-                source.Bounds.Width  = textureContent.Mipmaps[0].Width;
-                source.Bounds.Height = textureContent.Mipmaps[0].Height;
+                var source = new TileContent();
+                source.SrcTexture = textureContent;
+                source.SrcBounds.Location = Point.Zero;
+                source.SrcBounds.Width  = textureContent.Mipmaps[0].Width;
+                source.SrcBounds.Height = textureContent.Mipmaps[0].Height;
 
                 var transKeyColor = GetAttributeAsColor(imageNode, "trans");
                 if (transKeyColor != null)
@@ -138,10 +151,28 @@ namespace nkast.Aether.Content.Pipeline
                         foreach (var mip in mips)
                             ((PixelBitmapContent<Color>)mip).ReplaceColor(transKeyColor.Value, Color.Transparent);
 
-                images.Add(source);
+                if (tileId != tileset.SourceTiles.Count)
+                    throw new InvalidContentException("Invalid id");
+
+                tileset.SourceTiles.Add(source);
             }
 
-            return images;
+            return tileset;
+        }
+
+        private static List<SpriteContent> SourceSpritesFromTileset(TilesetContent tileset)
+        {
+            List<SpriteContent> sprites = new List<SpriteContent>();
+
+            foreach (var tile in tileset.SourceTiles)
+            {
+                var sprite = new SpriteContent();
+                sprite.Texture = tile.SrcTexture;
+                sprite.Bounds = tile.SrcBounds;
+                sprites.Add(sprite);
+            }
+
+            return sprites;
         }
 
         private static void PackSprites(TextureAtlasContent output)
@@ -172,15 +203,6 @@ namespace nkast.Aether.Content.Pipeline
                     output.Sprites.Add(name, newSprite);
                 }
             }
-        }
-
-        private static List<SpriteContent> ImportTSX(string tsxFilename, ContentImporterContext context)
-        {
-            XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load(tsxFilename);
-            XmlNode tileset = xmlDoc.DocumentElement;
-            var baseDirectory = Path.GetDirectoryName(tsxFilename);
-            return ImportTileset(tileset, context, baseDirectory);
         }
 
         private static void RenderAtlas(TextureAtlasContent output)

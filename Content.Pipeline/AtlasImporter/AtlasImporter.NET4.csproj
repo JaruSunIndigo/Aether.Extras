@@ -48,6 +48,8 @@
     <Compile Include="AtlasImporter.cs" />
     <Compile Include="Atlas\TextureAtlasContent.cs" />
     <Compile Include="Atlas\SpriteContent.cs" />
+    <Compile Include="Atlas\TileContent.cs" />
+    <Compile Include="Atlas\TilesetContent.cs" />
     <Compile Include="Processors\TextureAtlasProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serialization\TextureAtlasWriter.cs" />
