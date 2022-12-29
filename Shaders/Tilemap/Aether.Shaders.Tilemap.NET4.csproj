@@ -42,6 +42,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\TilemapEffect.dx11.mgfxo.8" />
     <EmbeddedResource Include="Resources\TilemapEffect.dx11.mgfxo.9" />
+    <EmbeddedResource Include="Resources\TilemapEffect.dx11.mgfxo.10" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MonoGame.Framework.Portable.9000" Version="3.8.9101">
