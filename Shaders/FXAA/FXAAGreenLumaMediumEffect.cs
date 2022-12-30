@@ -22,7 +22,7 @@ namespace nkast.Aether.Shaders
     public class FXAAGreenLumaMediumEffect : FXAAEffect 
     {
 #if ((MG && WINDOWS) || W10)
-        static readonly String resourceName = "nkast.Aether.Shaders.Resources.FXAAGreenLumaMedium.dx11.mgfxo";
+        static readonly String resourceName = "nkast.Aether.Shaders.Resources.FXAAGreenLumaMedium.dx11.fxo";
 #elif (XNA && WINDOWS)
         static readonly String resourceName = "nkast.Aether.Shaders.Resources.FXAAGreenLumaMedium.xna.WinHiDef";
 #endif

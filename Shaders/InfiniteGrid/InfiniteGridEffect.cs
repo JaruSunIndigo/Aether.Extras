@@ -43,7 +43,7 @@ namespace nkast.Aether.Shaders
 #if XNA
         static readonly String PlatformName = ".xna";
 #elif ((MG && WINDOWS) || W10)
-         static readonly String PlatformName = ".dx11.mgfxo";
+         static readonly String PlatformName = ".dx11.fxo";
 #endif
 
         private static string GetResourceName(GraphicsDevice graphicsDevice)

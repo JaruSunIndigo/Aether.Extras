@@ -64,7 +64,7 @@ namespace nkast.Aether.Shaders
         EffectDirtyFlags dirtyFlags = EffectDirtyFlags.All;
 
 #if ((MG && WINDOWS) || W10)
-        static readonly String resourceName = "nkast.Aether.Shaders.Resources.TilemapEffect.dx11.mgfxo";
+        static readonly String resourceName = "nkast.Aether.Shaders.Resources.TilemapEffect.dx11.fxo";
 #else
         static readonly String resourceName = "nkast.Aether.Shaders.Resources.TilemapEffect.xna.WinReach";
 #endif

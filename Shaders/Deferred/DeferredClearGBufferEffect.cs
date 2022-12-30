@@ -32,7 +32,7 @@ namespace nkast.Aether.Shaders
 
 
 #if ((MG && WINDOWS) || W10)
-        static readonly String resourceName = "nkast.Aether.Shaders.Resources.DeferredClearGBuffer.dx11.mgfxo";
+        static readonly String resourceName = "nkast.Aether.Shaders.Resources.DeferredClearGBuffer.dx11.fxo";
 #else
         static readonly String resourceName = "nkast.Aether.Shaders.Resources.DeferredClearGBuffer.xna.WinReach";
 #endif

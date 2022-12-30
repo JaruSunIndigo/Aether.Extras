@@ -53,7 +53,7 @@ namespace nkast.Aether.Shaders
 
 
 #if ((MG && WINDOWS) || W10)
-        static readonly String resourceName = "nkast.Aether.Shaders.Resources.DeferredSpotLight.dx11.mgfxo";
+        static readonly String resourceName = "nkast.Aether.Shaders.Resources.DeferredSpotLight.dx11.fxo";
 #else
         static readonly String resourceName = "nkast.Aether.Shaders.Resources.DeferredSpotLight.xna.WinReach";
 #endif
