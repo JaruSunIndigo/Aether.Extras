@@ -10,8 +10,8 @@
 
 #-------------------------------- References --------------------------------#
 
-/reference:..\..\Artifacts\Debug\net4\Aether.Content.Pipeline.AnimationImporters.dll
-/reference:..\..\Artifacts\Debug\net4\Aether.Content.Pipeline.GraphicsImporters.dll
+/reference:..\..\Artifacts\Debug\Processors\net4\Aether.Content.Pipeline.AnimationImporters.dll
+/reference:..\..\Artifacts\Debug\Processors\net4\Aether.Content.Pipeline.GraphicsImporters.dll
 
 #---------------------------------- Content ---------------------------------#
 

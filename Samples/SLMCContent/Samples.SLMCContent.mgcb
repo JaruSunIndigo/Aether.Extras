@@ -10,7 +10,7 @@
 
 #-------------------------------- References --------------------------------#
 
-/reference:..\..\Artifacts\Debug\net4\Aether.Content.Pipeline.SLMCImporter.dll
+/reference:..\..\Artifacts\Debug\Processors\net4\Aether.Content.Pipeline.SLMCImporter.dll
 
 #---------------------------------- Content ---------------------------------#
 

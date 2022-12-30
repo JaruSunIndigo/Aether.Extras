@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\Artifacts\Debug\net4\</OutputPath>
+    <OutputPath>..\..\Artifacts\Debug\Processors\net4\</OutputPath>
     <DefineConstants>TRACE;DEBUG;WINDOWS MG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -26,7 +26,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\Artifacts\Release\net4\</OutputPath>
+    <OutputPath>..\..\Artifacts\Release\Processors\net4\</OutputPath>
     <DefineConstants>TRACE;WINDOWS MG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
