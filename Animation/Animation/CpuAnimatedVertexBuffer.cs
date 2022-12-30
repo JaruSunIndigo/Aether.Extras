@@ -1,5 +1,5 @@
 ﻿#region License
-//   Copyright 2015-2016 Kastellanos Nikolaos
+//   Copyright 2015-2022 Kastellanos Nikolaos
 //
 //   Licensed under the Apache License, Version 2.0 (the "License");
 //   you may not use this file except in compliance with the License.
@@ -18,12 +18,13 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using nkast.Aether.Graphics;
 
+
 namespace nkast.Aether.Animation
 {
     public class CpuAnimatedVertexBuffer: DynamicVertexBuffer
     {
-        private VertexIndicesWeightsPositionNormal[] cpuVertices;
-        private VertexPositionNormalTexture[] gpuVertices;
+        private VertexPositionNormalTexture[] _gpuVertices;
+        private VertexIndicesWeightsPositionNormal[] _cpuVertices;
         
         public CpuAnimatedVertexBuffer(GraphicsDevice graphicsDevice, VertexDeclaration vertexDeclaration, int vertexCount, BufferUsage bufferUsage) :
             base(graphicsDevice, vertexDeclaration, vertexCount, bufferUsage)
@@ -33,12 +34,12 @@ namespace nkast.Aether.Animation
 
         internal void SetGpuVertices(VertexPositionNormalTexture[] vertices)
         {
-            this.gpuVertices = vertices;
+            _gpuVertices = vertices;
         }
 
         internal void SetCpuVertices(VertexIndicesWeightsPositionNormal[] vertices)
         {
-            this.cpuVertices = vertices;
+            _cpuVertices = vertices;
         }
 
         internal void UpdateVertices(Matrix[] boneTransforms, int startIndex, int elementCount)
@@ -48,15 +49,15 @@ namespace nkast.Aether.Animation
             // skin all of the vertices
             for (int i = startIndex; i < (startIndex + elementCount); i++)
             {
-                int b0 = cpuVertices[i].BlendIndex0;
-                int b1 = cpuVertices[i].BlendIndex1;
-                int b2 = cpuVertices[i].BlendIndex2;
-                int b3 = cpuVertices[i].BlendIndex3;
+                int b0 = _cpuVertices[i].BlendIndex0;
+                int b1 = _cpuVertices[i].BlendIndex1;
+                int b2 = _cpuVertices[i].BlendIndex2;
+                int b3 = _cpuVertices[i].BlendIndex3;
 
-                float w1 = cpuVertices[i].BlendWeights.X;
-                float w2 = cpuVertices[i].BlendWeights.Y;
-                float w3 = cpuVertices[i].BlendWeights.Z;
-                float w4 = cpuVertices[i].BlendWeights.W;
+                float w1 = _cpuVertices[i].BlendWeights.X;
+                float w2 = _cpuVertices[i].BlendWeights.Y;
+                float w3 = _cpuVertices[i].BlendWeights.Z;
+                float w4 = _cpuVertices[i].BlendWeights.W;
 
             #if (WP7_1)
                 // Moblunatic claims ~40% faster.
@@ -97,12 +98,12 @@ namespace nkast.Aether.Animation
             #endif
 
                 // Support the 4 Bone Influences - Position then Normal
-                Vector3.Transform(ref cpuVertices[i].Position, ref transformSum, out gpuVertices[i].Position);
-                Vector3.TransformNormal(ref cpuVertices[i].Normal, ref transformSum, out gpuVertices[i].Normal);
+                Vector3.Transform(ref _cpuVertices[i].Position, ref transformSum, out _gpuVertices[i].Position);
+                Vector3.TransformNormal(ref _cpuVertices[i].Normal, ref transformSum, out _gpuVertices[i].Normal);
             }
 
             // put the vertices into our vertex buffer
-            SetData(gpuVertices, 0, VertexCount, SetDataOptions.NoOverwrite);
+            SetData(_gpuVertices, 0, VertexCount, SetDataOptions.NoOverwrite);
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿#region License
-//   Copyright 2011-2016 Kastellanos Nikolaos
+//   Copyright 2011-2022 Kastellanos Nikolaos
 //
 //   Licensed under the Apache License, Version 2.0 (the "License");
 //   you may not use this file except in compliance with the License.
@@ -17,6 +17,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using nkast.Aether.Graphics;
+
 #if MAPPEDMEM
 using System;
 using System.Reflection;
@@ -28,13 +29,12 @@ namespace nkast.Aether.Animation
 {
     public class CpuAnimatedVertexBuffer: DynamicVertexBuffer
     {
+        private VertexPositionNormalTexture[] _gpuVertices;
         #if USE_NATIVE_ANIMATION
         Native.Animation.CpuAnimatedVertexBufferHelper _cpuVertexBufferHelper;
         #else
         private VertexIndicesWeightsPositionNormal[] _cpuVertices;
         #endif
-
-        private VertexPositionNormalTexture[] _gpuVertices;
         
         #if MAPPEDMEM
         SharpDX.Direct3D11.Buffer _buffer;
@@ -42,7 +42,7 @@ namespace nkast.Aether.Animation
 
         public CpuAnimatedVertexBuffer(GraphicsDevice graphicsDevice, VertexDeclaration vertexDeclaration, int vertexCount, BufferUsage bufferUsage) :
             base(graphicsDevice, vertexDeclaration, vertexCount, bufferUsage)
-        {            
+        {
             #if MAPPEDMEM
             FieldInfo _bufferInfo = typeof(VertexBuffer).GetField("_buffer", BindingFlags.Instance | BindingFlags.NonPublic);
             _buffer = _bufferInfo.GetValue(this) as SharpDX.Direct3D11.Buffer;
