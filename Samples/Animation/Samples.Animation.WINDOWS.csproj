@@ -64,9 +64,9 @@
     <None Include="app.manifest" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Animation\Aether.Animation.NET4.csproj">
-      <Project>{f08d6d4c-60fb-4543-8d81-594080eb8051}</Project>
-      <Name>Aether.Animation.NET4</Name>
+    <ProjectReference Include="..\..\Animation\Aether.Animation.NET4.DX.csproj">
+      <Project>{57903a6b-1576-4361-8f03-1d5f038a782a}</Project>
+      <Name>Aether.Animation.NET4.DX</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Shaders\InfiniteGrid\Aether.Shaders.InfiniteGrid.NET4.csproj">
       <Project>{08296a2e-becf-4db9-a518-8a613d07b80e}</Project>

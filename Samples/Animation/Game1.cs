@@ -11,8 +11,8 @@ namespace Samples.Animation
 {
     enum DrawMode : int
     {
-        CPU,
         GPU,
+        CPU,
     }
 
     public class Game1 : Microsoft.Xna.Framework.Game
@@ -25,7 +25,7 @@ namespace Samples.Animation
         Model _model_CPU;
         Model _model_GPU;
         Animations _animations;
-        DrawMode drawMode = DrawMode.CPU;
+        DrawMode drawMode = DrawMode.GPU;
 
         KeyboardState prevKeyboardState;
 

@@ -83,7 +83,7 @@ namespace nkast.Aether.Animation
             int vertexStride = VertexPositionNormalTexture.VertexDeclaration.VertexStride;
             int offsetInBytes = startIndex * vertexStride;
             SetData(offsetInBytes, _gpuVertices, startIndex, elementCount, vertexStride, SetDataOptions.NoOverwrite);
-#endif
+            #endif
         }
 
         private unsafe void InnerUpdateVertices(VertexPositionNormalTexture* pgpuVertices, Matrix[] boneTransforms, int startIndex, int elementCount)
@@ -92,7 +92,7 @@ namespace nkast.Aether.Animation
             {   
                 #if USE_NATIVE_ANIMATION
                 _cpuVertexBufferHelper.UpdateVertices((long)pBoneTransforms, (long)pgpuVertices, startIndex, elementCount);
-#else
+                #else
                 fixed (VertexIndicesWeightsPositionNormal* pcpuVertices = _cpuVertices)
                 {
                     Matrix transformSum = Matrix.Identity;
