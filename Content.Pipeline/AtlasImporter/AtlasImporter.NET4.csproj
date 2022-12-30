@@ -51,15 +51,10 @@
     <Compile Include="Atlas\TileContent.cs" />
     <Compile Include="Atlas\TilesetContent.cs" />
     <Compile Include="Processors\TextureAtlasProcessor.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serialization\TextureAtlasWriter.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

@@ -36,6 +36,8 @@
     <Compile Include="Atlas\Sprite.cs" />
     <Compile Include="Atlas\TextureAtlas.cs" />
     <Compile Include="ContentReaders\TextureAtlasReader.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.PORTABLE.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
