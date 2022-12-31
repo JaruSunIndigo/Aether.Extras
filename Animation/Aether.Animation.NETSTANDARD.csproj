@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>nkast.Aether.Animation</RootNamespace>
+    <AssemblyName>Aether.Animation</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>..\Artifacts\$(Configuration)\Libraries\netstandard2.0\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DefineConstants>TRACE;DEBUG;WINDOWS MG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DefineConstants>TRACE;WINDOWS MG</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MonoGame.Framework.Portable.9000" Version="3.8.9101">
+      <PrivateAssets>all</PrivateAssets>
+      <ExcludeAssets>runtime</ExcludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animation\Animations.cs" />
+    <Compile Include="Animation\Clip.cs" />
+    <Compile Include="Animation\CpuAnimatedVertexBuffer.Unsafe.cs" />
+    <Compile Include="Animation\Extensions.cs" />
+    <Compile Include="Animation\Keyframe.cs" />
+    <Compile Include="ContentReaders\AnimationsReader.cs" />
+    <Compile Include="ContentReaders\ClipReader.cs" />
+    <Compile Include="ContentReaders\CpuAnimatedVertexBufferReader.cs" />
+    <Compile Include="Graphics\VertexTypes\VertexIndicesWeightsPositionNormal.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+</Project>

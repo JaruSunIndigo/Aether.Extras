@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>nkast.Aether.Shaders</RootNamespace>
+    <AssemblyName>Aether.Shaders.FXAA</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>..\..\Artifacts\$(Configuration)\Libraries\netstandard2.0\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DefineConstants>TRACE;DEBUG;WINDOWS MG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DefineConstants>TRACE;WINDOWS MG</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MonoGame.Framework.Portable.9000" Version="3.8.9101">
+      <PrivateAssets>all</PrivateAssets>
+      <ExcludeAssets>runtime</ExcludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FXAAEffect.cs" />
+    <Compile Include="FXAAGreenLumaHighEffect.cs" />
+    <Compile Include="FXAAGreenLumaLowEffect.cs" />
+    <Compile Include="FXAAGreenLumaMediumEffect.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\FXAAGreenLumaHigh.dx11.fxo.8" />
+    <EmbeddedResource Include="Resources\FXAAGreenLumaLow.dx11.fxo.8" />
+    <EmbeddedResource Include="Resources\FXAAGreenLumaMedium.dx11.fxo.8" />
+    <EmbeddedResource Include="Resources\FXAAGreenLumaHigh.dx11.fxo.9" />
+    <EmbeddedResource Include="Resources\FXAAGreenLumaLow.dx11.fxo.9" />
+    <EmbeddedResource Include="Resources\FXAAGreenLumaMedium.dx11.fxo.9" />
+    <EmbeddedResource Include="Resources\FXAAGreenLumaHigh.dx11.fxo.10" />
+    <EmbeddedResource Include="Resources\FXAAGreenLumaLow.dx11.fxo.10" />
+    <EmbeddedResource Include="Resources\FXAAGreenLumaMedium.dx11.fxo.10" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Properties\AssemblyInfo.UAP.cs" />
+  </ItemGroup>
+</Project>

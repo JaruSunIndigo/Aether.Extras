@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>nkast.Aether.Content.Pipeline</RootNamespace>
+    <AssemblyName>Aether.Content.Pipeline.GraphicsImporters</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>..\..\Artifacts\$(Configuration)\Processors\netstandard2.0\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DefineConstants>TRACE;DEBUG;WINDOWS</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DefineConstants>TRACE;WINDOWS MG</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MonoGame.Framework.Portable.9000" Version="3.8.9101">
+      <PrivateAssets>all</PrivateAssets>
+      <ExcludeAssets>runtime</ExcludeAssets>
+    </PackageReference>
+    <PackageReference Include="MonoGame.Framework.Content.Pipeline.Portable.9000" Version="3.8.9101">
+      <PrivateAssets>all</PrivateAssets>
+      <ExcludeAssets>runtime</ExcludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Graphics\DynamicIndexBufferContent.cs" />
+    <Compile Include="Graphics\DynamicModelContent.cs" />
+    <Compile Include="Graphics\DynamicModelMeshContent.cs" />
+    <Compile Include="Graphics\DynamicModelMeshPartContent.cs" />
+    <Compile Include="Graphics\DynamicVertexBufferContent.cs" />
+    <Compile Include="Processors\DynamicModelProcessor.cs" />
+    <Compile Include="Serialization\DynamicIndexBufferWriter.cs" />
+    <Compile Include="Serialization\DynamicModelWriter.cs" />
+    <Compile Include="Serialization\DynamicVertexBufferWriter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+</Project>
