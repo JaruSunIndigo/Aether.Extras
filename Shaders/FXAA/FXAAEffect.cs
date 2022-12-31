@@ -50,7 +50,8 @@ namespace nkast.Aether.Shaders
 
         internal static byte[] LoadEffectResource(string name)
         {
-            using (var stream = LoadEffectResourceStream(name))
+            name = GetResourceName(name);
+            using (var stream = GetAssembly(typeof(FXAAEffect)).GetManifestResourceStream(name))
             {
                 var bytecode = new byte[stream.Length];
                 stream.Read(bytecode, 0, (int)stream.Length);
@@ -58,11 +59,17 @@ namespace nkast.Aether.Shaders
             }
         }
 
-        internal static Stream LoadEffectResourceStream(string name)
+        private static string GetResourceName(string name)
         {
-            // Detect MG version
+            String platformName = "";
             var version = "";
-#if !XNA
+
+#if XNA
+            platformName = ".xna.WinHiDef";
+#else
+            platformName = ".dx11.fxo";
+
+            // Detect version
             version = ".10";
             var mgVersion = GetAssembly(typeof(Effect)).GetName().Version;
             if (mgVersion.Major == 3)
@@ -78,11 +85,9 @@ namespace nkast.Aether.Shaders
                         version = ".10";
                 }
             }
-            name = name + version;
 #endif
-            
-            Stream stream = GetAssembly(typeof(FXAAEffect)).GetManifestResourceStream(name);
-            return stream;
+
+            return name + platformName + version;
         }
 
         private static Assembly GetAssembly(Type type)

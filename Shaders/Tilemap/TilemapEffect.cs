@@ -63,15 +63,12 @@ namespace nkast.Aether.Shaders
 
         EffectDirtyFlags dirtyFlags = EffectDirtyFlags.All;
 
-#if ((MG && WINDOWS) || W10)
-        static readonly String resourceName = "nkast.Aether.Shaders.Resources.TilemapEffect.dx11.fxo";
-#else
-        static readonly String resourceName = "nkast.Aether.Shaders.Resources.TilemapEffect.xna.WinReach";
-#endif
+        static readonly String ResourceName = "nkast.Aether.Shaders.Resources.TilemapEffect";
 
         internal static byte[] LoadEffectResource(string name)
         {
-            using (var stream = LoadEffectResourceStream(name))
+            name = GetResourceName(name);
+            using (var stream = GetAssembly(typeof(TilemapEffect)).GetManifestResourceStream(name))
             using (var ms = new MemoryStream())
             {
                 stream.CopyTo(ms);
@@ -79,11 +76,17 @@ namespace nkast.Aether.Shaders
             }
         }
 
-        internal static Stream LoadEffectResourceStream(string name)
+        private static string GetResourceName(string name)
         {
-            // Detect MG version
+            String platformName = "";
             var version = "";
-#if !XNA && !PORTABLE
+
+#if XNA
+            platformName = ".xna.WinReach";
+#else
+            platformName = ".dx11.fxo";
+
+            // Detect version
             version = ".10";
             var mgVersion = GetAssembly(typeof(Effect)).GetName().Version;
             if (mgVersion.Major == 3)
@@ -99,11 +102,9 @@ namespace nkast.Aether.Shaders
                         version = ".10";
                 }
             }
-            name = name + version;
 #endif
 
-            Stream stream = GetAssembly(typeof(TilemapEffect)).GetManifestResourceStream(name);
-            return stream;
+            return name + platformName + version;
         }
 
         private static Assembly GetAssembly(Type type)
@@ -303,13 +304,7 @@ namespace nkast.Aether.Shaders
         #region Methods
 
          public TilemapEffect(GraphicsDevice graphicsDevice)
-            : base(graphicsDevice, 
-#if NETFX_CORE
-            LoadEffectResourceStream(resourceName), true
-#else
-            LoadEffectResource(resourceName)
-#endif
-           )
+            : base(graphicsDevice, LoadEffectResource(ResourceName))
         {    
             CacheEffectParameters(null);
         }

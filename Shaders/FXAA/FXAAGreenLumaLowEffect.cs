@@ -21,14 +21,11 @@ namespace nkast.Aether.Shaders
 {
     public class FXAAGreenLumaLowEffect : FXAAEffect 
     {
-#if ((MG && WINDOWS) || W10)
-        static readonly String resourceName = "nkast.Aether.Shaders.Resources.FXAAGreenLumaLow.dx11.fxo";
-#elif (XNA && WINDOWS)
-        static readonly String resourceName = "nkast.Aether.Shaders.Resources.FXAAGreenLumaLow.xna.WinHiDef";
-#endif
+        static readonly String ResourceName = "nkast.Aether.Shaders.Resources.FXAAGreenLumaLow";
+
 
         public FXAAGreenLumaLowEffect(GraphicsDevice graphicsDevice)
-            : base(graphicsDevice, LoadEffectResource(resourceName))
+            : base(graphicsDevice, LoadEffectResource(ResourceName))
         {    
         }        
     }

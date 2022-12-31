@@ -40,20 +40,19 @@ namespace nkast.Aether.Shaders
         #region Fields
 
         static readonly String ResourceName = "nkast.Aether.Shaders.Resources.InfiniteGridEffect";
-#if XNA
-        static readonly String PlatformName = ".xna";
-#elif ((MG && WINDOWS) || W10)
-         static readonly String PlatformName = ".dx11.fxo";
-#endif
 
-        private static string GetResourceName(GraphicsDevice graphicsDevice)
+        private static string GetResourceName(string name, GraphicsDevice graphicsDevice)
         {
             string profileName = (graphicsDevice.GraphicsProfile == GraphicsProfile.Reach) ? ".Reach" : ".HiDef";
-
-
-            // Detect MG version
+            String platformName = "";
             var version = "";
-#if !XNA
+
+#if XNA
+            platformName = ".xna";
+#else
+            platformName = ".dx11.fxo";
+
+            // Detect version
             version = ".10";
             var mgVersion = GetAssembly(typeof(Effect)).GetName().Version;
             if (mgVersion.Major == 3)
@@ -71,11 +70,12 @@ namespace nkast.Aether.Shaders
             }
 #endif
 
-            return ResourceName + profileName + PlatformName + version;
+            return name + profileName + platformName + version;
         }
 
-        internal static byte[] LoadEffectResource(string name)
+        internal static byte[] LoadEffectResource(string name, GraphicsDevice graphicsDevice)
         {
+            name = GetResourceName(name, graphicsDevice);
             using (var stream = GetAssembly(typeof(InfiniteGridEffect)).GetManifestResourceStream(name))
             {
                 var bytecode = new byte[stream.Length];
@@ -143,7 +143,7 @@ namespace nkast.Aether.Shaders
         #region Methods
 
         public InfiniteGridEffect(GraphicsDevice graphicsDevice)
-            : base(graphicsDevice, LoadEffectResource(GetResourceName(graphicsDevice)))
+            : base(graphicsDevice, LoadEffectResource(ResourceName, graphicsDevice))
         {
             CacheEffectParameters(null);
             worldViewProjectionParam.SetValue(Matrix.Identity);
