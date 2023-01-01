@@ -74,7 +74,17 @@ namespace nkast.Aether.Shaders
 #if XNA
             platformName = ".xna.WinReach";
 #else
-            platformName = ".dx11.fxo";
+            switch (MonoGame.Framework.Utilities.PlatformInfo.GraphicsBackend)
+            {
+                case MonoGame.Framework.Utilities.GraphicsBackend.DirectX:
+                    platformName = ".dx11.fxo";
+                    break;
+                case MonoGame.Framework.Utilities.GraphicsBackend.OpenGL:
+                    platformName = ".ogl.fxo";
+                    break;
+                default:
+                    throw new NotSupportedException("platform");
+            }
 
             // Detect version  
             version = ".10";
