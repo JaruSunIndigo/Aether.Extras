@@ -24,7 +24,6 @@ namespace Samples.SLMC
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
 
-            graphics.GraphicsProfile = GraphicsProfile.HiDef;
             graphics.PreferredBackBufferWidth = 800;
             graphics.PreferredBackBufferHeight = 480;
         }
@@ -106,7 +105,7 @@ namespace Samples.SLMC
             
             GraphicsDevice.SetRenderTarget(null);
             GraphicsDevice.Clear(Color.CornflowerBlue);
-            spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.PointWrap, null, null);
+            spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.PointClamp, null, null);
             spriteBatch.Draw(rt, rtSize, mipSize, Color.White);
             spriteBatch.End();
 
