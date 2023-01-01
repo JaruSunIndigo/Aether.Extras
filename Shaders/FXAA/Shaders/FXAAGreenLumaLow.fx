@@ -59,7 +59,7 @@ float4 PixelShaderFunction_FXAA(VSOutput input) : SV_Target0
 	tex.tex = Texture;
 	tex.smpl = TextureSampler;
 #else
-    tex = Texture;
+    tex = TextureSampler;
 #endif
 	
 	float4 value = FxaaPixelShader(
