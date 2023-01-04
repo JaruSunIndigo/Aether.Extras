@@ -246,7 +246,8 @@ namespace nkast.Aether.Shaders
                 if (fogEnabled != value)
                 {
                     fogEnabled = value;
-                    dirtyFlags |= EffectDirtyFlags.ShaderIndex | EffectDirtyFlags.FogEnable;
+                    dirtyFlags |= EffectDirtyFlags.FogEnable;
+                    UpdateCurrentTechnique();
                 }
             }
         }
@@ -304,7 +305,7 @@ namespace nkast.Aether.Shaders
                 if (vertexColorEnabled != value)
                 {
                     vertexColorEnabled = value;
-                    dirtyFlags |= EffectDirtyFlags.ShaderIndex;
+                    UpdateCurrentTechnique();
                 }
             }
         }
@@ -377,25 +378,21 @@ namespace nkast.Aether.Shaders
             if ((dirtyFlags & EffectDirtyFlags.MaterialColor) != 0)
             {
                 diffuseColorParam.SetValue(new Vector4(diffuseColor * alpha, alpha));
-
                 dirtyFlags &= ~EffectDirtyFlags.MaterialColor;
             }
+        }
 
-            // Recompute the shader index?
-            if ((dirtyFlags & EffectDirtyFlags.ShaderIndex) != 0)
-            {
-                int shaderIndex = 0;
+        private void UpdateCurrentTechnique()
+        {
+            int shaderIndex = 0;
 
-                if (!fogEnabled)
-                    shaderIndex += 1;
+            if (!fogEnabled)
+                shaderIndex += 1;
 
-                if (vertexColorEnabled)
-                    shaderIndex += 2;
+            if (vertexColorEnabled)
+                shaderIndex += 2;
 
-                dirtyFlags &= ~EffectDirtyFlags.ShaderIndex;
-
-                CurrentTechnique = Techniques[shaderIndex];
-            }
+            CurrentTechnique = Techniques[shaderIndex];
         }
 
 
@@ -487,7 +484,6 @@ namespace nkast.Aether.Shaders
             Fog = 16,
             FogEnable = 32,
             //AlphaTest = 64,
-            ShaderIndex = 128,
             All = -1
         }
     }
