@@ -46,10 +46,6 @@ namespace Samples.FXAA
 
             graphics.GraphicsProfile = GraphicsProfile.HiDef;
 
-#if WINDOWS_PHONE
-            graphics.IsFullScreen = true;
-            TargetElapsedTime = TimeSpan.FromTicks(333333);
-#endif
         }
 
         protected override void LoadContent()
