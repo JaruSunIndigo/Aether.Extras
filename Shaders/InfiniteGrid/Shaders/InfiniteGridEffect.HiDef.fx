@@ -19,8 +19,8 @@ BEGIN_CONSTANTS
 float4 DiffuseColor;
 
 float2 TexelSize;
-float3 PlaneNormal;
-float  PlaneD;
+//float3 PlaneNormal;
+//float  PlaneD;
 
 MATRIX_CONSTANTS
 matrix WorldViewProjection;

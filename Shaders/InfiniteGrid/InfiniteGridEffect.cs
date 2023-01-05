@@ -177,8 +177,8 @@ namespace nkast.Aether.Shaders
             InvProjection   = cloneSource.InvProjection;
             InvView         = cloneSource.InvView;
             InvPlaneMatrix  = cloneSource.InvPlaneMatrix;
-            PlaneNormal     = cloneSource.PlaneNormal;
-            PlaneD          = cloneSource.PlaneD;
+            //PlaneNormal     = cloneSource.PlaneNormal;
+            //PlaneD          = cloneSource.PlaneD;
         }
         
         public override Effect Clone()
@@ -206,8 +206,8 @@ namespace nkast.Aether.Shaders
             InvProjection = Matrix.Invert(projection);
             InvView = Matrix.Invert(view);
             InvPlaneMatrix = Matrix.Invert(EditMatrix);
-            PlaneNormal = editPlane.Normal;
-            PlaneD = editPlane.D;
+            //PlaneNormal = editPlane.Normal;
+            //PlaneD = editPlane.D;
         }
 
         #endregion
