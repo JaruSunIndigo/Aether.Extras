@@ -5,8 +5,8 @@
     <TargetFramework>net6.0</TargetFramework>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Samples.FXAA</RootNamespace>
-    <AssemblyName>Samples.FXAA</AssemblyName>
+    <RootNamespace>Samples.Deferred</RootNamespace>
+    <AssemblyName>Samples.Deferred</AssemblyName>
     <MonoGamePlatform>Windows</MonoGamePlatform>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <OutputPath>bin\$(Configuration)\DesktopGL\net6\</OutputPath>

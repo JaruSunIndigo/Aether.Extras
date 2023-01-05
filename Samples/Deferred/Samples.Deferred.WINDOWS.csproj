@@ -9,8 +9,8 @@
     <ProjectGuid>{594B1001-B485-499A-A22B-42125763C2CF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Samples.FXAA</RootNamespace>
-    <AssemblyName>Samples.FXAA</AssemblyName>
+    <RootNamespace>Samples.Deferred</RootNamespace>
+    <AssemblyName>Samples.Deferred</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MonoGamePlatform>Windows</MonoGamePlatform>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
