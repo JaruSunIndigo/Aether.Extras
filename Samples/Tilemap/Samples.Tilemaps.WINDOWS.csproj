@@ -9,8 +9,8 @@
     <ProjectGuid>{9B99798B-72F3-4E4B-9B99-DE15F7C955E9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Samples.Tilemap</RootNamespace>
-    <AssemblyName>Samples.Tilemap</AssemblyName>
+    <RootNamespace>Samples.Tilemaps</RootNamespace>
+    <AssemblyName>Samples.Tilemaps</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MonoGamePlatform>Windows</MonoGamePlatform>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>

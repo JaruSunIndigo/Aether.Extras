@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework.Input;
 using nkast.Aether.Graphics;
 using nkast.Aether.Shaders;
 
-namespace Samples.Atlas
+namespace Samples.Tilemaps
 {
     public class SampleGame : Game
     {

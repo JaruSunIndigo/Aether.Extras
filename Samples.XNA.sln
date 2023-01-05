@@ -51,7 +51,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.SLMC.XNA", "Samples
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.SLMCContent", "Samples\SLMCContent\Samples.SLMCContent.contentproj", "{99A5C5A9-03E3-41C6-A121-EF423F6CEB23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Tilemap.XNA", "Samples\Tilemap\Samples.Tilemap.XNA.csproj", "{0586BA88-7CBC-493B-9B9F-B1AE7089ECDC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Tilemaps.XNA", "Samples\Tilemap\Samples.Tilemaps.XNA.csproj", "{0586BA88-7CBC-493B-9B9F-B1AE7089ECDC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.TilemapContent", "Samples\TilemapContent\Samples.TilemapContent.contentproj", "{CC95FC77-31DC-4120-895C-4764ED092F4E}"
 EndProject

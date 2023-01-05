@@ -1,6 +1,6 @@
 using System;
 
-namespace Samples.Atlas
+namespace Samples.Tilemaps
 {
     public static class Program
     {
