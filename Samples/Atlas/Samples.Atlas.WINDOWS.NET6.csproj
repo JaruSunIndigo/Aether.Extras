@@ -3,7 +3,6 @@
   <PropertyGroup>
     <EnableDefaultItems>false</EnableDefaultItems>
     <TargetFramework>net6.0-windows</TargetFramework>
-    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Samples.Atlas</RootNamespace>
     <AssemblyName>Samples.Atlas</AssemblyName>
