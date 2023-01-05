@@ -68,8 +68,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AntiAliasing.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="FXAASampleComponent.cs" />
     <Compile Include="SampleGame.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Spaceship.cs" />
   </ItemGroup>
   <ItemGroup>

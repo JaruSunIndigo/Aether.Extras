@@ -68,8 +68,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DeferredRendering.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="DeferredSampleComponent.cs" />
     <Compile Include="SampleGame.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="QuadRenderer.cs" />
     <Compile Include="Spaceship.cs" />
   </ItemGroup>
