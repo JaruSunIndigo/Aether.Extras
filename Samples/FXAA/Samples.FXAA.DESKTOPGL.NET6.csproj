@@ -25,7 +25,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AntiAliasing.cs" />
-    <Compile Include="Game1.cs" />
+    <Compile Include="SampleGame.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Spaceship.cs" />
   </ItemGroup>

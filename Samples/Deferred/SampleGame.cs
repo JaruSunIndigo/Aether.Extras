@@ -16,7 +16,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Samples.Deferred
 {
-    public class Game1 : Microsoft.Xna.Framework.Game
+    public class SampleGame : Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
@@ -49,7 +49,7 @@ namespace Samples.Deferred
         float lightBcurrentIntensity = LightBIntensity;
         float lightCcurrentIntensity = LightCIntensity;
 
-        public Game1()
+        public SampleGame()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";

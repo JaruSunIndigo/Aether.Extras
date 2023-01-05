@@ -16,7 +16,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Samples.FXAA
 {
-    public class Game1 : Microsoft.Xna.Framework.Game
+    public class SampleGame : Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
@@ -39,7 +39,7 @@ namespace Samples.FXAA
         
         AntiAliasing _antiAliasing;
 
-        public Game1()
+        public SampleGame()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";

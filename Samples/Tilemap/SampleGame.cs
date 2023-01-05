@@ -1,12 +1,14 @@
 using System;
+using System.IO;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using nkast.Aether.Graphics;
+using nkast.Aether.Shaders;
 
 namespace Samples.Atlas
 {
-    public class Game1 : Microsoft.Xna.Framework.Game
+    public class SampleGame : Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
@@ -22,11 +24,11 @@ namespace Samples.Atlas
         RenderTarget2D rt;
 
 
-        TextureAtlas atlasMipmapPerSprite;
-        TextureAtlas atlasMipmap;
-        TextureAtlas atlasNoMipmap;
+        Tilemap tilemapMipmapPerSprite;
+        Tilemap tilemapMipmap;
+        Tilemap tilemapNoMipmap;
         
-        public Game1()
+        public SampleGame()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -36,16 +38,24 @@ namespace Samples.Atlas
         }
 
         protected override void LoadContent()
-        {            
+        {
             spriteBatch = new SpriteBatch(GraphicsDevice);
             font = Content.Load<SpriteFont>("font");
 
             rt = new RenderTarget2D(GraphicsDevice, atlasSize.Width, atlasSize.Height);
 
-            // Load Atlas
-            atlasMipmapPerSprite = Content.Load<TextureAtlas>("atlasMipmapPerSprite");
-            atlasMipmap = Content.Load<TextureAtlas>("atlasMipmap");
-            atlasNoMipmap = Content.Load<TextureAtlas>("atlasNoMipmap");
+            // Load tilemap
+            tilemapMipmapPerSprite = Content.Load<Tilemap>("tilemapMipmapPerSprite");
+            tilemapMipmap = Content.Load<Tilemap>("tilemapMipmap");
+            tilemapNoMipmap = Content.Load<Tilemap>("tilemapNoMipmap");
+
+#if DEBUG
+            using (var fs = File.Create("tilemapNoMipmapAtlas.png"))
+                tilemapNoMipmap.TextureAtlas.SaveAsPng(fs, tilemapNoMipmap.TextureAtlas.Width, tilemapNoMipmap.TextureAtlas.Height);
+            using (var fs = File.Create("tilemapMipmapAtlas.png"))
+                tilemapNoMipmap.TextureAtlas.SaveAsPng(fs, tilemapMipmap.TextureAtlas.Width, tilemapNoMipmap.TextureAtlas.Height);
+#endif
+            
         }
         
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
@@ -81,29 +91,28 @@ namespace Samples.Atlas
             GraphicsDevice.BlendState = BlendState.Opaque;
             GraphicsDevice.DepthStencilState = DepthStencilState.Default;
 
+            GraphicsDevice.SetRenderTarget(rt);
+            GraphicsDevice.Clear(Color.Black);
+
+            var currentTilemap = (useGenerateBitmap) 
+                ? (useMipmapPerSprite ? tilemapMipmapPerSprite : tilemapMipmap)
+                : (tilemapNoMipmap);
+
             int mipLevel2 = (int)Math.Pow(2, mipLevel);
             var mipSize = atlasSize;
             mipSize.Width /= mipLevel2;
             mipSize.Height /= mipLevel2;
             
-            GraphicsDevice.SetRenderTarget(rt);
-            GraphicsDevice.Clear(Color.Black);
 
-            var currentAtlas = (useGenerateBitmap) ? (useMipmapPerSprite ? atlasMipmapPerSprite : atlasMipmap) : atlasNoMipmap;
-            
             if (showAtlas)
             {
                 spriteBatch.Begin();
-                spriteBatch.Draw(currentAtlas.Texture, mipSize, Color.White);
+                spriteBatch.Draw(currentTilemap.TextureAtlas, mipSize, Color.White);
                 spriteBatch.End();
             }
             else
             {
-                var scaleMtx = Matrix.CreateScale(1f/mipLevel2);
-                spriteBatch.Begin(SpriteSortMode.Deferred, null, null, null, null, null, scaleMtx);
-                // Draw sprites from Atlas
-                DrawSprites(gameTime, spriteBatch, currentAtlas);
-                spriteBatch.End();
+                DrawTilemap(gameTime, currentTilemap, mipSize);
             }
 
 
@@ -116,23 +125,29 @@ namespace Samples.Atlas
             spriteBatch.Begin();
             spriteBatch.DrawString(font, String.Format("[F1] MipmapPerSprite - ({0})", useMipmapPerSprite ? "ON" : "OFF"), new Vector2(20, 20), Color.White);
             spriteBatch.DrawString(font, String.Format("[F2] GenerateMipmap - ({0})", useGenerateBitmap ? "ON" : "OFF"), new Vector2(20, 40), Color.White);
-            spriteBatch.DrawString(font, String.Format("[F3] {0}", showAtlas? "Show Sprites" : "Show Atlas"), new Vector2(20, 60), Color.White);
+            spriteBatch.DrawString(font, String.Format("[F3] {0}", showAtlas? "Show Tilemap" : "Show Atlas"), new Vector2(20, 60), Color.White);
             spriteBatch.DrawString(font, String.Format("[+/-] MipLevel - ({0})", mipLevel), new Vector2(20, 80), Color.White);
             spriteBatch.End();
 
             base.Draw(gameTime);
         }
 
-        private void DrawSprites(GameTime gameTime, SpriteBatch spriteBatch, TextureAtlas atlas)
+        private void DrawTilemap(GameTime gameTime, Tilemap tilemap, Rectangle mipSize)
         {
-            var sprite18 = atlas.Sprites["18"];
-            spriteBatch.Draw(sprite18, new Vector2(128,128), Color.White);
+            // setup tilemapEffect
+            var viewport = GraphicsDevice.Viewport;
+            Matrix projection = Matrix.CreateOrthographicOffCenter(0, viewport.Width, viewport.Height, 0, 0, 1);
+            Matrix halfPixelOffset = Matrix.Identity;
+#if XNA
+            halfPixelOffset = Matrix.CreateTranslation(-0.5f, -0.5f, 0);
+#endif
 
-            var spriteMushroom_2 = atlas.Sprites["Mushroom_2"];
-            spriteBatch.Draw(spriteMushroom_2, new Vector2(256 + 128, 128), Color.White);
-
-            var sprite10 = atlas.Sprites["10"];
-            spriteBatch.Draw(sprite10, new Vector2(512, 128), Color.White);
+            tilemap.Effect.Projection = halfPixelOffset * projection;
+                        
+            // Draw tilemap
+            spriteBatch.Begin(0, BlendState.AlphaBlend, SamplerState.PointWrap, null, null, tilemap.Effect);
+            spriteBatch.Draw(tilemap.TextureMap, mipSize, Color.White);
+            spriteBatch.End();
         }
     }
 }

@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Samples.SLMC
 {
-    public class Game1 : Microsoft.Xna.Framework.Game
+    public class SampleGame : Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
@@ -19,7 +19,7 @@ namespace Samples.SLMC
 
         Texture2D tx;
         
-        public Game1()
+        public SampleGame()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";

@@ -7,7 +7,7 @@ namespace Samples.Animation
         [STAThread]
         static void Main(string[] args)
         {
-            using (Game1 game = new Game1())
+            using (SampleGame game = new SampleGame())
             {
                 game.Run();
             }

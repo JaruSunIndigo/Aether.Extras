@@ -15,7 +15,7 @@ namespace Samples.Animation
         CPU,
     }
 
-    public class Game1 : Microsoft.Xna.Framework.Game
+    public class SampleGame : Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
@@ -29,7 +29,7 @@ namespace Samples.Animation
 
         KeyboardState prevKeyboardState;
 
-        public Game1()
+        public SampleGame()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
