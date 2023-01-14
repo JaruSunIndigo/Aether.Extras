@@ -54,7 +54,4 @@
     <EmbeddedResource Include="Resources\DeferredPointLight.ogl.fxo.10" />
     <EmbeddedResource Include="Resources\DeferredSpotLight.ogl.fxo.10" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Remove="Properties\AssemblyInfo.UAP.cs" />
-  </ItemGroup>
 </Project>

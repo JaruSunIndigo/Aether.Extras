@@ -45,7 +45,4 @@
     <EmbeddedResource Include="Resources\FXAAGreenLumaLow.ogl.fxo.10" />
     <EmbeddedResource Include="Resources\FXAAGreenLumaMedium.ogl.fxo.10" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Remove="Properties\AssemblyInfo.UAP.cs" />
-  </ItemGroup>
 </Project>
