@@ -37,7 +37,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Shaders.Tilemap.NETS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SLMCImporter.NETSTANDARD", "Content.Pipeline\SLMCImporter\SLMCImporter.NETSTANDARD.csproj", "{C9FA924B-DA91-4641-8B7D-CBC09E5560AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VoxelImporters.NETSTANDARD", "Content.Pipeline\VoxelImporters\VoxelImporters.NETSTANDARD.csproj", "{AA15CF95-0AF2-4346-9465-CB6EDBE22ED9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VoxelImporters.NETSTANDARD", "Content.Pipeline\VoxelImporters\VoxelImporters.NETSTANDARD.csproj", "{AA15CF95-0AF2-4346-9465-CB6EDBE22ED9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Tilemap.NETSTANDARD", "Tilemap\Aether.Tilemap.NETSTANDARD.csproj", "{7BD9F460-F3F9-40A0-B298-066EA975C06C}"
 EndProject
