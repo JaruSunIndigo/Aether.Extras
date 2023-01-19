@@ -1,6 +1,5 @@
 # Aether.Extras
-MonoGame Content Importers, Shaders, etc
-
+Content Importers and Shaders for [MonoGame](https://github.com/MonoGame/MonoGame) and [Kni](https://github.com/kniengine/kni) framework.
 
 ## Content Importers
 
