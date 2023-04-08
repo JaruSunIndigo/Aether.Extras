@@ -3,21 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.1082
 MinimumVisualStudioVersion = 15.0.28307.1082
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aether.Content.Pipeline", "Aether.Content.Pipeline", "{717F89BC-8423-4E7C-A834-460CFD62B1E3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RawModelProcessor.PORTABLE", "Content.Pipeline\RawModelProcessor\RawModelProcessor.PORTABLE.csproj", "{C3218A39-5491-44BF-B820-754832E318DB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphicsImporters.PORTABLE", "Content.Pipeline\GraphicsImporters\GraphicsImporters.PORTABLE.csproj", "{0A079394-D331-433A-94DF-AA25B6522279}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Graphics.PORTABLE", "Graphics\Aether.Graphics.PORTABLE.csproj", "{3E3BB349-662A-4628-B033-154CB8CD2F2A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Animation.PORTABLE", "Animation\Aether.Animation.PORTABLE.csproj", "{11DC5896-8B7A-43ED-978C-45D0ECD4DD42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimationImporters.PORTABLE", "Content.Pipeline\AnimationImporters\AnimationImporters.PORTABLE.csproj", "{962D579A-91F7-4FAB-940A-423E04B8465E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Atlas.PORTABLE", "Atlas\Aether.Atlas.PORTABLE.csproj", "{E5907795-BC19-4CAA-9909-9F7145E1BB0D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aether.Shaders", "Aether.Shaders", "{0193DE8C-8B7A-43F6-A30B-E65EC387B2C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C3218A39-5491-44BF-B820-754832E318DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C3218A39-5491-44BF-B820-754832E318DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C3218A39-5491-44BF-B820-754832E318DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C3218A39-5491-44BF-B820-754832E318DB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0A079394-D331-433A-94DF-AA25B6522279}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0A079394-D331-433A-94DF-AA25B6522279}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0A079394-D331-433A-94DF-AA25B6522279}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0A079394-D331-433A-94DF-AA25B6522279}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3E3BB349-662A-4628-B033-154CB8CD2F2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3E3BB349-662A-4628-B033-154CB8CD2F2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E3BB349-662A-4628-B033-154CB8CD2F2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -41,10 +23,6 @@ Global
 		{11DC5896-8B7A-43ED-978C-45D0ECD4DD42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11DC5896-8B7A-43ED-978C-45D0ECD4DD42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11DC5896-8B7A-43ED-978C-45D0ECD4DD42}.Release|Any CPU.Build.0 = Release|Any CPU
-		{962D579A-91F7-4FAB-940A-423E04B8465E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{962D579A-91F7-4FAB-940A-423E04B8465E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{962D579A-91F7-4FAB-940A-423E04B8465E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{962D579A-91F7-4FAB-940A-423E04B8465E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E5907795-BC19-4CAA-9909-9F7145E1BB0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E5907795-BC19-4CAA-9909-9F7145E1BB0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5907795-BC19-4CAA-9909-9F7145E1BB0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -52,11 +30,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{C3218A39-5491-44BF-B820-754832E318DB} = {717F89BC-8423-4E7C-A834-460CFD62B1E3}
-		{0A079394-D331-433A-94DF-AA25B6522279} = {717F89BC-8423-4E7C-A834-460CFD62B1E3}
-		{962D579A-91F7-4FAB-940A-423E04B8465E} = {717F89BC-8423-4E7C-A834-460CFD62B1E3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CC734668-3E0E-4826-90C3-55064F0473DB}
