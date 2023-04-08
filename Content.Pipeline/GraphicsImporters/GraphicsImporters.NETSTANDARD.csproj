@@ -36,6 +36,8 @@
     <Compile Include="Serialization\DynamicIndexBufferWriter.cs" />
     <Compile Include="Serialization\DynamicModelWriter.cs" />
     <Compile Include="Serialization\DynamicVertexBufferWriter.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
 </Project>
