@@ -45,6 +45,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GraphicsImporters\GraphicsImporters.NETSTANDARD.csproj" />
+    <ProjectReference Include="..\GraphicsImporters\GraphicsImporters.NETSTANDARD.csproj">
+    </ProjectReference>
   </ItemGroup>
 </Project>

@@ -36,6 +36,8 @@
     <Compile Include="Processors\TilePacker.cs" />
     <Compile Include="Processors\TilemapProcessor.cs" />
     <Compile Include="Serialization\TilemapWriter.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
 </Project>

@@ -28,6 +28,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="RawModelProcessor.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
 </Project>
