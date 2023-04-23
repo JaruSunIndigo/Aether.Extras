@@ -29,9 +29,7 @@ namespace nkast.Aether.Content.Pipeline.Processors
         private int _generateKeyframesFrequency = 0;
         private bool _fixRealBoneRoot = false;
 
-#if !PORTABLE
         [DisplayName("MaxBones")]
-#endif
         [DefaultValue(SkinnedEffect.MaxBones)]
         public virtual int MaxBones 
         {
@@ -39,9 +37,7 @@ namespace nkast.Aether.Content.Pipeline.Processors
             set { _maxBones = value; }
         }
 
-#if !PORTABLE
         [DisplayName("Generate Keyframes Frequency")]
-#endif
         [DefaultValue(0)] // (0=no, 30=30fps, 60=60fps)
         public virtual int GenerateKeyframesFrequency
         {
@@ -49,9 +45,7 @@ namespace nkast.Aether.Content.Pipeline.Processors
             set { _generateKeyframesFrequency = value; }
         }
 
-#if !PORTABLE
         [DisplayName("Fix BoneRoot from MG importer")]
-#endif
         [DefaultValue(false)]
         public virtual bool FixRealBoneRoot
         {
