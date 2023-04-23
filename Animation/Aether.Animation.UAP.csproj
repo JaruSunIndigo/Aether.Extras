@@ -148,11 +148,11 @@
       <PrivateAssets>all</PrivateAssets>
       <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>
-    <PackageReference Include="SharpDX.Direct3D11"  Version="4.0.1.0">
+    <PackageReference Include="SharpDX.Direct3D11" Version="4.0.1.0">
       <PrivateAssets>all</PrivateAssets>
       <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>
-    <PackageReference Include="SharpDX.DXGI"  Version="4.0.1.0">
+    <PackageReference Include="SharpDX.DXGI" Version="4.0.1.0">
       <PrivateAssets>all</PrivateAssets>
       <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>
