@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.33529.398
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Animation.MonoAndroid", "Animation\Aether.Animation.MonoAndroid.csproj", "{1C84A04C-793A-469B-81A3-B5DC39117612}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C84A04C-793A-469B-81A3-B5DC39117612}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C84A04C-793A-469B-81A3-B5DC39117612}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C84A04C-793A-469B-81A3-B5DC39117612}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C84A04C-793A-469B-81A3-B5DC39117612}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A2521D4A-846A-4F06-9E91-3A20163E618B}
+	EndGlobalSection
+EndGlobal

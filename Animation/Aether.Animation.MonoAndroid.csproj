@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{1C84A04C-793A-469B-81A3-B5DC39117612}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>nkast.Aether.Animation</RootNamespace>
+    <AssemblyName>Aether.Animation</AssemblyName>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v4.4</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Artifacts\Debug\Libraries\MonoAndroid\</OutputPath>
+    <BaseIntermediateOutputPath>obj\MonoAndroid\</BaseIntermediateOutputPath>
+    <DefineConstants>DEBUG;ANDROID;MG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>..\Artifacts\Release\Libraries\MonoAndroid\</OutputPath>
+    <BaseIntermediateOutputPath>obj\MonoAndroid\</BaseIntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <DefineConstants>ANDROID;MG</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <PackageReference Include="MonoGame.Framework.Android.9000" Version="3.8.9102">
+      <PrivateAssets>all</PrivateAssets>
+      <ExcludeAssets>runtime</ExcludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animation\Animations.cs" />
+    <Compile Include="Animation\Clip.cs" />
+    <Compile Include="Animation\CpuAnimatedVertexBuffer.Unsafe.cs" />
+    <Compile Include="Animation\Extensions.cs" />
+    <Compile Include="Animation\Keyframe.cs" />
+    <Compile Include="ContentReaders\AnimationsReader.cs" />
+    <Compile Include="ContentReaders\ClipReader.cs" />
+    <Compile Include="ContentReaders\CpuAnimatedVertexBufferReader.cs" />
+    <Compile Include="Graphics\VertexTypes\VertexIndicesWeightsPositionNormal.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+</Project>
