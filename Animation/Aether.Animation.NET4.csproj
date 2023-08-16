@@ -36,7 +36,11 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="mscorlib" />
-    <PackageReference Include="MonoGame.Framework.Portable.9000" Version="3.8.9102">
+    <PackageReference Include="nkast.Xna.Framework" Version="3.9.9001">
+      <PrivateAssets>all</PrivateAssets>
+      <ExcludeAssets>runtime</ExcludeAssets>
+    </PackageReference>
+    <PackageReference Include="nkast.Xna.Framework.Ref" Version="3.9.9001">
       <PrivateAssets>all</PrivateAssets>
       <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>

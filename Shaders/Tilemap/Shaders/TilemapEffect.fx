@@ -1,12 +1,7 @@
 #include "Macros.fxh"
 
 
-#ifdef SM4
-DECLARE_TEXTURE(Texture, 0);
-DECLARE_TEXTURE(TextureAtlas, 1);
-#else
-texture Texture;
-sampler TextureSampler : register(s0) = sampler_state
+DECLARE_TEXTURE(Texture, 0) = sampler_state
 {
 	Texture = (Texture);
 	MAGFILTER = POINT;
@@ -15,8 +10,8 @@ sampler TextureSampler : register(s0) = sampler_state
 	AddressU = Wrap;
 	AddressV = Wrap;
 };
-texture TextureAtlas;
-sampler TextureAtlasSampler : register(s1) = sampler_state
+
+DECLARE_TEXTURE(TextureAtlas, 1) = sampler_state
 {
     Texture = (TextureAtlas);
 	MAGFILTER = POINT; //LINEAR;
@@ -25,7 +20,6 @@ sampler TextureAtlasSampler : register(s1) = sampler_state
 	AddressU = Wrap;
 	AddressV = Wrap;
 };
-#endif
 
 
 BEGIN_CONSTANTS

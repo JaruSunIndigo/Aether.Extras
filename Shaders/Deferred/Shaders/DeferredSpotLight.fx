@@ -28,14 +28,7 @@ float outerAngleCos;
 //control the brightness of the light
 float lightIntensity = 1.0f;
 
-// diffuse color, and specularIntensity in the alpha channel
-texture colorMap; 
-// normals, and specularPower in the alpha channel
-texture normalMap;
-//depth
-texture depthMap;
-
-sampler colorSampler = sampler_state
+DECLARE_TEXTURE(colorMap, 0) = sampler_state
 {
     Texture = (colorMap);
     AddressU = CLAMP;
@@ -44,18 +37,22 @@ sampler colorSampler = sampler_state
     MinFilter = LINEAR;
     Mipfilter = LINEAR;
 };
-sampler depthSampler = sampler_state
+
+// normals, and specularPower in the alpha channel
+DECLARE_TEXTURE(normalMap, 1) = sampler_state
 {
-    Texture = (depthMap);
+    Texture = (normalMap);
     AddressU = CLAMP;
     AddressV = CLAMP;
     MagFilter = POINT;
     MinFilter = POINT;
     Mipfilter = POINT;
 };
-sampler normalSampler = sampler_state
+
+//depth
+DECLARE_TEXTURE(depthMap, 2) = sampler_state
 {
-    Texture = (normalMap);
+    Texture = (depthMap);
     AddressU = CLAMP;
     AddressV = CLAMP;
     MagFilter = POINT;
@@ -100,16 +97,17 @@ float4 PixelShaderFunction(VertexShaderOutput input) : COLOR0
     texCoord -=halfPixel;
 
     //get normal data from the normalMap
-    float4 normalData = tex2D(normalSampler,texCoord);
+    float4 normalData = SAMPLE_TEXTURE(normalMap,texCoord);
     //tranform normal back into [-1,1] range
     float3 normal = 2.0f * normalData.xyz - 1.0f;
+
     //get specular power
     float specularPower = normalData.a * 255;
     //get specular intensity from the colorMap
-    float specularIntensity = tex2D(colorSampler, texCoord).a;
+    float specularIntensity = SAMPLE_TEXTURE(colorMap,texCoord).a;
 
     //read depth
-    float depthVal = tex2D(depthSampler,texCoord).r;
+    float depthVal = SAMPLE_TEXTURE(depthMap,texCoord).r;
 
     //compute screen-space position
     float4 position;
@@ -137,8 +135,8 @@ float4 PixelShaderFunction(VertexShaderOutput input) : COLOR0
 	
     //compute diffuse light
     float NdL = max(0,dot(normal,lightVector));
-    //float3 diffuseLight = NdL * Color.rgb;
 	float3 diffuseLight = Color.rgb;
+    //float3 diffuseLight = NdL * Color.rgb;
 
     //reflection vector
     float3 reflectionVector = normalize(reflect(-lightVector, normal));

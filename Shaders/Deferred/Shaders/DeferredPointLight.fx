@@ -23,13 +23,7 @@ float lightRadius;
 float lightIntensity = 1.0f;
 
 // diffuse color, and specularIntensity in the alpha channel
-texture colorMap; 
-// normals, and specularPower in the alpha channel
-texture normalMap;
-//depth
-texture depthMap;
-
-sampler colorSampler = sampler_state
+DECLARE_TEXTURE(colorMap, 0) = sampler_state
 {
     Texture = (colorMap);
     AddressU = CLAMP;
@@ -38,16 +32,9 @@ sampler colorSampler = sampler_state
     MinFilter = LINEAR;
     Mipfilter = LINEAR;
 };
-sampler depthSampler = sampler_state
-{
-    Texture = (depthMap);
-    AddressU = CLAMP;
-    AddressV = CLAMP;
-    MagFilter = POINT;
-    MinFilter = POINT;
-    Mipfilter = POINT;
-};
-sampler normalSampler = sampler_state
+
+// normals, and specularPower in the alpha channel
+DECLARE_TEXTURE(normalMap, 1) = sampler_state
 {
     Texture = (normalMap);
     AddressU = CLAMP;
@@ -57,6 +44,16 @@ sampler normalSampler = sampler_state
     Mipfilter = POINT;
 };
 
+//depth
+DECLARE_TEXTURE(depthMap, 2) = sampler_state
+{
+    Texture = (depthMap);
+    AddressU = CLAMP;
+    AddressV = CLAMP;
+    MagFilter = POINT;
+    MinFilter = POINT;
+    Mipfilter = POINT;
+};
 
 struct VertexShaderInput
 {
@@ -94,17 +91,17 @@ float4 PixelShaderFunction(VertexShaderOutput input) : COLOR0
     texCoord -=halfPixel;
 
     //get normal data from the normalMap
-    float4 normalData = tex2D(normalSampler,texCoord);
+    float4 normalData = SAMPLE_TEXTURE(normalMap,texCoord);
     //tranform normal back into [-1,1] range
     float3 normal = 2.0f * normalData.xyz - 1.0f;
-	
+
     //get specular power
     float specularPower = normalData.a * 255;
     //get specular intensity from the colorMap
-    float specularIntensity = tex2D(colorSampler, texCoord).a;
+    float specularIntensity = SAMPLE_TEXTURE(colorMap,texCoord).a;
 
     //read depth
-    float depthVal = tex2D(depthSampler,texCoord).r;
+    float depthVal = SAMPLE_TEXTURE(depthMap,texCoord).r;
 
     //compute screen-space position
     float4 position;
@@ -117,7 +114,7 @@ float4 PixelShaderFunction(VertexShaderOutput input) : COLOR0
 
     //surface-to-light vector
     float3 lightVector = lightPosition - position;
-	
+
     //compute attenuation based on distance - linear attenuation
     float attenuation = saturate(1.0f - length(lightVector)/lightRadius);
 
@@ -125,9 +122,9 @@ float4 PixelShaderFunction(VertexShaderOutput input) : COLOR0
     lightVector = normalize(lightVector);
 
     //compute diffuse light
-    float NdL = max(0,dot(normal, lightVector)+0.2);
-    float3 diffuseLight = NdL * Color.rgb;
+    float NdL = max(0,dot(normal,lightVector)+0.2);
 	//float3 diffuseLight = Color.rgb;
+    float3 diffuseLight = NdL * Color.rgb;
 	//if(NdL==0) return float4(0,0,0,0);
 
     //reflection vector
@@ -138,7 +135,7 @@ float4 PixelShaderFunction(VertexShaderOutput input) : COLOR0
     float specularLight = specularIntensity * pow( saturate(dot(reflectionVector, directionToCamera)), specularPower);
 
     //take into account attenuation and lightIntensity.
-    return attenuation * lightIntensity * float4(diffuseLight.rgb, specularLight);
+    return attenuation * lightIntensity * float4(diffuseLight.rgb,specularLight);
 }
 
 TECHNIQUE( Standard, VertexShaderFunction, PixelShaderFunction );
