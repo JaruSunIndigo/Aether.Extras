@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+
   <PropertyGroup>
     <EnableDefaultItems>false</EnableDefaultItems>
     <TargetFramework>net6.0-windows</TargetFramework>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Samples.Atlas</RootNamespace>
     <AssemblyName>Samples.Atlas</AssemblyName>
-    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <KniPlatform>Windows</KniPlatform>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <OutputPath>bin\$(Configuration)\DesktopGL\net6\</OutputPath>
   </PropertyGroup>
@@ -32,23 +32,19 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Xna.Framework">
-      <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\Framework\netstandard2.0\Xna.Framework.dll</HintPath>
-    </Reference>
-    <Reference Include="MonoGame.Framework">
-      <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\Windows\net6.0-windows\MonoGame.Framework.dll</HintPath>
-    </Reference>
+	<PackageReference Include="nkast.Xna.Framework" Version="3.10.9001" />
+	<PackageReference Include="MonoGame.Framework.WindowsDX.9000" Version="3.10.9001" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <MonoGameContentReference Include="..\AtlasContent\Samples.AtlasContent.mgcb">
+    <KniContentReference Include="..\AtlasContent\Samples.AtlasContent.mgcb">
       <Link>Content\Content.mgcb</Link>
-    </MonoGameContentReference>
+    </KniContentReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Atlas\Aether.Atlas.NETSTANDARD.csproj" />
   </ItemGroup>
-    <Import Project="C:\Program Files (x86)\MSBuild\MonoGame\v3.0\MonoGame.Content.Builder17.targets" />
+    <Import Project="C:\Program Files (x86)\MSBuild\MonoGame\v3.0\Kni.Content.Builder.targets" />
 </Project>
