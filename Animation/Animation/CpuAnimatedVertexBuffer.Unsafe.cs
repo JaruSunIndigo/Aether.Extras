@@ -44,8 +44,10 @@ namespace nkast.Aether.Animation
             base(graphicsDevice, vertexDeclaration, vertexCount, bufferUsage)
         {
             #if MAPPEDMEM
-            FieldInfo _bufferInfo = typeof(VertexBuffer).GetField("_buffer", BindingFlags.Instance | BindingFlags.NonPublic);
-            _buffer = _bufferInfo.GetValue(this) as SharpDX.Direct3D11.Buffer;
+            FieldInfo _strategyInfo = typeof(VertexBuffer).GetField("_strategy", BindingFlags.Instance | BindingFlags.NonPublic);
+            Object vertexBufferStrategy = _strategyInfo.GetValue(this);
+            FieldInfo _bufferInfo = vertexBufferStrategy.GetType().GetField("_buffer", BindingFlags.Instance | BindingFlags.NonPublic);
+            _buffer = _bufferInfo.GetValue(vertexBufferStrategy) as SharpDX.Direct3D11.Buffer;
             #endif
 
             return;
