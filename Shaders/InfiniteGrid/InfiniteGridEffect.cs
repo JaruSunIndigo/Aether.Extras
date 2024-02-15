@@ -41,7 +41,7 @@ namespace nkast.Aether.Shaders
 
         static readonly String ResourceName = "nkast.Aether.Shaders.Resources.InfiniteGridEffect";
 
-        private static string GetResourceName(string name, GraphicsDevice graphicsDevice)
+        private static string GetResourceName(GraphicsDevice graphicsDevice, string name)
         {
             string profileName = (graphicsDevice.GraphicsProfile == GraphicsProfile.Reach) ? ".Reach" : ".HiDef";
             String platformName = "";
@@ -83,9 +83,9 @@ namespace nkast.Aether.Shaders
             return name + profileName + platformName + version;
         }
 
-        internal static byte[] LoadEffectResource(string name, GraphicsDevice graphicsDevice)
+        internal static byte[] LoadEffectResource(GraphicsDevice graphicsDevice, string name)
         {
-            name = GetResourceName(name, graphicsDevice);
+            name = GetResourceName(graphicsDevice, name);
             using (var stream = GetAssembly(typeof(InfiniteGridEffect)).GetManifestResourceStream(name))
             {
                 var bytecode = new byte[stream.Length];
@@ -153,7 +153,7 @@ namespace nkast.Aether.Shaders
         #region Methods
 
         public InfiniteGridEffect(GraphicsDevice graphicsDevice)
-            : base(graphicsDevice, LoadEffectResource(ResourceName, graphicsDevice))
+            : base(graphicsDevice, LoadEffectResource(graphicsDevice, ResourceName))
         {
             CacheEffectParameters(null);
             worldViewProjectionParam.SetValue(Matrix.Identity);

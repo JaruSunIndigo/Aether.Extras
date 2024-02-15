@@ -25,7 +25,7 @@ namespace nkast.Aether.Shaders
 
 
         public FXAAGreenLumaHighEffect(GraphicsDevice graphicsDevice)
-            : base(graphicsDevice, LoadEffectResource(ResourceName))
+            : base(graphicsDevice, LoadEffectResource(graphicsDevice, ResourceName))
         {    
         }
     }

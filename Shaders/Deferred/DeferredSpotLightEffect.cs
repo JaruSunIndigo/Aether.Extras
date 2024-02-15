@@ -54,9 +54,9 @@ namespace nkast.Aether.Shaders
 
         static readonly String ResourceName = "nkast.Aether.Shaders.Resources.DeferredSpotLight";
 
-        internal static byte[] LoadEffectResource(string name)
+        internal static byte[] LoadEffectResource(GraphicsDevice graphicsDevice, string name)
         {
-            name = GetResourceName(name);
+            name = GetResourceName(graphicsDevice, name);
             using (var stream = GetAssembly(typeof(DeferredPointLightEffect)).GetManifestResourceStream(name))
             {
                 var bytecode = new byte[stream.Length];
@@ -66,7 +66,7 @@ namespace nkast.Aether.Shaders
         }
 
 
-        private static string GetResourceName(string name)
+        private static string GetResourceName(GraphicsDevice graphicsDevice, string name)
         {
             String platformName = "";
             var version = "";
@@ -221,7 +221,7 @@ namespace nkast.Aether.Shaders
         #region Methods
 
          public DeferredSpotLightEffect(GraphicsDevice graphicsDevice)
-            : base(graphicsDevice, LoadEffectResource(ResourceName))
+            : base(graphicsDevice, LoadEffectResource(graphicsDevice, ResourceName))
         {    
             CacheEffectParameters(null);
         }
