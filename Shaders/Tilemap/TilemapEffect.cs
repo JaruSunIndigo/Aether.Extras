@@ -101,15 +101,9 @@ namespace nkast.Aether.Shaders
             var kniVersion = GetAssembly(typeof(Effect)).GetName().Version;
             if (kniVersion.Major == 3)
             {
-                if (kniVersion.Minor == 6)
-                    version = ".8";
-                if (kniVersion.Minor == 7)
-                    version = ".8";
-                if (kniVersion.Minor == 8)
+                if (kniVersion.Minor == 10)
                 {
-                    version = ".9";
-                    if (kniVersion.Build == 1 || kniVersion.Build >= 9100)
-                        version = ".10";
+                    version = ".10";
                 }
             }
 #endif
