@@ -8,7 +8,7 @@
     <AssemblyName>Samples.Atlas</AssemblyName>
     <KniPlatform>Windows</KniPlatform>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <OutputPath>bin\$(Configuration)\DesktopGL\net6\</OutputPath>
+    <OutputPath>bin\$(Configuration)\WindowsDX\net6\</OutputPath>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Icon.ico</ApplicationIcon>
