@@ -71,17 +71,17 @@ namespace nkast.Aether.Shaders
 
             // Detect version
             version = ".10";
-            var mgVersion = GetAssembly(typeof(Effect)).GetName().Version;
-            if (mgVersion.Major == 3)
+            var kniVersion = GetAssembly(typeof(Effect)).GetName().Version;
+            if (kniVersion.Major == 3)
             {
-                if (mgVersion.Minor == 6)
+                if (kniVersion.Minor == 6)
                     version = ".8";
-                if (mgVersion.Minor == 7)
+                if (kniVersion.Minor == 7)
                     version = ".8";
-                if (mgVersion.Minor == 8)
+                if (kniVersion.Minor == 8)
                 {
                     version = ".9";
-                    if (mgVersion.Build == 1 || mgVersion.Build >= 9100)
+                    if (kniVersion.Build == 1 || kniVersion.Build >= 9100)
                         version = ".10";
                 }
             }
