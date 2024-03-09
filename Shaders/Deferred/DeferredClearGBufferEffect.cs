@@ -52,12 +52,14 @@ namespace nkast.Aether.Shaders
 #if XNA
             platformName = ".xna.WinReach";
 #else
-            switch (MonoGame.Framework.Utilities.PlatformInfo.GraphicsBackend)
+            switch (graphicsDevice.Adapter.Backend)
             {
-                case MonoGame.Framework.Utilities.GraphicsBackend.DirectX:
+                case GraphicsBackend.DirectX11:
                     platformName = ".dx11.fxo";
                     break;
-                case MonoGame.Framework.Utilities.GraphicsBackend.OpenGL:
+                case GraphicsBackend.OpenGL:
+                case GraphicsBackend.GLES:
+                case GraphicsBackend.WebGL:
                     platformName = ".ogl.fxo";
                     break;
                 default:
