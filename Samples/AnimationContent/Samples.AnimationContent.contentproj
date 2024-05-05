@@ -30,12 +30,12 @@
     <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.VideoImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dude\dude.Original.fbx">
+    <Compile Include="Dude\dude.fbx">
       <Name>dude</Name>
       <Importer>FbxImporter</Importer>
       <Processor>CpuAnimatedModelProcessor</Processor>
     </Compile>
-    <Compile Include="Dude\dude_GPU.Original.fbx">
+    <Compile Include="Dude\dude.fbx">
       <Name>dude_GPU</Name>
       <Importer>FbxImporter</Importer>
       <Processor>GpuAnimatedModelProcessor</Processor>
