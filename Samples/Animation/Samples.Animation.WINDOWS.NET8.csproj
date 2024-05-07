@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <EnableDefaultItems>false</EnableDefaultItems>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Samples.SLMC</RootNamespace>
-    <AssemblyName>Samples.SLMC</AssemblyName>
+    <RootNamespace>Samples.Animation</RootNamespace>
+    <AssemblyName>Samples.Animation</AssemblyName>
     <KniPlatform>Windows</KniPlatform>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <OutputPath>bin\$(Configuration)\WindowsDX\net6\</OutputPath>
+    <OutputPath>bin\$(Configuration)\WindowsDX\</OutputPath>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Icon.ico</ApplicationIcon>
@@ -24,7 +24,7 @@
     <DefineConstants>TRACE;WINDOWS MG</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="SLMCSampleComponent.cs" />
+    <Compile Include="AnimationSampleComponent.cs" />
     <Compile Include="SampleGame.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>
@@ -44,9 +44,13 @@
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <KniContentReference Include="..\SLMCContent\Samples.SLMCContent.mgcb">
+    <KniContentReference Include="..\AnimationContent\Content.mgcb">
       <Link>Content\Content.mgcb</Link>
     </KniContentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Animation\Aether.Animation.NETSTANDARD.DX.csproj" />
+    <ProjectReference Include="..\..\Shaders\InfiniteGrid\Aether.Shaders.InfiniteGrid.NETSTANDARD.csproj" />
   </ItemGroup>
 
 </Project>

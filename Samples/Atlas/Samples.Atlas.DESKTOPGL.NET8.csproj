@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <EnableDefaultItems>false</EnableDefaultItems>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Samples.Atlas</RootNamespace>
     <AssemblyName>Samples.Atlas</AssemblyName>
     <KniPlatform>Windows</KniPlatform>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <OutputPath>bin\$(Configuration)\DesktopGL\net6\</OutputPath>
+    <OutputPath>bin\$(Configuration)\DesktopGL\</OutputPath>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Icon.ico</ApplicationIcon>

@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <EnableDefaultItems>false</EnableDefaultItems>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Samples.Deferred</RootNamespace>
-    <AssemblyName>Samples.Deferred</AssemblyName>
+    <RootNamespace>Samples.FXAA</RootNamespace>
+    <AssemblyName>Samples.FXAA</AssemblyName>
     <KniPlatform>Windows</KniPlatform>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <OutputPath>bin\$(Configuration)\DesktopGL\net6\</OutputPath>
+    <OutputPath>bin\$(Configuration)\DesktopGL\</OutputPath>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Icon.ico</ApplicationIcon>
@@ -23,11 +23,10 @@
     <DefineConstants>TRACE;WINDOWS MG</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="DeferredRendering.cs" />
-    <Compile Include="DeferredSampleComponent.cs" />
+    <Compile Include="AntiAliasing.cs" />
+    <Compile Include="FXAASampleComponent.cs" />
     <Compile Include="SampleGame.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="QuadRenderer.cs" />
     <Compile Include="Spaceship.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -46,12 +45,12 @@
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <KniContentReference Include="..\DeferredContent\Samples.DeferredContent.mgcb">
+    <KniContentReference Include="..\FXAAContent\Samples.FXAAContent.mgcb">
       <Link>Content\Content.mgcb</Link>
     </KniContentReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Shaders\Deferred\Aether.Shaders.Deferred.NETSTANDARD.csproj" />
+    <ProjectReference Include="..\..\Shaders\FXAA\Aether.Shaders.FXAA.NETSTANDARD.csproj" />
   </ItemGroup>
 
 </Project>

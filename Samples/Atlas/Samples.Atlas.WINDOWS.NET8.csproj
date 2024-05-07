@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <EnableDefaultItems>false</EnableDefaultItems>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Samples.Tilemaps</RootNamespace>
-    <AssemblyName>Samples.Tilemaps</AssemblyName>
+    <RootNamespace>Samples.Atlas</RootNamespace>
+    <AssemblyName>Samples.Atlas</AssemblyName>
     <KniPlatform>Windows</KniPlatform>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <OutputPath>bin\$(Configuration)\WindowsDX\net6\</OutputPath>
+    <OutputPath>bin\$(Configuration)\WindowsDX\</OutputPath>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Icon.ico</ApplicationIcon>
@@ -24,7 +24,7 @@
     <DefineConstants>TRACE;WINDOWS MG</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="TilemapSampleComponent.cs" />
+    <Compile Include="AtlasSampleComponent.cs" />
     <Compile Include="SampleGame.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>
@@ -44,14 +44,12 @@
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <KniContentReference Include="..\TilemapContent\Samples.TilemapContent.mgcb">
+    <KniContentReference Include="..\AtlasContent\Samples.AtlasContent.mgcb">
       <Link>Content\Content.mgcb</Link>
     </KniContentReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Atlas\Aether.Atlas.NETSTANDARD.csproj" />
-    <ProjectReference Include="..\..\Shaders\Tilemap\Aether.Shaders.Tilemap.NETSTANDARD.csproj" />
-    <ProjectReference Include="..\..\Tilemap\Aether.Tilemap.NETSTANDARD.csproj" />
   </ItemGroup>
 
 </Project>

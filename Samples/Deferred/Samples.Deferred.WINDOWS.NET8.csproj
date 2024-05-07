@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <EnableDefaultItems>false</EnableDefaultItems>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Samples.Atlas</RootNamespace>
-    <AssemblyName>Samples.Atlas</AssemblyName>
+    <RootNamespace>Samples.Deferred</RootNamespace>
+    <AssemblyName>Samples.Deferred</AssemblyName>
     <KniPlatform>Windows</KniPlatform>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <OutputPath>bin\$(Configuration)\WindowsDX\net6\</OutputPath>
+    <OutputPath>bin\$(Configuration)\WindowsDX\</OutputPath>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Icon.ico</ApplicationIcon>
@@ -24,9 +24,12 @@
     <DefineConstants>TRACE;WINDOWS MG</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="AtlasSampleComponent.cs" />
+    <Compile Include="DeferredRendering.cs" />
+    <Compile Include="DeferredSampleComponent.cs" />
     <Compile Include="SampleGame.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="QuadRenderer.cs" />
+    <Compile Include="Spaceship.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -44,12 +47,12 @@
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <KniContentReference Include="..\AtlasContent\Samples.AtlasContent.mgcb">
+    <KniContentReference Include="..\DeferredContent\Samples.DeferredContent.mgcb">
       <Link>Content\Content.mgcb</Link>
     </KniContentReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Atlas\Aether.Atlas.NETSTANDARD.csproj" />
+    <ProjectReference Include="..\..\Shaders\Deferred\Aether.Shaders.Deferred.NETSTANDARD.csproj" />
   </ItemGroup>
 
 </Project>

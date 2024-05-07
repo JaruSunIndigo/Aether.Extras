@@ -2,19 +2,20 @@
 
   <PropertyGroup>
     <EnableDefaultItems>false</EnableDefaultItems>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Samples.SLMC</RootNamespace>
-    <AssemblyName>Samples.SLMC</AssemblyName>
+    <RootNamespace>Samples.FXAA</RootNamespace>
+    <AssemblyName>Samples.FXAA</AssemblyName>
     <KniPlatform>Windows</KniPlatform>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <OutputPath>bin\$(Configuration)\DesktopGL\net6\</OutputPath>
+    <OutputPath>bin\$(Configuration)\WindowsDX\</OutputPath>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
+    <UseWindowsForms>True</UseWindowsForms>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <DefineConstants>TRACE;DEBUG;WINDOWS MG</DefineConstants>
@@ -23,9 +24,11 @@
     <DefineConstants>TRACE;WINDOWS MG</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="SLMCSampleComponent.cs" />
+    <Compile Include="AntiAliasing.cs" />
+    <Compile Include="FXAASampleComponent.cs" />
     <Compile Include="SampleGame.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Spaceship.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -36,16 +39,19 @@
 	<PackageReference Include="nkast.Xna.Framework.Graphics" Version="3.11.9002" />
 	<PackageReference Include="nkast.Xna.Framework.Audio" Version="3.11.9002" />
 	<PackageReference Include="nkast.Xna.Framework.Media" Version="3.11.9002" />
-    <PackageReference Include="MonoGame.Framework.DesktopGL.9000" Version="3.11.9002" />
+	<PackageReference Include="MonoGame.Framework.WindowsDX.9000" Version="3.11.9002" />
     <PackageReference Include="nkast.Xna.Framework.Content.Pipeline.Builder" Version="3.11.9002" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <KniContentReference Include="..\SLMCContent\Samples.SLMCContent.mgcb">
+    <KniContentReference Include="..\FXAAContent\Samples.FXAAContent.mgcb">
       <Link>Content\Content.mgcb</Link>
     </KniContentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shaders\FXAA\Aether.Shaders.FXAA.NETSTANDARD.csproj" />
   </ItemGroup>
 
 </Project>

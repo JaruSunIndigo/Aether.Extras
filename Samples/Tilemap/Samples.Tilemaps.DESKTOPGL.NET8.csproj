@@ -2,20 +2,19 @@
 
   <PropertyGroup>
     <EnableDefaultItems>false</EnableDefaultItems>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Samples.Animation</RootNamespace>
-    <AssemblyName>Samples.Animation</AssemblyName>
+    <RootNamespace>Samples.Tilemaps</RootNamespace>
+    <AssemblyName>Samples.Tilemaps</AssemblyName>
     <KniPlatform>Windows</KniPlatform>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <OutputPath>bin\$(Configuration)\WindowsDX\net6\</OutputPath>
+    <OutputPath>bin\$(Configuration)\DesktopGL\</OutputPath>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
-    <UseWindowsForms>True</UseWindowsForms>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <DefineConstants>TRACE;DEBUG;WINDOWS MG</DefineConstants>
@@ -24,7 +23,7 @@
     <DefineConstants>TRACE;WINDOWS MG</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="AnimationSampleComponent.cs" />
+    <Compile Include="TilemapSampleComponent.cs" />
     <Compile Include="SampleGame.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>
@@ -37,20 +36,21 @@
 	<PackageReference Include="nkast.Xna.Framework.Graphics" Version="3.11.9002" />
 	<PackageReference Include="nkast.Xna.Framework.Audio" Version="3.11.9002" />
 	<PackageReference Include="nkast.Xna.Framework.Media" Version="3.11.9002" />
-	<PackageReference Include="MonoGame.Framework.WindowsDX.9000" Version="3.11.9002" />
+    <PackageReference Include="MonoGame.Framework.DesktopGL.9000" Version="3.11.9002" />
     <PackageReference Include="nkast.Xna.Framework.Content.Pipeline.Builder" Version="3.11.9002" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <KniContentReference Include="..\AnimationContent\Content.mgcb">
+    <KniContentReference Include="..\TilemapContent\Samples.TilemapContent.mgcb">
       <Link>Content\Content.mgcb</Link>
     </KniContentReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Animation\Aether.Animation.NETSTANDARD.DX.csproj" />
-    <ProjectReference Include="..\..\Shaders\InfiniteGrid\Aether.Shaders.InfiniteGrid.NETSTANDARD.csproj" />
+    <ProjectReference Include="..\..\Atlas\Aether.Atlas.NETSTANDARD.csproj" />
+    <ProjectReference Include="..\..\Shaders\Tilemap\Aether.Shaders.Tilemap.NETSTANDARD.csproj" />
+    <ProjectReference Include="..\..\Tilemap\Aether.Tilemap.NETSTANDARD.csproj" />
   </ItemGroup>
 
 </Project>

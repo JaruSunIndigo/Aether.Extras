@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <EnableDefaultItems>false</EnableDefaultItems>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Samples.FXAA</RootNamespace>
-    <AssemblyName>Samples.FXAA</AssemblyName>
+    <RootNamespace>Samples.SLMC</RootNamespace>
+    <AssemblyName>Samples.SLMC</AssemblyName>
     <KniPlatform>Windows</KniPlatform>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <OutputPath>bin\$(Configuration)\DesktopGL\net6\</OutputPath>
+    <OutputPath>bin\$(Configuration)\DesktopGL\</OutputPath>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Icon.ico</ApplicationIcon>
@@ -23,11 +23,9 @@
     <DefineConstants>TRACE;WINDOWS MG</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="AntiAliasing.cs" />
-    <Compile Include="FXAASampleComponent.cs" />
+    <Compile Include="SLMCSampleComponent.cs" />
     <Compile Include="SampleGame.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Spaceship.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -45,12 +43,9 @@
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <KniContentReference Include="..\FXAAContent\Samples.FXAAContent.mgcb">
+    <KniContentReference Include="..\SLMCContent\Samples.SLMCContent.mgcb">
       <Link>Content\Content.mgcb</Link>
     </KniContentReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Shaders\FXAA\Aether.Shaders.FXAA.NETSTANDARD.csproj" />
   </ItemGroup>
 
 </Project>
