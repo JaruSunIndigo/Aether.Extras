@@ -6,17 +6,8 @@
 //-----------------------------------------------------------------------------
 
 
-#ifdef MGFX  // Macros for targetting HLSL 4.0
-
-#define TECHNIQUE(name, vsname, psname ) \
-	technique name { pass { VertexShader = compile vs_4_0_level_9_1 vsname (); PixelShader = compile ps_4_0_level_9_1 psname(); } }
-
-#else  // Macros for targetting shader model 2.0 (XNA)
-
 #define TECHNIQUE(name, vsname, psname ) \
 	technique name { pass { VertexShader = compile vs_2_0 vsname (); PixelShader = compile ps_2_0 psname(); } }
-
-#endif
 
 
 #ifdef SM4  // Macros for targetting HLSL 4.0
