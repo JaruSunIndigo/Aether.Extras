@@ -3,7 +3,7 @@ setlocal
 
 cd %~dp0
 
-SET MGFX="C:\Program Files (x86)\MSBuild\MonoGame\v3.0\Tools\2mgfx.exe"
+SET MGFX="C:\Program Files (x86)\MSBuild\MonoGame\v3.0\Tools\KNIFXC.exe"
 SET XNAFX="..\..\Tools\CompileEffect\CompileEffect.exe"
 
 @echo Build dx11
