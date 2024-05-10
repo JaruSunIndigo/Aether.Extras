@@ -15,6 +15,7 @@
 #endregion
 
 using System;
+using System.Reflection;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
@@ -27,7 +28,7 @@ namespace nkast.Aether.Graphics.Content
         protected override TextureAtlas Read(ContentReader input, TextureAtlas existingInstance)
         {
             IGraphicsDeviceService graphicsDeviceService = (IGraphicsDeviceService)input.ContentManager.ServiceProvider.GetService(typeof(IGraphicsDeviceService));
-            var device = graphicsDeviceService.GraphicsDevice;
+            GraphicsDevice device = graphicsDeviceService.GraphicsDevice;
 
 
             TextureAtlas output = existingInstance ?? new TextureAtlas();
@@ -36,11 +37,11 @@ namespace nkast.Aether.Graphics.Content
             output.Texture = ReadTexture2D(input, output.Texture);
 
             // read Sprites
-            var count = input.ReadInt32();
+            int count = input.ReadInt32();
             for (int i = 0; i < count; i++)
             {
-                var name = input.ReadString();
-                var bounds = new Rectangle(input.ReadInt32(), input.ReadInt32(), input.ReadInt32(), input.ReadInt32());
+                string name = input.ReadString();
+                Rectangle bounds = new Rectangle(input.ReadInt32(), input.ReadInt32(), input.ReadInt32(), input.ReadInt32());
                 output.Sprites[name] = new Sprite(output.Texture, bounds);
             }
 
@@ -56,9 +57,9 @@ namespace nkast.Aether.Graphics.Content
             }
             catch(NotSupportedException)
             {
-                var assembly = typeof(Microsoft.Xna.Framework.Content.ContentTypeReader).Assembly;
-                var texture2DReaderType = assembly.GetType("Microsoft.Xna.Framework.Content.Texture2DReader");
-                var texture2DReader = (ContentTypeReader)Activator.CreateInstance(texture2DReaderType, true);
+                Assembly assembly = typeof(ContentTypeReader).Assembly;
+                Type texture2DReaderType = assembly.GetType("Microsoft.Xna.Framework.Content.Texture2DReader");
+                ContentTypeReader texture2DReader = (ContentTypeReader)Activator.CreateInstance(texture2DReaderType, true);
                 output = input.ReadRawObject<Texture2D>(texture2DReader, existingInstance);
             }
             

@@ -21,7 +21,7 @@ namespace nkast.Aether.Shaders
 {
     public class FXAAGreenLumaLowEffect : FXAAEffect 
     {
-        static readonly String ResourceName = "nkast.Aether.Shaders.Resources.FXAAGreenLumaLow";
+        static readonly string ResourceName = "nkast.Aether.Shaders.Resources.FXAAGreenLumaLow";
 
 
         public FXAAGreenLumaLowEffect(GraphicsDevice graphicsDevice)

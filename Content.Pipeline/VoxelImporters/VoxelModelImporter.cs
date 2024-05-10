@@ -58,48 +58,48 @@ namespace nkast.Aether.Content.Pipeline
             XYZI[] voxels = voxel.Voxels;
             uint[] palette = voxel.Palette;
 
-            var scale = voxel.RealSize / voxel.GridSize;
+            Vector3 scale = voxel.RealSize / voxel.GridSize;
             Vector3 centerOffset = new Vector3(1f, 1f, 1f) * (voxel.RealSize / -2f);
 
-            var corner000 = new Point3(0, 0, 0);
-            var corner100 = new Point3(1, 0, 0);
-            var corner010 = new Point3(0, 1, 0);
-            var corner110 = new Point3(1, 1, 0);
-            var corner001 = new Point3(0, 0, 1);
-            var corner101 = new Point3(1, 0, 1);
-            var corner011 = new Point3(0, 1, 1);
-            var corner111 = new Point3(1, 1, 1);
+            Point3 corner000 = new Point3(0, 0, 0);
+            Point3 corner100 = new Point3(1, 0, 0);
+            Point3 corner010 = new Point3(0, 1, 0);
+            Point3 corner110 = new Point3(1, 1, 0);
+            Point3 corner001 = new Point3(0, 0, 1);
+            Point3 corner101 = new Point3(1, 0, 1);
+            Point3 corner011 = new Point3(0, 1, 1);
+            Point3 corner111 = new Point3(1, 1, 1);
 
 
-            var Forward = Vector3.Forward;
-            var Backward = Vector3.Backward;
-            var Left = Vector3.Left;
-            var Right = Vector3.Right;
-            var Up = Vector3.Up;
-            var Down = Vector3.Down;
+            Vector3 Forward = Vector3.Forward;
+            Vector3 Backward = Vector3.Backward;
+            Vector3 Left = Vector3.Left;
+            Vector3 Right = Vector3.Right;
+            Vector3 Up = Vector3.Up;
+            Vector3 Down = Vector3.Down;
 
             for (int i = 0; i < voxels.Length; i++)
             {
-                var pt000 = voxels[i].Point.Add(ref corner000);
-                var pt100 = voxels[i].Point.Add(ref corner100);
-                var pt010 = voxels[i].Point.Add(ref corner010);
-                var pt110 = voxels[i].Point.Add(ref corner110);
-                var pt001 = voxels[i].Point.Add(ref corner001);
-                var pt101 = voxels[i].Point.Add(ref corner101);
-                var pt011 = voxels[i].Point.Add(ref corner011);
-                var pt111 = voxels[i].Point.Add(ref corner111);
+                Point3 pt000 = voxels[i].Point.Add(ref corner000);
+                Point3 pt100 = voxels[i].Point.Add(ref corner100);
+                Point3 pt010 = voxels[i].Point.Add(ref corner010);
+                Point3 pt110 = voxels[i].Point.Add(ref corner110);
+                Point3 pt001 = voxels[i].Point.Add(ref corner001);
+                Point3 pt101 = voxels[i].Point.Add(ref corner101);
+                Point3 pt011 = voxels[i].Point.Add(ref corner011);
+                Point3 pt111 = voxels[i].Point.Add(ref corner111);
 
                 // back
-                var p0 = pt000.ToVector3();
-                var p1 = pt100.ToVector3();
-                var p2 = pt010.ToVector3();
-                var p3 = pt110.ToVector3();
+                Vector3 p0 = pt000.ToVector3();
+                Vector3 p1 = pt100.ToVector3();
+                Vector3 p2 = pt010.ToVector3();
+                Vector3 p3 = pt110.ToVector3();
 
                 // front
-                var p4 = pt001.ToVector3();
-                var p5 = pt101.ToVector3();
-                var p6 = pt011.ToVector3();
-                var p7 = pt111.ToVector3();
+                Vector3 p4 = pt001.ToVector3();
+                Vector3 p5 = pt101.ToVector3();
+                Vector3 p6 = pt011.ToVector3();
+                Vector3 p7 = pt111.ToVector3();
 
                 Vector3.Multiply(ref p0, ref scale, out p0); Vector3.Add(ref p0, ref centerOffset, out p0);
                 Vector3.Multiply(ref p1, ref scale, out p1); Vector3.Add(ref p1, ref centerOffset, out p1);
@@ -190,7 +190,7 @@ namespace nkast.Aether.Content.Pipeline
                 mesh.Positions.Add(this.vertices[pi].Position);
             }
 
-            var geom = new GeometryContent();
+            GeometryContent geom = new GeometryContent();
             mesh.Geometry.Add(geom);
             BasicMaterialContent material = new BasicMaterialContent();
             geom.Material = material;

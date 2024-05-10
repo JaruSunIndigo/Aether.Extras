@@ -63,13 +63,13 @@ namespace nkast.Aether.Shaders
 
         EffectDirtyFlags dirtyFlags = EffectDirtyFlags.All;
 
-        static readonly String ResourceName = "nkast.Aether.Shaders.Resources.TilemapEffect";
+        static readonly string ResourceName = "nkast.Aether.Shaders.Resources.TilemapEffect";
 
         internal static byte[] LoadEffectResource(GraphicsDevice graphicsDevice, string name)
         {
             name = GetResourceName(graphicsDevice, name);
-            using (var stream = GetAssembly(typeof(TilemapEffect)).GetManifestResourceStream(name))
-            using (var ms = new MemoryStream())
+            using (Stream stream = GetAssembly(typeof(TilemapEffect)).GetManifestResourceStream(name))
+            using (MemoryStream ms = new MemoryStream())
             {
                 stream.CopyTo(ms);
                 return ms.ToArray();
@@ -78,8 +78,8 @@ namespace nkast.Aether.Shaders
 
         private static string GetResourceName(GraphicsDevice graphicsDevice, string name)
         {
-            String platformName = "";
-            var version = "";
+            string platformName = "";
+            string version = "";
 
 #if XNA
             platformName = ".xna.WinReach";
@@ -100,7 +100,7 @@ namespace nkast.Aether.Shaders
 
             // Detect version
             version = ".10";
-            var kniVersion = GetAssembly(typeof(Effect)).GetName().Version;
+            Version kniVersion = GetAssembly(typeof(Effect)).GetName().Version;
             if (kniVersion.Major == 3)
             {
                 if (kniVersion.Minor == 9)

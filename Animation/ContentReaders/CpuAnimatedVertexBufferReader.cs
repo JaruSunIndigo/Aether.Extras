@@ -28,29 +28,29 @@ namespace nkast.Aether.Animation.Content
         protected override CpuAnimatedVertexBuffer Read(ContentReader input, CpuAnimatedVertexBuffer buffer)
         {
             IGraphicsDeviceService graphicsDeviceService = (IGraphicsDeviceService)input.ContentManager.ServiceProvider.GetService(typeof(IGraphicsDeviceService));
-            var device = graphicsDeviceService.GraphicsDevice;
+            GraphicsDevice device = graphicsDeviceService.GraphicsDevice;
 
             // read standard VertexBuffer
-            var declaration = input.ReadRawObject<VertexDeclaration>();
-            var vertexCount = (int)input.ReadUInt32();
+            VertexDeclaration declaration = input.ReadRawObject<VertexDeclaration>();
+            int vertexCount = (int)input.ReadUInt32();
             // int dataSize = vertexCount * declaration.VertexStride;
             //byte[] data = new byte[dataSize];
             //input.Read(data, 0, dataSize);
 
             //read data                      
-            var channels = declaration.GetVertexElements();
+            VertexElement[] channels = declaration.GetVertexElements();
             var cpuVertices = new VertexIndicesWeightsPositionNormal[vertexCount];
             var gpuVertices = new VertexPositionNormalTexture[vertexCount];
 
             for (int i = 0; i < vertexCount; i++)
             {
-                foreach (var channel in channels)
+                foreach (VertexElement channel in channels)
                 {
                     switch (channel.VertexElementUsage)
                     {
                         case VertexElementUsage.Position:
                             System.Diagnostics.Debug.Assert(channel.VertexElementFormat == VertexElementFormat.Vector3);
-                            var pos = input.ReadVector3();
+                            Vector3 pos = input.ReadVector3();
                             if (channel.UsageIndex == 0)
                             {
                                 cpuVertices[i].Position = pos;
@@ -60,7 +60,7 @@ namespace nkast.Aether.Animation.Content
 
                         case VertexElementUsage.Normal:
                             System.Diagnostics.Debug.Assert(channel.VertexElementFormat == VertexElementFormat.Vector3);
-                            var nor = input.ReadVector3();
+                            Vector3 nor = input.ReadVector3();
                             if (channel.UsageIndex == 0)
                             {
                                 cpuVertices[i].Normal = nor;
@@ -70,7 +70,7 @@ namespace nkast.Aether.Animation.Content
 
                         case VertexElementUsage.TextureCoordinate:
                             System.Diagnostics.Debug.Assert(channel.VertexElementFormat == VertexElementFormat.Vector2);
-                            var tex = input.ReadVector2();
+                            Vector2 tex = input.ReadVector2();
                             if (channel.UsageIndex == 0)
                             {
                                 gpuVertices[i].TextureCoordinate = tex;
@@ -79,7 +79,7 @@ namespace nkast.Aether.Animation.Content
 
                         case VertexElementUsage.BlendWeight:
                             System.Diagnostics.Debug.Assert(channel.VertexElementFormat == VertexElementFormat.Vector4);
-                            var wei = input.ReadVector4();
+                            Vector4 wei = input.ReadVector4();
                             if (channel.UsageIndex == 0)
                             {
                                 cpuVertices[i].BlendWeights = wei;
@@ -88,10 +88,10 @@ namespace nkast.Aether.Animation.Content
 
                         case VertexElementUsage.BlendIndices:
                             System.Diagnostics.Debug.Assert(channel.VertexElementFormat == VertexElementFormat.Byte4);
-                            var i0 = input.ReadByte();
-                            var i1 = input.ReadByte();
-                            var i2 = input.ReadByte();
-                            var i3 = input.ReadByte();
+                            byte i0 = input.ReadByte();
+                            byte i1 = input.ReadByte();
+                            byte i2 = input.ReadByte();
+                            byte i3 = input.ReadByte();
                             if (channel.UsageIndex == 0)
                             {
                                 cpuVertices[i].BlendIndex0 = i0;

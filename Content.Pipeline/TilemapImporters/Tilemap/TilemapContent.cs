@@ -44,12 +44,12 @@ namespace nkast.Aether.Content.Pipeline
 
         internal static void PackTiles(TilemapContent output, int tileWidth, int tileHeight)
         {
-            var dstTiles = TilePacker.ArrangeGlyphs(output.Tileset.SourceTiles, tileWidth, tileHeight, true, true);
+            IList<TileContent> dstTiles = TilePacker.ArrangeGlyphs(output.Tileset.SourceTiles, tileWidth, tileHeight, true, true);
 
-            foreach (var dstTile in dstTiles)
+            foreach (TileContent dstTile in dstTiles)
             {
                 output.DestinationTiles.Add(dstTile);
-                var name = dstTile.SrcTexture.Name;
+                string name = dstTile.SrcTexture.Name;
                 if (output.Tiles.ContainsKey(name))
                     name = name + dstTile.Id;
                 output.Tiles.Add(name, dstTile);
@@ -59,36 +59,36 @@ namespace nkast.Aether.Content.Pipeline
         internal static void RenderAtlas(TilemapContent output)
         {
             Rectangle s = new Rectangle(0,0,1,1);
-            foreach (var dstTile in output.DestinationTiles)
+            foreach (TileContent dstTile in output.DestinationTiles)
             {
                 s = Rectangle.Union(s,dstTile.DstBounds);
             }
 
             var outputBmp = new PixelBitmapContent<Color>(s.Width, s.Height);
 
-            foreach (var dstTile in output.DestinationTiles)
+            foreach (TileContent dstTile in output.DestinationTiles)
             {
-                var srcBounds = dstTile.SrcBounds;
-                var dstBounds = new Rectangle(dstTile.DstBounds.X, dstTile.DstBounds.Y, srcBounds.Width, srcBounds.Height);
-                var offsetX = 0;
-                var offsetY = dstTile.DstBounds.Height - srcBounds.Height;
+                Rectangle srcBounds = dstTile.SrcBounds;
+                Rectangle dstBounds = new Rectangle(dstTile.DstBounds.X, dstTile.DstBounds.Y, srcBounds.Width, srcBounds.Height);
+                int offsetX = 0;
+                int offsetY = dstTile.DstBounds.Height - srcBounds.Height;
                 dstBounds.X += offsetX;
                 dstBounds.Y += offsetY;
-                var srcBmp = dstTile.SrcTexture.Faces[0][0];
+                BitmapContent srcBmp = dstTile.SrcTexture.Faces[0][0];
                 BitmapContent.Copy(srcBmp, srcBounds, outputBmp, dstBounds);
             }
-            var mipmapChain = new MipmapChain(outputBmp);
+            MipmapChain mipmapChain = new MipmapChain(outputBmp);
             output.TextureAtlas.Mipmaps = mipmapChain;
         }
 
         internal static void RenderMap(TilemapContent output)
         {
-            var mp = new byte[output.MapData.Length * 4];
+            byte[] mp = new byte[output.MapData.Length * 4];
             for (int i = 0; i < output.MapData.Length; i++)
             {
-                var id = output.MapData[i] - output.Firstgid;
+                int id = output.MapData[i] - output.Firstgid;
                 TileContent tile = null;
-                foreach (var t in output.DestinationTiles)
+                foreach (TileContent t in output.DestinationTiles)
                 {
                     if (t.Id == id)
                     {

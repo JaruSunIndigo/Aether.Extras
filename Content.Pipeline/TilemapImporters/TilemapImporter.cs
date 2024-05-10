@@ -53,8 +53,8 @@ namespace nkast.Aether.Content.Pipeline
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(filename);
 
-            var map = xmlDoc.DocumentElement;
-            var orientation = map.GetAttribute("orientation");
+            XmlElement map = xmlDoc.DocumentElement;
+            string orientation = map.GetAttribute("orientation");
             if (orientation != "orthogonal")
                 throw new InvalidContentException("Invalid orientation. Only 'orthogonal' is supported for atlases.");
             output.Renderorder = map.GetAttribute("renderorder");
@@ -70,34 +70,34 @@ namespace nkast.Aether.Content.Pipeline
 
             if (tilesetNode.Attributes["source"] != null)
             {
-                var tsxFilename = tilesetNode.Attributes["source"].Value;
-                var baseDirectory = Path.GetDirectoryName(filename);
+                string tsxFilename = tilesetNode.Attributes["source"].Value;
+                string baseDirectory = Path.GetDirectoryName(filename);
                 tsxFilename = Path.Combine(baseDirectory, tsxFilename);
 
-                var tileset = ImportTSX(tsxFilename, context);
+                TilesetContent tileset = ImportTSX(tsxFilename, context);
                 output.Tileset = tileset;
                 context.AddDependency(tsxFilename);
             }
             else
             {
-                var rootDirectory = Path.GetDirectoryName(filename);
-                var tileset = ImportTileset(tilesetNode, context, rootDirectory);
+                string rootDirectory = Path.GetDirectoryName(filename);
+                TilesetContent tileset = ImportTileset(tilesetNode, context, rootDirectory);
                 output.Tileset = tileset;
             }
 
             XmlNode layerNode = map["layer"];
-            var layerColumns = Convert.ToInt32(map.Attributes["width"].Value, CultureInfo.InvariantCulture);
-            var layerRows = Convert.ToInt32(map.Attributes["height"].Value, CultureInfo.InvariantCulture);
+            int layerColumns = Convert.ToInt32(map.Attributes["width"].Value, CultureInfo.InvariantCulture);
+            int layerRows = Convert.ToInt32(map.Attributes["height"].Value, CultureInfo.InvariantCulture);
             output.LayerColumns = layerColumns;
             output.LayerRows = layerRows;
 
             XmlNode layerDataNode = layerNode["data"];
-            var encoding = layerDataNode.Attributes["encoding"].Value;
+            string encoding = layerDataNode.Attributes["encoding"].Value;
             if (encoding != "csv")
                 throw new InvalidContentException("Invalid encoding. Only 'csv' is supported for data.");
-            var data = layerDataNode.InnerText;
-            var dataStringList = data.Split(',');
-            var mapData = new int[dataStringList.Length];
+            string data = layerDataNode.InnerText;
+            string[] dataStringList = data.Split(',');
+            int[] mapData = new int[dataStringList.Length];
             for (int i = 0; i < dataStringList.Length; i++)
                 mapData[i] = Convert.ToInt32(dataStringList[i].Trim(), CultureInfo.InvariantCulture);
             output.MapData = mapData;
@@ -110,7 +110,7 @@ namespace nkast.Aether.Content.Pipeline
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(tsxFilename);
             XmlNode tilesetNode = xmlDoc.DocumentElement;
-            var baseDirectory = Path.GetDirectoryName(tsxFilename);
+            string baseDirectory = Path.GetDirectoryName(tsxFilename);
             return ImportTileset(tilesetNode, context, baseDirectory);
         }
 
@@ -127,8 +127,8 @@ namespace nkast.Aether.Content.Pipeline
             BitmapContent bm = new PixelBitmapContent<Color>(tileset.TileWidth, tileset.tileHeight);
             Texture2DContent mt = new Texture2DContent();
             mt.Faces[0].Add(bm);
-            mt.Name = "null";            
-            var nullTile = new TileContent();
+            mt.Name = "null";
+            TileContent nullTile = new TileContent();
             nullTile.Tileset = tileset;
             nullTile.Id = -1;
             nullTile.SrcTexture = mt;
@@ -144,18 +144,18 @@ namespace nkast.Aether.Content.Pipeline
             foreach (XmlNode tileNode in tilesetNode.ChildNodes)
             {
                 if (tileNode.Name != "tile") continue;
-                var tileId = tileNode.GetAttributeAsInt("id").Value;
+                int tileId = tileNode.GetAttributeAsInt("id").Value;
 
                 XmlNode imageNode = tileNode["image"];
-                
-                //var format = GetAttribute(imageNode, "format");
-                var imageSource = imageNode.GetAttribute("source");
-                var fullImageSource = Path.Combine(baseDirectory, imageSource);
+
+                //string format = GetAttribute(imageNode, "format");
+                string imageSource = imageNode.GetAttribute("source");
+                string fullImageSource = Path.Combine(baseDirectory, imageSource);
                 TextureImporter txImporter = new TextureImporter();
-                var textureContent = (Texture2DContent)txImporter.Import(fullImageSource, context);
+                Texture2DContent textureContent = (Texture2DContent)txImporter.Import(fullImageSource, context);
                 textureContent.Name = Path.GetFileNameWithoutExtension(fullImageSource);
 
-                var source = new TileContent();
+                TileContent source = new TileContent();
                 source.Tileset = tileset;
                 source.Id = tileId;
                 source.SrcTexture = textureContent;
@@ -165,11 +165,11 @@ namespace nkast.Aether.Content.Pipeline
                 source.DstBounds.Location = Point.Zero;
                 source.DstBounds.Width = textureContent.Mipmaps[0].Width;
                 source.DstBounds.Height = textureContent.Mipmaps[0].Height;
-                
-                var transKeyColor = imageNode.GetAttributeAsColor("trans");
+
+                Color? transKeyColor = imageNode.GetAttributeAsColor("trans");
                 if (transKeyColor != null)
-                    foreach (var mips in textureContent.Faces)
-                        foreach (var mip in mips)
+                    foreach (MipmapChain mips in textureContent.Faces)
+                        foreach (BitmapContent mip in mips)
                             ((PixelBitmapContent<Color>)mip).ReplaceColor(transKeyColor.Value, Color.Transparent);
 
                 if (tileId != tileset.SourceTiles.Count-1)

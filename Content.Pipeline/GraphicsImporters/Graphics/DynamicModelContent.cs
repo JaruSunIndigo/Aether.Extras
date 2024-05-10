@@ -71,7 +71,7 @@ namespace nkast.Aether.Content.Pipeline.Graphics
 
             //deep clone Meshes
             Meshes = new List<DynamicModelMeshContent>(source.Meshes.Count);
-            foreach(var mesh in source.Meshes)
+            foreach(ModelMeshContent mesh in source.Meshes)
                 Meshes.Add(new DynamicModelMeshContent(mesh));
         }
 

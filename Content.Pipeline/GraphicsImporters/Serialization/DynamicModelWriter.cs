@@ -43,21 +43,21 @@ namespace nkast.Aether.Content.Pipeline.Serialization
 
         private void WriteBones(ContentWriter output, ModelBoneContentCollection bones)
         {
-            var bonesCount = bones.Count;
+            int bonesCount = bones.Count;
             output.Write((UInt32)bonesCount);
 
-            foreach (var bone in bones)
+            foreach (ModelBoneContent bone in bones)
             {
                 output.WriteObject(bone.Name);
                 output.Write(bone.Transform);
             }
 
-            foreach (var bone in bones)
+            foreach (ModelBoneContent bone in bones)
             {
                 WriteBoneReference(output, bonesCount, bone.Parent);
                 
                 output.Write((uint)bone.Children.Count);
-                foreach (var child in bone.Children)
+                foreach (ModelBoneContent child in bone.Children)
                     WriteBoneReference(output, bonesCount, child);
             }
 
@@ -81,8 +81,8 @@ namespace nkast.Aether.Content.Pipeline.Serialization
         {
             output.Write((UInt32)meshes.Count);
 
-            var bonesCount = model.Bones.Count;
-            foreach (var mesh in meshes)
+            int bonesCount = model.Bones.Count;
+            foreach (DynamicModelMeshContent mesh in meshes)
             {
                 output.WriteObject(mesh.Name); 
                 WriteBoneReference(output, bonesCount, mesh.ParentBone);
@@ -105,7 +105,7 @@ namespace nkast.Aether.Content.Pipeline.Serialization
         {
             output.Write((UInt32)parts.Count);
 
-            foreach (var part in parts)
+            foreach (DynamicModelMeshPartContent part in parts)
             {
                 output.Write((UInt32)part.VertexOffset);
                 output.Write((UInt32)part.NumVertices);

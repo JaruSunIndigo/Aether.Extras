@@ -31,9 +31,9 @@ namespace nkast.Aether.Content.Pipeline.Serialization
             
             // write Sprites
             output.Write(atlas.DestinationSprites.Count);
-            foreach(var name in atlas.Sprites.Keys)
+            foreach(string name in atlas.Sprites.Keys)
             {
-                var sprite = atlas.Sprites[name];
+                SpriteContent sprite = atlas.Sprites[name];
                 output.Write(name);
                 output.Write(sprite.Bounds.X);
                 output.Write(sprite.Bounds.Y);

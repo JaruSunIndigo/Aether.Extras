@@ -27,8 +27,8 @@ namespace nkast.Aether.Content.Pipeline
         {
             ModelContent model = base.Process(input, context);
 
-            foreach(var mesh in model.Meshes)
-                foreach(var part in mesh.MeshParts)
+            foreach(ModelMeshContent mesh in model.Meshes)
+                foreach(ModelMeshPartContent part in mesh.MeshParts)
                     Proccess(part);
 
             return model;
@@ -36,7 +36,7 @@ namespace nkast.Aether.Content.Pipeline
 
         private void Proccess(ModelMeshPartContent part)
         {
-            var vertexData = part.VertexBuffer.VertexData;
+            byte[] vertexData = part.VertexBuffer.VertexData;
 
             object indexData;
             int indexSize = part.IndexBuffer.Count;

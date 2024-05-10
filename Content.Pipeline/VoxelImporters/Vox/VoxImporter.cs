@@ -26,11 +26,11 @@ namespace nkast.Aether.Content.Pipeline
         internal VoxelContent ImportVox(string filename, ContentImporterContext context)
         {
             VoxelContent output;
-            using (var stream = new FileStream(filename, FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (Stream stream = new FileStream(filename, FileMode.Open, FileAccess.Read, FileShare.Read))
             {
-                using (var reader = new BinaryReader(stream))
+                using (BinaryReader reader = new BinaryReader(stream))
                 {
-                    var contentIdentity = new ContentIdentity(filename);
+                    ContentIdentity contentIdentity = new ContentIdentity(filename);
                     output = ImportVox(reader, contentIdentity, context);
                 }
             }
@@ -42,17 +42,17 @@ namespace nkast.Aether.Content.Pipeline
         {
             VoxelContent output = null;
 
-            var header = new VoxHeader(reader);
+            VoxHeader header = new VoxHeader(reader);
 
-            var main = new Chunk(reader);
+            Chunk main = new Chunk(reader);
             if (main.ChunkId != Chunk.MAIN)
                 throw new InvalidContentException("MAIN was expected");
 
-            var chunk = new Chunk(reader);
+            Chunk chunk = new Chunk(reader);
             if (chunk.ChunkId == Chunk.PACK)
                 throw new InvalidContentException("PACK is not supported");
 
-            var chunkSIZE = chunk;
+            Chunk chunkSIZE = chunk;
             if (chunkSIZE.ChunkId != Chunk.SIZE)
                 throw new InvalidContentException("SIZE was expected");
             int sizeX = reader.ReadInt32();
@@ -60,18 +60,18 @@ namespace nkast.Aether.Content.Pipeline
             int sizeY = reader.ReadInt32();
 
 
-            var chunkXYZI = new Chunk(reader);
+            Chunk chunkXYZI = new Chunk(reader);
             if (chunkXYZI.ChunkId != Chunk.XYZI)
                 throw new InvalidContentException("XYZI was expected");
-            var numVoxels = reader.ReadInt32();
+            int numVoxels = reader.ReadInt32();
 
             XYZI[] voxels = new XYZI[numVoxels];
-            for (var i = 0; i < numVoxels; i++)
+            for (int i = 0; i < numVoxels; i++)
             {
-                var x = reader.ReadByte();
-                var z = reader.ReadByte();
-                var y = reader.ReadByte();
-                var ColorIndex = reader.ReadByte();
+                byte x = reader.ReadByte();
+                byte z = reader.ReadByte();
+                byte y = reader.ReadByte();
+                byte ColorIndex = reader.ReadByte();
                 z = (byte)(sizeZ - 1 - z);
 
                 voxels[i].Point = new Point3(x, y, z);

@@ -26,18 +26,18 @@ namespace nkast.Aether.Content.Pipeline
             int tileWidth, int tileHeight,
             bool requirePOT, bool requireSquare)
 		{
-            // copy tiles to destTiles
-            var destTiles = new List<TileContent>();
+			// copy tiles to destTiles
+			List<TileContent> destTiles = new List<TileContent>();
             for (int i = 0; i < sourceTiles.Count; i++)
             {
-                var srcTile = sourceTiles[i];
-                var dstTile = new TileContent(srcTile);
+				TileContent srcTile = sourceTiles[i];
+				TileContent dstTile = new TileContent(srcTile);
                 destTiles.Add(dstTile);
             }
             
             for (int i = 0; i < destTiles.Count; i++)
 			{
-                var dstTile = destTiles[i];
+				TileContent dstTile = destTiles[i];
                 dstTile.DstBounds.Width = tileWidth;
                 dstTile.DstBounds.Height = tileHeight;
             }
@@ -102,11 +102,11 @@ namespace nkast.Aether.Content.Pipeline
 		// Checks if a proposed glyph position collides with anything that we already arranged.
 		static int FindIntersectingTile(List<TileContent> glyphs, int index, int x, int y)
 		{
-            var bounds = glyphs[index].DstBounds;
+            Rectangle bounds = glyphs[index].DstBounds;
 
 			for (int i = 0; i < index; i++)
 			{
-                var other = glyphs[i].DstBounds;
+				Rectangle other = glyphs[i].DstBounds;
 
                 if (other.X >= x + bounds.Width)
 					continue;
@@ -125,7 +125,7 @@ namespace nkast.Aether.Content.Pipeline
 
 		static int CompareTileSizes(TileContent a, TileContent b)
 		{
-			var res = b.DstBounds.Height.CompareTo(a.DstBounds.Height);
+			int res = b.DstBounds.Height.CompareTo(a.DstBounds.Height);
             if (res == 0)
                 res = b.DstBounds.Width.CompareTo(a.DstBounds.Width);
   		    return res;
@@ -136,7 +136,7 @@ namespace nkast.Aether.Content.Pipeline
 			int maxWidth = 0;
 			int totalSize = 0;
 
-			foreach (var sourceGlyph in sourceGlyphs)
+			foreach (TileContent sourceGlyph in sourceGlyphs)
 			{
 				maxWidth = Math.Max(maxWidth, sourceGlyph.DstBounds.Width);
 				totalSize += sourceGlyph.DstBounds.Width * sourceGlyph.DstBounds.Height;

@@ -29,11 +29,11 @@ namespace nkast.Aether.Content.Pipeline
         {
             TextureContent output;
 
-            using(var stream = new FileStream(filename, FileMode.Open, FileAccess.Read, FileShare.Read))
+            using(Stream stream = new FileStream(filename, FileMode.Open, FileAccess.Read, FileShare.Read))
             {
-                using(var reader = new BinaryReader(stream))
+                using(BinaryReader reader = new BinaryReader(stream))
                 {
-                    var header = new DDSHeader(reader);
+                    DDSHeader header = new DDSHeader(reader);
                     if (header.PixelFormat.Flags == PF_Flags.FOURCC && header.PixelFormat.FourCC == PF_FourCC.DX10)
                     {
                         throw new NotImplementedException("DX10 Header not supported");
@@ -44,14 +44,14 @@ namespace nkast.Aether.Content.Pipeline
 
                     if (header.Caps2.HasFlag(DDS_Caps2.CUBEMAP))
                     {
-                        var cube = new TextureCubeContent();
-                        var format = GetFormat(header.PixelFormat);
+                        TextureCubeContent cube = new TextureCubeContent();
+                        SurfaceFormat format = GetFormat(header.PixelFormat);
                         for (int f = 0; f < 6; f++)
                         {
-                            var width = header.Width;
-                            var height = header.Height;
+                            int width = header.Width;
+                            int height = header.Height;
                             BitmapContent bitmap = CreateBitmap(format, width, height);
-                            var size = GetBitmapSize(format, width, height);
+                            int size = GetBitmapSize(format, width, height);
                             byte[] src = reader.ReadBytes(size);
                             bitmap.SetPixelData(src);
                             cube.Faces[f].Add(bitmap);

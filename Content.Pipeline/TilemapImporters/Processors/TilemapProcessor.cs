@@ -60,18 +60,18 @@ namespace nkast.Aether.Content.Pipeline
         public TilemapContent Process(TilemapContent input, ContentProcessorContext context)
         {
             if (MipmapsPerSprite && GenerateMipmaps)
-                foreach (var texture in input.DestinationTiles)
+                foreach (TileContent texture in input.DestinationTiles)
                     texture.SrcTexture.GenerateMipmaps(false);
 
-            var output = input;
+            TilemapContent output = input;
             
             if (GenerateMipmaps)
             {
                 if (MipmapsPerSprite)
                 {
-                    var maxTileWidth = 1;
-                    var maxTileHeight = 1;
-                    foreach (var tile in input.DestinationTiles)
+                    int maxTileWidth = 1;
+                    int maxTileHeight = 1;
+                    foreach (TileContent tile in input.DestinationTiles)
                     {
                         maxTileWidth = Math.Max(maxTileWidth, tile.DstBounds.Width);
                         maxTileHeight = Math.Max(maxTileHeight, tile.DstBounds.Height);
@@ -88,12 +88,12 @@ namespace nkast.Aether.Content.Pipeline
                             break;
 
                         var mipmapBmp = new PixelBitmapContent<Color>(size.Width, size.Height);
-                        foreach (var tile in input.DestinationTiles)
+                        foreach (TileContent tile in input.DestinationTiles)
                         {
                             if (mipLevel >= tile.SrcTexture.Faces[0].Count) continue;
-                            var srcBmp = tile.SrcTexture.Faces[0][mipLevel];
-                            var srcBounds = new Rectangle(0, 0, srcBmp.Width, srcBmp.Height);
-                            var dstBounds = tile.DstBounds;
+                            BitmapContent srcBmp = tile.SrcTexture.Faces[0][mipLevel];
+                            Rectangle srcBounds = new Rectangle(0, 0, srcBmp.Width, srcBmp.Height);
+                            Rectangle dstBounds = tile.DstBounds;
                             dstBounds.X = (int)Math.Ceiling((float)dstBounds.X / mipLevel2);
                             dstBounds.Y = (int)Math.Ceiling((float)dstBounds.Y / mipLevel2);
                             dstBounds.Width = (int)(dstBounds.Width / mipLevel2);
@@ -112,12 +112,12 @@ namespace nkast.Aether.Content.Pipeline
                         output.TextureAtlas.Mipmaps.Add(mipmapBmp);
                     }
 
-                    var outputFace0 = output.TextureAtlas.Faces[0];
+                    MipmapChain outputFace0 = output.TextureAtlas.Faces[0];
                     while (outputFace0[outputFace0.Count - 1].Width > 1 || outputFace0[outputFace0.Count - 1].Height > 1)
                     {
-                        var lastMipmap = outputFace0[outputFace0.Count - 1];
-                        var w = Math.Max(1, lastMipmap.Width/2);
-                        var h = Math.Max(1, lastMipmap.Height/2);
+                        BitmapContent lastMipmap = outputFace0[outputFace0.Count - 1];
+                        int w = Math.Max(1, lastMipmap.Width/2);
+                        int h = Math.Max(1, lastMipmap.Height/2);
                         var mipmapBmp = new PixelBitmapContent<Color>(w, h);
                         //PixelBitmapContent<Color>.Copy(lastMipmap, mipmapBmp);
                         output.TextureAtlas.Mipmaps.Add(mipmapBmp);

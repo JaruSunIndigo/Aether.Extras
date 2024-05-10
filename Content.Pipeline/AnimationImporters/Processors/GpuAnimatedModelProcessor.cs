@@ -19,6 +19,7 @@ using Microsoft.Xna.Framework.Content.Pipeline;
 using Microsoft.Xna.Framework.Content.Pipeline.Graphics;
 using Microsoft.Xna.Framework.Content.Pipeline.Processors;
 using Microsoft.Xna.Framework.Graphics;
+using nkast.Aether.Content.Pipeline.Animation;
 
 namespace nkast.Aether.Content.Pipeline.Processors
 {
@@ -67,11 +68,11 @@ namespace nkast.Aether.Content.Pipeline.Processors
 
         public override ModelContent Process(NodeContent input, ContentProcessorContext context)
         {
-            var animationProcessor = new AnimationsProcessor();
+            AnimationsProcessor animationProcessor = new AnimationsProcessor();
             animationProcessor.MaxBones = this.MaxBones;   
             animationProcessor.GenerateKeyframesFrequency = this.GenerateKeyframesFrequency;
             animationProcessor.FixRealBoneRoot = this._fixRealBoneRoot;
-            var animation = animationProcessor.Process(input, context);
+            AnimationsContent animation = animationProcessor.Process(input, context);
             
             ModelContent model = base.Process(input, context);
             model.Tag = animation;

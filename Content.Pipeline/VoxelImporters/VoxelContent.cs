@@ -37,7 +37,7 @@ namespace nkast.Aether.Content.Pipeline
             //for(int i = 0; i< Voxels.Length;i++)
             System.Threading.Tasks.Parallel.For(0, Voxels.Length, (i) =>
             {
-                var vpt = Voxels[i].Point;
+                Point3 vpt = Voxels[i].Point;
 
                 if (blocks.Contains(new Point3(vpt.X - 1, vpt.Y, vpt.Z)))
                     Voxels[i].SharedSides |= Sides.Left;
@@ -61,12 +61,12 @@ namespace nkast.Aether.Content.Pipeline
 
         internal void RemoveHiddenBlocks()
         {
-            var visibleBlocks2 = Voxels.Where((v) => { return v.SharedSides != Sides.All; });
+            IEnumerable<XYZI> visibleBlocks2 = Voxels.Where((v) => { return v.SharedSides != Sides.All; });
             Voxels = visibleBlocks2.ToArray();
 
             //HashSet<Point3> blocks = new HashSet<Point3>( Voxels.Select<XYZI, Point3>((v) => { return v.Point; }) );
             //HashSet<Point3> insideBlocks = new HashSet<Point3>();
-            
+
             //for (int z = 1; z < GridSize.Z - 1; z++)
             //{
             //    for (int y = 1; y < GridSize.Y - 1; y++)
@@ -87,7 +87,7 @@ namespace nkast.Aether.Content.Pipeline
             //    }
             //}
 
-            //var visibleBlocks = Voxels.Where((v) => { return !insideBlocks.Contains(v.Point); });
+            //IEnumerable<XYZI> visibleBlocks = Voxels.Where((v) => { return !insideBlocks.Contains(v.Point); });
             //Voxels = visibleBlocks.ToArray();
 
             return;

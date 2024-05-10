@@ -83,12 +83,12 @@ namespace nkast.Aether.Content.Pipeline.Processors
 
         object IContentProcessor.Process(object input, ContentProcessorContext context)
         {
-            var model = Process((NodeContent)input, context);
-            var outputModel = new DynamicModelContent(model);
+            ModelContent model = Process((NodeContent)input, context);
+            DynamicModelContent outputModel = new DynamicModelContent(model);
             
-            foreach(var mesh in outputModel.Meshes)
+            foreach(DynamicModelMeshContent mesh in outputModel.Meshes)
             {
-                foreach(var part in mesh.MeshParts)
+                foreach(DynamicModelMeshPartContent part in mesh.MeshParts)
                 {
                     ProcessVertexBuffer(outputModel, context, part);
                     ProcessIndexBuffer(outputModel, context, part);
@@ -96,11 +96,11 @@ namespace nkast.Aether.Content.Pipeline.Processors
             }
 
             // import animation
-            var animationProcessor = new AnimationsProcessor();
+            AnimationsProcessor animationProcessor = new AnimationsProcessor();
             animationProcessor.MaxBones = this.MaxBones;
             animationProcessor.GenerateKeyframesFrequency = this.GenerateKeyframesFrequency;
             animationProcessor.FixRealBoneRoot = this._fixRealBoneRoot;
-            var animation = animationProcessor.Process((NodeContent)input, context);
+            AnimationsContent animation = animationProcessor.Process((NodeContent)input, context);
             outputModel.Tag = animation;
 
             //ProcessNode((NodeContent)input);

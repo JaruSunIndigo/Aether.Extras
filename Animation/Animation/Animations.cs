@@ -70,7 +70,7 @@ namespace nkast.Aether.Animation
 
         public void SetClip(string clipName)
         {
-            var clip = Clips["Base Stack"];
+            Clip clip = Clips["Base Stack"];
             SetClip(clip);
         }
 

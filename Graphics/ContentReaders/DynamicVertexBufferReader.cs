@@ -24,11 +24,11 @@ namespace nkast.Aether.Graphics.Content
         protected override DynamicVertexBuffer Read(ContentReader input, DynamicVertexBuffer buffer)
         {   
             IGraphicsDeviceService graphicsDeviceService = (IGraphicsDeviceService)input.ContentManager.ServiceProvider.GetService(typeof(IGraphicsDeviceService));
-            var device = graphicsDeviceService.GraphicsDevice;
+            GraphicsDevice device = graphicsDeviceService.GraphicsDevice;
 
             // read standard VertexBuffer
-            var declaration = input.ReadRawObject<VertexDeclaration>();
-            var vertexCount = (int)input.ReadUInt32();
+            VertexDeclaration declaration = input.ReadRawObject<VertexDeclaration>();
+            int vertexCount = (int)input.ReadUInt32();
             int dataSize = vertexCount * declaration.VertexStride;
             byte[] data = new byte[dataSize];
             input.Read(data, 0, dataSize);

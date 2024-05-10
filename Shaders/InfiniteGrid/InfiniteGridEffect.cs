@@ -39,13 +39,13 @@ namespace nkast.Aether.Shaders
 
         #region Fields
 
-        static readonly String ResourceName = "nkast.Aether.Shaders.Resources.InfiniteGridEffect";
+        static readonly string ResourceName = "nkast.Aether.Shaders.Resources.InfiniteGridEffect";
 
         private static string GetResourceName(GraphicsDevice graphicsDevice, string name)
         {
             string profileName = (graphicsDevice.GraphicsProfile == GraphicsProfile.Reach) ? ".Reach" : ".HiDef";
-            String platformName = "";
-            var version = "";
+            string platformName = "";
+            string version = "";
 
 #if XNA
             platformName = ".xna";
@@ -66,7 +66,7 @@ namespace nkast.Aether.Shaders
 
             // Detect version
             version = ".10";
-            var kniVersion = GetAssembly(typeof(Effect)).GetName().Version;
+            Version kniVersion = GetAssembly(typeof(Effect)).GetName().Version;
             if (kniVersion.Major == 3)
             {
                 if (kniVersion.Minor == 9)
@@ -86,9 +86,9 @@ namespace nkast.Aether.Shaders
         internal static byte[] LoadEffectResource(GraphicsDevice graphicsDevice, string name)
         {
             name = GetResourceName(graphicsDevice, name);
-            using (var stream = GetAssembly(typeof(InfiniteGridEffect)).GetManifestResourceStream(name))
+            using (Stream stream = GetAssembly(typeof(InfiniteGridEffect)).GetManifestResourceStream(name))
             {
-                var bytecode = new byte[stream.Length];
+                byte[] bytecode = new byte[stream.Length];
                 stream.Read(bytecode, 0, (int)stream.Length);
                 return bytecode;
             }
@@ -200,7 +200,7 @@ namespace nkast.Aether.Shaders
 
         internal void SetDefaultParameters(Viewport viewport, Matrix projection, Matrix view, Matrix EditMatrix)
         {
-            var editPlane = new Plane(EditMatrix.Forward, Vector3.Dot(EditMatrix.Forward, EditMatrix.Translation));
+            Plane editPlane = new Plane(EditMatrix.Forward, Vector3.Dot(EditMatrix.Forward, EditMatrix.Translation));
 
             TexelSize = new Vector2(1f / viewport.Width, 1f / viewport.Height);
             InvProjection = Matrix.Invert(projection);

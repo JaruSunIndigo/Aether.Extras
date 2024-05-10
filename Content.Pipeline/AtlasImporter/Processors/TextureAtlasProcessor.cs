@@ -60,20 +60,20 @@ namespace nkast.Aether.Content.Pipeline
         public TextureAtlasContent Process(TextureAtlasContent input, ContentProcessorContext context)
         {
             if (MipmapsPerSprite && GenerateMipmaps)
-                foreach (var texture in input.SourceSprites)
+                foreach (SpriteContent texture in input.SourceSprites)
                     texture.Texture.GenerateMipmaps(false);
 
-            var output = input;
+            TextureAtlasContent output = input;
             
             if (GenerateMipmaps)
             {
                 if (MipmapsPerSprite)
                 {
-                    var maxSpriteWidth = 1;
-                    var maxSpriteHeight = 1;
-                    foreach (var sprite in input.SourceSprites)
+                    int maxSpriteWidth = 1;
+                    int maxSpriteHeight = 1;
+                    foreach (SpriteContent sprite in input.SourceSprites)
                     {
-                        var face0 = sprite.Texture.Faces[0];
+                        MipmapChain face0 = sprite.Texture.Faces[0];
                         maxSpriteWidth = Math.Max(maxSpriteWidth, face0[0].Width);
                         maxSpriteHeight = Math.Max(maxSpriteHeight, face0[0].Height);
                     }
@@ -88,12 +88,12 @@ namespace nkast.Aether.Content.Pipeline
                         if ((maxSpriteWidth / mipLevel2) < 1 && (maxSpriteHeight / mipLevel2) < 1) break;
 
                         var mipmapBmp = new PixelBitmapContent<Color>(size.Width, size.Height);
-                        foreach (var sprite in input.DestinationSprites)
+                        foreach (SpriteContent sprite in input.DestinationSprites)
                         {
                             if (mipLevel >= sprite.Texture.Faces[0].Count) continue;
-                            var srcBmp = sprite.Texture.Faces[0][mipLevel];
-                            var srcRect = new Rectangle(0, 0, srcBmp.Width, srcBmp.Height);
-                            var destRect = sprite.Bounds;
+                            BitmapContent srcBmp = sprite.Texture.Faces[0][mipLevel];
+                            Rectangle srcRect = new Rectangle(0, 0, srcBmp.Width, srcBmp.Height);
+                            Rectangle destRect = sprite.Bounds;
                             destRect.X = (int)Math.Ceiling((float)destRect.X / mipLevel2);
                             destRect.Y = (int)Math.Ceiling((float)destRect.Y / mipLevel2);
                             destRect.Width = (int)(destRect.Width / mipLevel2);
@@ -104,12 +104,12 @@ namespace nkast.Aether.Content.Pipeline
                         output.Texture.Mipmaps.Add(mipmapBmp);
                     }
 
-                    var outputFace0 = output.Texture.Faces[0];
+                    MipmapChain outputFace0 = output.Texture.Faces[0];
                     while (outputFace0[outputFace0.Count - 1].Width > 1 || outputFace0[outputFace0.Count - 1].Height > 1)
                     {
-                        var lastMipmap = outputFace0[outputFace0.Count - 1];
-                        var w = Math.Max(1, lastMipmap.Width/2);
-                        var h = Math.Max(1, lastMipmap.Height/2);
+                        BitmapContent lastMipmap = outputFace0[outputFace0.Count - 1];
+                        int w = Math.Max(1, lastMipmap.Width/2);
+                        int h = Math.Max(1, lastMipmap.Height/2);
                         var mipmapBmp = new PixelBitmapContent<Color>(w, h);
                         //PixelBitmapContent<Color>.Copy(lastMipmap, mipmapBmp);
                         output.Texture.Mipmaps.Add(mipmapBmp);

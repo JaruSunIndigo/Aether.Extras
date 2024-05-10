@@ -86,7 +86,7 @@ namespace nkast.Aether.Content.Pipeline.Processors
             List<int> skeletonHierarchy = new List<int>();
             List<string> boneNames = new List<string>();
 
-            foreach(var bone in bones)
+            foreach(BoneContent bone in bones)
             {
                 bindPose.Add(bone.Transform);
                 invBindPose.Add(Matrix.Invert(bone.AbsoluteTransform));
@@ -110,7 +110,7 @@ namespace nkast.Aether.Content.Pipeline.Processors
         {
             for (int i = input.Children.Count - 1; i >= 0; i--)
             {
-                var node = input.Children[i];
+                NodeContent node = input.Children[i];
                 if (node is BoneContent &&
                     node.AbsoluteTransform == Matrix.Identity &&
                     node.Children.Count ==1 &&
@@ -119,7 +119,7 @@ namespace nkast.Aether.Content.Pipeline.Processors
                     )
                 {
                     //dettach real boneRoot
-                    var realBoneRoot = node.Children[0];
+                    NodeContent realBoneRoot = node.Children[0];
                     node.Children.RemoveAt(0);
                     //copy animation from node to boneRoot
                     foreach (var animation in node.Animations)
@@ -411,7 +411,7 @@ namespace nkast.Aether.Content.Pipeline.Processors
                                 
                 if (boneFrames[b][0].Time != TimeSpan.Zero)
                 {
-                    var keyframe0 = new KeyframeContent(boneFrames[b][0].Bone, TimeSpan.Zero, boneFrames[b][0].Transform);
+                    KeyframeContent keyframe0 = new KeyframeContent(boneFrames[b][0].Bone, TimeSpan.Zero, boneFrames[b][0].Transform);
                     boneFrames[b].Insert(0, keyframe0);
                 }
             }
@@ -526,7 +526,7 @@ namespace nkast.Aether.Content.Pipeline.Processors
         {
             int a = i;
             int b = i + 1;
-            var diff = frames[b].Time - frames[a].Time;
+            TimeSpan diff = frames[b].Time - frames[a].Time;
             Matrix mBlend = Matrix.Identity;
             if (diff > keySpan)
             {

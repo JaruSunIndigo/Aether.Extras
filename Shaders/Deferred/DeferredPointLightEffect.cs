@@ -48,14 +48,14 @@ namespace nkast.Aether.Shaders
         #region Fields
 
 
-        static readonly String ResourceName = "nkast.Aether.Shaders.Resources.DeferredPointLight";
+        static readonly string ResourceName = "nkast.Aether.Shaders.Resources.DeferredPointLight";
 
         internal static byte[] LoadEffectResource(GraphicsDevice graphicsDevice, string name)
         {
             name = GetResourceName(graphicsDevice, name);
-            using (var stream = GetAssembly(typeof(DeferredPointLightEffect)).GetManifestResourceStream(name))
+            using (Stream stream = GetAssembly(typeof(DeferredPointLightEffect)).GetManifestResourceStream(name))
             {
-                var bytecode = new byte[stream.Length];
+                byte[] bytecode = new byte[stream.Length];
                 stream.Read(bytecode, 0, (int)stream.Length);
                 return bytecode;
             }
@@ -63,8 +63,8 @@ namespace nkast.Aether.Shaders
 
         private static string GetResourceName(GraphicsDevice graphicsDevice, string name)
         {
-            String platformName = "";
-            var version = "";
+            string platformName = "";
+            string version = "";
 
 #if XNA
             platformName = ".xna.WinReach";
@@ -85,7 +85,7 @@ namespace nkast.Aether.Shaders
 
             // Detect version  
             version = ".10";
-            var kniVersion = GetAssembly(typeof(Effect)).GetName().Version;
+            Version kniVersion = GetAssembly(typeof(Effect)).GetName().Version;
             if (kniVersion.Major == 3)
             {
                 if (kniVersion.Minor == 9)

@@ -62,12 +62,12 @@ namespace nkast.Aether.Content.Pipeline.Serialization
 
         object IContentProcessor.Process(object input, ContentProcessorContext context)
         {
-            var model = Process((NodeContent)input, context);
-            var dynamicModel = new DynamicModelContent(model);
+            ModelContent model = Process((NodeContent)input, context);
+            DynamicModelContent dynamicModel = new DynamicModelContent(model);
             
-            foreach(var mesh in dynamicModel.Meshes)
+            foreach(DynamicModelMeshContent mesh in dynamicModel.Meshes)
             {
-                foreach(var part in mesh.MeshParts)
+                foreach(DynamicModelMeshPartContent part in mesh.MeshParts)
                 {
                     ProcessVertexBuffer(dynamicModel, context, part);
                     ProcessIndexBuffer(dynamicModel, context, part);

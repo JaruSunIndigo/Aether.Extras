@@ -24,21 +24,21 @@ namespace System.Xml
 
         public static string GetAttribute(this XmlNode xmlNode, string attributeName)
         {
-            var attribute = xmlNode.Attributes[attributeName];
+            XmlAttribute attribute = xmlNode.Attributes[attributeName];
             if (attribute == null) return null;
             return attribute.Value;
         }
 
         public static int? GetAttributeAsInt(this XmlNode xmlNode, string attributeName)
         {
-            var attribute = xmlNode.Attributes[attributeName];
+            XmlAttribute attribute = xmlNode.Attributes[attributeName];
             if (attribute == null) return null;
             return Int32.Parse(attribute.Value, CultureInfo.InvariantCulture);
         }
 
         public static Color? GetAttributeAsColor(this XmlNode xmlNode, string attributeName)
         {
-            var attribute = xmlNode.Attributes[attributeName];
+            XmlAttribute attribute = xmlNode.Attributes[attributeName];
             if (attribute == null) return null;
             attribute.Value = attribute.Value.TrimStart(new char[] { '#' });
             return new Color(

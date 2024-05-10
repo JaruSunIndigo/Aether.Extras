@@ -55,7 +55,7 @@ namespace nkast.Aether.Content.Pipeline.Graphics
             
             //deep clone MeshParts
             MeshParts = new List<DynamicModelMeshPartContent>(source.MeshParts.Count);
-            foreach (var mesh in source.MeshParts)
+            foreach (ModelMeshPartContent mesh in source.MeshParts)
                 MeshParts.Add(new DynamicModelMeshPartContent(mesh));
         }
 

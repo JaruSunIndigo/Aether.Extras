@@ -21,7 +21,7 @@ namespace nkast.Aether.Shaders
 {
     public class FXAAGreenLumaMediumEffect : FXAAEffect 
     {
-        static readonly String ResourceName = "nkast.Aether.Shaders.Resources.FXAAGreenLumaMedium";
+        static readonly string ResourceName = "nkast.Aether.Shaders.Resources.FXAAGreenLumaMedium";
 
 
         public FXAAGreenLumaMediumEffect(GraphicsDevice graphicsDevice)

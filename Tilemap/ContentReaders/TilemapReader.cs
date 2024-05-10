@@ -15,6 +15,7 @@
 #endregion
 
 using System;
+using System.Reflection;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
@@ -28,7 +29,7 @@ namespace nkast.Aether.Graphics.Content
         protected override Tilemap Read(ContentReader input, Tilemap existingInstance)
         {
             IGraphicsDeviceService graphicsDeviceService = (IGraphicsDeviceService)input.ContentManager.ServiceProvider.GetService(typeof(IGraphicsDeviceService));
-            var device = graphicsDeviceService.GraphicsDevice;
+            GraphicsDevice device = graphicsDeviceService.GraphicsDevice;
 
 
             Tilemap output = existingInstance ?? new Tilemap();
@@ -39,15 +40,15 @@ namespace nkast.Aether.Graphics.Content
             output.TextureMap = ReadTexture2D(input, output.TextureMap);
 
             // read Sprites
-            var count = input.ReadInt32();
+            int count = input.ReadInt32();
             for (int i = 0; i < count; i++)
             {
-                var name = input.ReadString();
-                var bounds = new Rectangle(input.ReadInt32(), input.ReadInt32(), input.ReadInt32(), input.ReadInt32());
+                string name = input.ReadString();
+                Rectangle bounds = new Rectangle(input.ReadInt32(), input.ReadInt32(), input.ReadInt32(), input.ReadInt32());
                 output.Sprites[name] = new Tile(output.TextureAtlas, bounds);
             }
 
-            var tilemapEffect = new TilemapEffect(device);
+            TilemapEffect tilemapEffect = new TilemapEffect(device);
             tilemapEffect.Alpha = 1f;
             tilemapEffect.VertexColorEnabled = true;
             tilemapEffect.DiffuseColor = new Vector3(1f, 1f, 1f);
@@ -75,9 +76,9 @@ namespace nkast.Aether.Graphics.Content
             }
             catch(NotSupportedException)
             {
-                var assembly = typeof(Microsoft.Xna.Framework.Content.ContentTypeReader).Assembly;
-                var texture2DReaderType = assembly.GetType("Microsoft.Xna.Framework.Content.Texture2DReader");
-                var texture2DReader = (ContentTypeReader)Activator.CreateInstance(texture2DReaderType, true);
+                Assembly assembly = typeof(ContentTypeReader).Assembly;
+                Type texture2DReaderType = assembly.GetType("Microsoft.Xna.Framework.Content.Texture2DReader");
+                ContentTypeReader texture2DReader = (ContentTypeReader)Activator.CreateInstance(texture2DReaderType, true);
                 output = input.ReadRawObject<Texture2D>(texture2DReader, existingInstance);
             }
             

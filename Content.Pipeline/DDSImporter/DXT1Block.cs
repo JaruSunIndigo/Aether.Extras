@@ -34,8 +34,8 @@ namespace nkast.Aether.Content.Pipeline
         
         internal Color GetColor(int colorIndex)
         {
-            var H = colorIndex / 4;
-            var L = colorIndex % 4;
+            int H = colorIndex / 4;
+            int L = colorIndex % 4;
             int idx = 0;
 
             switch (H)

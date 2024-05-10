@@ -88,7 +88,7 @@ namespace nkast.Aether.Content.Pipeline.Serialization
             
             for (int boneIndex = 0; boneIndex < count; boneIndex++)
             {
-                var boneName = boneNames[boneIndex];
+                string boneName = boneNames[boneIndex];
                 output.Write(boneName);
             }
 

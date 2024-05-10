@@ -36,7 +36,7 @@ namespace nkast.Aether.Content.Pipeline
             if (Path.GetExtension(filename) != ".slmc")
                 throw new InvalidContentException("File type not supported.");
 
-            var images = ImportSLMC(filename, context);
+            IList<Texture2DContent> images = ImportSLMC(filename, context);
 
             if (images.Count < 1)
                 throw new InvalidContentException("Element 'channels' must have at least one 'image'.");
@@ -46,21 +46,21 @@ namespace nkast.Aether.Content.Pipeline
             int width = images[0].Mipmaps[0].Width;
             int height = images[0].Mipmaps[0].Height;
             // validate size
-            foreach (var image in images)
+            foreach (Texture2DContent image in images)
             {
                 if (image.Mipmaps[0].Width != width|| image.Mipmaps[0].Height != height)
                     throw new InvalidContentException("Images must be of the same size.");
             }
 
-            var pixelCount = width * height;
-            var byteCount = pixelCount * 4;
+            int pixelCount = width * height;
+            int byteCount = pixelCount * 4;
             byte[] data = new byte[byteCount];
 
             for (int i = 0; i < images.Count; i++)
             {
-                var image = images[i];
-                var face = image.Faces[0][0];
-                var pixelData = face.GetPixelData();
+                Texture2DContent image = images[i];
+                BitmapContent face = image.Faces[0][0];
+                byte[] pixelData = face.GetPixelData();
 
                 for (int d = 0; d < pixelCount; d++)
                 {
@@ -68,7 +68,7 @@ namespace nkast.Aether.Content.Pipeline
                 }
             }
 
-            var bitmap = new PixelBitmapContent<Color>(width, height);
+            PixelBitmapContent<Color> bitmap = new PixelBitmapContent<Color>(width, height);
             bitmap.SetPixelData(data);
 
             output = new Texture2DContent();
@@ -82,7 +82,7 @@ namespace nkast.Aether.Content.Pipeline
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(filename);
             
-            var channels = xmlDoc.DocumentElement;
+            XmlElement channels = xmlDoc.DocumentElement;
 
             if (channels.Name != "channels")
                 throw new InvalidContentException(String.Format("Root element must be 'channels'."));
@@ -95,10 +95,10 @@ namespace nkast.Aether.Content.Pipeline
                 if (imageNode.Name != "image")
                     throw new InvalidContentException(String.Format("Element '{0}' not supported in 'channels'.", imageNode.Name));
 
-                var imageSource = GetAttribute(imageNode, "source");
-                var fullImageSource = Path.Combine(Path.GetDirectoryName(filename), imageSource);
+                string imageSource = GetAttribute(imageNode, "source");
+                string fullImageSource = Path.Combine(Path.GetDirectoryName(filename), imageSource);
                 context.AddDependency(fullImageSource);
-                var textureContent = (Texture2DContent)txImporter.Import(fullImageSource, context);
+                Texture2DContent textureContent = (Texture2DContent)txImporter.Import(fullImageSource, context);
                 textureContent.Name = Path.GetFileNameWithoutExtension(fullImageSource);
 
                 images.Add(textureContent);
@@ -109,7 +109,7 @@ namespace nkast.Aether.Content.Pipeline
         
         private static string GetAttribute(XmlNode xmlNode, string attributeName)
         {
-            var attribute = xmlNode.Attributes[attributeName];
+            XmlAttribute attribute = xmlNode.Attributes[attributeName];
             if (attribute == null) return null;
             return attribute.Value;
         }

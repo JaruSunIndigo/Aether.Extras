@@ -24,11 +24,11 @@ namespace nkast.Aether.Graphics.Content
         protected override DynamicIndexBuffer Read(ContentReader input, DynamicIndexBuffer buffer)
         {   
             IGraphicsDeviceService graphicsDeviceService = (IGraphicsDeviceService)input.ContentManager.ServiceProvider.GetService(typeof(IGraphicsDeviceService));
-            var device = graphicsDeviceService.GraphicsDevice;
+            GraphicsDevice device = graphicsDeviceService.GraphicsDevice;
 
             // read IndexBuffer
-            var is16Bit = input.ReadBoolean();
-            var dataSize = (int)input.ReadUInt32();
+            bool is16Bit = input.ReadBoolean();
+            int dataSize = (int)input.ReadUInt32();
             byte[] data = new byte[dataSize];
             input.Read(data, 0, dataSize);
 
@@ -38,9 +38,9 @@ namespace nkast.Aether.Graphics.Content
 
             if (buffer == null)
             {
-                var elementSize = (is16Bit) ? IndexElementSize.SixteenBits : IndexElementSize.ThirtyTwoBits;
-                var stride = (is16Bit) ? 2 : 4;
-                var indexCount = dataSize / stride;
+                IndexElementSize elementSize = (is16Bit) ? IndexElementSize.SixteenBits : IndexElementSize.ThirtyTwoBits;
+                int stride = (is16Bit) ? 2 : 4;
+                int indexCount = dataSize / stride;
                 BufferUsage usage = (IsWriteOnly) ? BufferUsage.WriteOnly : BufferUsage.None;
                 buffer = new DynamicIndexBuffer(device, elementSize, indexCount, usage);
             }

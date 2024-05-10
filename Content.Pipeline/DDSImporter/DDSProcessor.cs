@@ -59,7 +59,7 @@ namespace nkast.Aether.Content.Pipeline
 
         private void ConvertToColor(TextureContent textureContent)
         {
-            foreach (var face in textureContent.Faces)
+            foreach (MipmapChain face in textureContent.Faces)
             {
                 for (int m = 0; m < face.Count; m++)
                 {
@@ -73,14 +73,14 @@ namespace nkast.Aether.Content.Pipeline
 
         unsafe private static BitmapContent ConvertToColor(BitmapContent input)
         {
-            var width = input.Width;
-            var height = input.Height;
+            int width = input.Width;
+            int height = input.Height;
 
             SurfaceFormat format;
             input.TryGetFormat(out format);
-            var formatSize = DDSImporter.GetBitmapSize(format, width, height);
-            var blocks = formatSize;
-            var inData = input.GetPixelData();
+            int formatSize = DDSImporter.GetBitmapSize(format, width, height);
+            int blocks = formatSize;
+            byte[] inData = input.GetPixelData();
 
             var output = new PixelBitmapContent<Color>(width, height);
 
