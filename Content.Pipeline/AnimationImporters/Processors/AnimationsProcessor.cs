@@ -104,37 +104,41 @@ namespace nkast.Aether.Content.Pipeline.Processors
         /// <summary>
         /// MonoGame converts some NodeContent into BoneContent.
         /// Here we revert that to get the original Skeleton and  
-        /// add the real boneroot to the root node.
+        /// add the real boneRoot to the root node.
         /// </summary>
         private void MGFixRealBoneRoot(NodeContent input, ContentProcessorContext context)
         {
             for (int i = input.Children.Count - 1; i >= 0; i--)
             {
                 NodeContent node = input.Children[i];
-                if (node is BoneContent &&
-                    node.AbsoluteTransform == Matrix.Identity &&
-                    node.Children.Count ==1 &&
-                    node.Children[0] is BoneContent &&
-                    node.Children[0].AbsoluteTransform == Matrix.Identity
+
+                if (node is BoneContent 
+                &&  node.AbsoluteTransform == Matrix.Identity
+                &&  node.Children.Count == 1
+                &&  node.Children[0] is BoneContent
+                &&  node.Children[0].AbsoluteTransform == Matrix.Identity
                     )
                 {
                     //dettach real boneRoot
                     NodeContent realBoneRoot = node.Children[0];
                     node.Children.RemoveAt(0);
+
                     //copy animation from node to boneRoot
                     foreach (var animation in node.Animations)
                         realBoneRoot.Animations.Add(animation.Key, animation.Value);
+
                     // convert fake BoneContent back to NodeContent
-                    input.Children[i] = new NodeContent()
-                    {
-                        Name = node.Name,
-                        Identity = node.Identity,
-                        Transform = node.Transform,                        
-                    };
+                    NodeContent realNode = new NodeContent();
+                    realNode.Name = node.Name;
+                    realNode.Identity = node.Identity;
+                    realNode.Transform = node.Transform;
+
+                    input.Children[i] = realNode;
                     foreach (var animation in node.Animations)
                         input.Children[i].Animations.Add(animation.Key, animation.Value);
                     foreach (var opaqueData in node.OpaqueData)
                         input.Children[i].OpaqueData.Add(opaqueData.Key, opaqueData.Value);
+
                     //attach real boneRoot to the root node
                     input.Children.Add(realBoneRoot);
 
