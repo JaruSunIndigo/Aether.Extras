@@ -8,7 +8,7 @@ float specularPower = 0.5f;
 
 DECLARE_TEXTURE(Diffuse, 0) = sampler_state
 {
-    Texture = (Diffuse);
+    //Texture = (Diffuse);
     MAGFILTER = LINEAR;
     MINFILTER = LINEAR;
     MIPFILTER = LINEAR;
@@ -18,7 +18,7 @@ DECLARE_TEXTURE(Diffuse, 0) = sampler_state
 
 DECLARE_TEXTURE(SpecularMap, 1) = sampler_state
 {
-    Texture = (SpecularMap);
+    //Texture = (SpecularMap);
     MagFilter = LINEAR;
     MinFilter = LINEAR;
     Mipfilter = LINEAR;
@@ -28,7 +28,7 @@ DECLARE_TEXTURE(SpecularMap, 1) = sampler_state
 
 DECLARE_TEXTURE(NormalMap, 2) = sampler_state
 {
-    Texture = (NormalMap);
+    //Texture = (NormalMap);
     MagFilter = LINEAR;
     MinFilter = LINEAR;
     Mipfilter = LINEAR;
