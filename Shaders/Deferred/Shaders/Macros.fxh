@@ -13,14 +13,6 @@
 #ifdef SM4  // Macros for targetting HLSL 4.0
 
 
-#define BEGIN_CONSTANTS     cbuffer Parameters : register(b0) {
-#define MATRIX_CONSTANTS
-#define END_CONSTANTS       };
-
-#define _vs(r)
-#define _ps(r)
-#define _cb(r)
-
 #define DECLARE_TEXTURE(Name, index) \
     Texture2D<float4> Name : register(t##index); \
     sampler Name##Sampler : register(s##index)
@@ -36,14 +28,6 @@
 #else  // Macros for targetting shader model 2.0 (XNA & MojoShader)
 
 
-#define BEGIN_CONSTANTS
-#define MATRIX_CONSTANTS
-#define END_CONSTANTS
-
-#define _vs(r)  : register(vs, r)
-#define _ps(r)  : register(ps, r)
-#define _cb(r)
-
 #define DECLARE_TEXTURE(Name, index) \
     texture2D Name : register(t##index); \
     sampler Name##Sampler : register(s##index) 
@@ -54,6 +38,33 @@
 
 #define SAMPLE_TEXTURE(Name, texCoord)  tex2D(Name##Sampler, texCoord)
 #define SAMPLE_CUBEMAP(Name, texCoord)  texCUBE(Name##Sampler, texCoord)
+
+
+#endif
+
+
+#ifdef SM4  // Macros for targetting HLSL 4.0
+
+
+#define BEGIN_CONSTANTS     cbuffer Parameters : register(b0) {
+#define MATRIX_CONSTANTS
+#define END_CONSTANTS       };
+
+#define _vs(r)
+#define _ps(r)
+#define _cb(r)
+
+
+#else  // Macros for targetting shader model 2.0 (XNA & MojoShader)
+
+
+#define BEGIN_CONSTANTS
+#define MATRIX_CONSTANTS
+#define END_CONSTANTS
+
+#define _vs(r)  : register(vs, r)
+#define _ps(r)  : register(ps, r)
+#define _cb(r)
 
 
 #endif
