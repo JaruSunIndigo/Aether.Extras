@@ -28,15 +28,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <PackageReference Include="nkast.Xna.Framework" Version="3.11.9002">
+    <PackageReference Include="nkast.Xna.Framework" Version="3.12.9001">
       <PrivateAssets>all</PrivateAssets>
       <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>
-    <PackageReference Include="nkast.Xna.Framework.Graphics" Version="3.11.9002">
+    <PackageReference Include="nkast.Xna.Framework.Graphics" Version="3.12.9001">
       <PrivateAssets>all</PrivateAssets>
       <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>
-    <PackageReference Include="nkast.Xna.Framework.Ref" Version="3.11.9002">
+    <PackageReference Include="nkast.Xna.Framework.Game" Version="3.12.9001">
       <PrivateAssets>all</PrivateAssets>
       <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>

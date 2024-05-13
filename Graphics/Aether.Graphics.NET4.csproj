@@ -30,15 +30,15 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="nkast.Xna.Framework" Version="3.11.9002">
+    <PackageReference Include="nkast.Xna.Framework" Version="3.12.9001">
       <PrivateAssets>all</PrivateAssets>
       <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>
-    <PackageReference Include="nkast.Xna.Framework.Content" Version="3.11.9002">
+    <PackageReference Include="nkast.Xna.Framework.Content" Version="3.12.9001">
       <PrivateAssets>all</PrivateAssets>
       <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>
-    <PackageReference Include="nkast.Xna.Framework.Graphics" Version="3.11.9002">
+    <PackageReference Include="nkast.Xna.Framework.Graphics" Version="3.12.9001">
       <PrivateAssets>all</PrivateAssets>
       <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>
