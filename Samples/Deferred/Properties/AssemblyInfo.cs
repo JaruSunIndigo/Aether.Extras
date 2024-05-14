@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyProduct("Samples.Deferred")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyCopyright("Copyright © Kastellanos Nikolaos 2016-2022")]
+[assembly: AssemblyCopyright("Copyright © Kastellanos Nikolaos 2016-2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -31,4 +31,4 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("1.3.0.0")]
+[assembly: AssemblyVersion("1.4.0.0")]
