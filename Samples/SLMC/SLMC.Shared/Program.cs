@@ -7,7 +7,7 @@ namespace Samples.SLMC
         [STAThread]
         static void Main(string[] args)
         {
-            using (SampleGame game = new SampleGame())
+            using (SLMCGame game = new SLMCGame())
             {
                 game.Run();
             }

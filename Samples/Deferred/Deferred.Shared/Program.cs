@@ -7,7 +7,7 @@ namespace Samples.Deferred
         [STAThread]
         static void Main(string[] args)
         {
-            using (SampleGame game = new SampleGame())
+            using (DeferredGame game = new DeferredGame())
             {
                 game.Run();
             }

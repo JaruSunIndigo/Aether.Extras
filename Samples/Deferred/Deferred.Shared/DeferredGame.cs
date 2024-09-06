@@ -3,24 +3,23 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace Samples.Atlas
+namespace Samples.Deferred
 {
-    public class SampleGame : Game
+    public class DeferredGame : Game
     {
         GraphicsDeviceManager graphics;
-        
-        AtlasSampleComponent _atlasSampleComponent;
 
-        public SampleGame()
+        DeferredSampleComponent _deferredSampleComponent;
+
+        public DeferredGame()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
 
-            graphics.PreferredBackBufferWidth = 800;
-            graphics.PreferredBackBufferHeight = 480;
+            graphics.GraphicsProfile = GraphicsProfile.HiDef;
 
-            _atlasSampleComponent = new AtlasSampleComponent(this, graphics);
-            Components.Add(_atlasSampleComponent);
+            _deferredSampleComponent = new DeferredSampleComponent(this);
+            Components.Add(_deferredSampleComponent);
         }
 
         protected override void LoadContent()

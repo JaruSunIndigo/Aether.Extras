@@ -24,7 +24,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="SLMCSampleComponent.cs" />
-    <Compile Include="SampleGame.cs" />
+    <Compile Include="SLMCGame.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -25,7 +25,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="TilemapSampleComponent.cs" />
-    <Compile Include="SampleGame.cs" />
+    <Compile Include="TilemapGame.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>

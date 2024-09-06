@@ -5,13 +5,13 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Samples.Animation
 {
-    public class SampleGame : Game
+    public class AnimationGame : Game
     {
         GraphicsDeviceManager graphics;
 
         AnimationSampleComponent _animationSampleComponent;
 
-        public SampleGame()
+        public AnimationGame()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";

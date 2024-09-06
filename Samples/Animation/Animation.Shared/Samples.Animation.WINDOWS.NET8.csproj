@@ -25,7 +25,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AnimationSampleComponent.cs" />
-    <Compile Include="SampleGame.cs" />
+    <Compile Include="AnimationGame.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>

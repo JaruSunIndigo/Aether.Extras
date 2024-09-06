@@ -5,13 +5,13 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Samples.SLMC
 {
-    public class SampleGame : Game
+    public class SLMCGame : Game
     {
         GraphicsDeviceManager graphics;
 
         SLMCSampleComponent _slmcSampleComponent;
 
-        public SampleGame()
+        public SLMCGame()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";

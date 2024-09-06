@@ -7,7 +7,7 @@ namespace Samples.FXAA
         [STAThread]
         static void Main(string[] args)
         {
-            using (SampleGame game = new SampleGame())
+            using (FXAAGame game = new FXAAGame())
             {
                 game.Run();
             }

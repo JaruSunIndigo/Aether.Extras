@@ -3,30 +3,26 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace Samples.Tilemaps
+namespace Samples.FXAA
 {
-    public class SampleGame : Game
+    public class FXAAGame : Game
     {
         GraphicsDeviceManager graphics;
+        FXAASampleComponent _fxaaSampleComponent;
 
-        
-        TilemapSampleComponent _tilemapSampleComponent;
-
-        public SampleGame()
+        public FXAAGame()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
 
-            graphics.PreferredBackBufferWidth = 800;
-            graphics.PreferredBackBufferHeight = 480;
+            graphics.GraphicsProfile = GraphicsProfile.HiDef;
 
-            _tilemapSampleComponent = new TilemapSampleComponent(this, graphics);
-            Components.Add(_tilemapSampleComponent);
+            _fxaaSampleComponent = new FXAASampleComponent(this);
+            Components.Add(_fxaaSampleComponent);
         }
 
         protected override void LoadContent()
         {
-            
         }
         
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
@@ -48,5 +44,6 @@ namespace Samples.Tilemaps
 
             base.Draw(gameTime);
         }
+        
     }
 }

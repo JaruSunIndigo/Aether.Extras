@@ -7,7 +7,7 @@ namespace Samples.Atlas
         [STAThread]
         static void Main(string[] args)
         {
-            using (SampleGame game = new SampleGame())
+            using (AtlasGame game = new AtlasGame())
             {
                 game.Run();
             }

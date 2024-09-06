@@ -7,7 +7,7 @@ namespace Samples.Tilemaps
         [STAThread]
         static void Main(string[] args)
         {
-            using (SampleGame game = new SampleGame())
+            using (TilemapGame game = new TilemapGame())
             {
                 game.Run();
             }

@@ -26,7 +26,7 @@
   <ItemGroup>
     <Compile Include="AntiAliasing.cs" />
     <Compile Include="FXAASampleComponent.cs" />
-    <Compile Include="SampleGame.cs" />
+    <Compile Include="FXAAGame.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Spaceship.cs" />
   </ItemGroup>
