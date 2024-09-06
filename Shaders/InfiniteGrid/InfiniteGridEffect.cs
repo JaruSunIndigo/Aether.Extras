@@ -202,7 +202,8 @@ namespace nkast.Aether.Shaders
         {
             Plane editPlane = new Plane(EditMatrix.Forward, Vector3.Dot(EditMatrix.Forward, EditMatrix.Translation));
 
-            TexelSize = new Vector2(1f / viewport.Width, 1f / viewport.Height);
+            if (this.GraphicsDevice.GraphicsProfile == GraphicsProfile.Reach)
+                TexelSize = new Vector2(1f / viewport.Width, 1f / viewport.Height);
             InvProjection = Matrix.Invert(projection);
             InvView = Matrix.Invert(view);
             InvPlaneMatrix = Matrix.Invert(EditMatrix);
