@@ -62,7 +62,7 @@
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <KniContentReference Include="..\FXAAContent\Samples.FXAAContent.mgcb">
+    <KniContentReference Include="..\FXAAContent\FXAAContent.mgcb">
       <Link>Content\Content.mgcb</Link>
     </KniContentReference>
     <None Include="app.config" />

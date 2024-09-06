@@ -60,7 +60,7 @@
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <KniContentReference Include="..\AtlasContent\Samples.AtlasContent.mgcb">
+    <KniContentReference Include="..\AtlasContent\AtlasContent.mgcb">
       <Link>Content\Content.mgcb</Link>
     </KniContentReference>
     <None Include="app.config" />

@@ -46,7 +46,7 @@
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <KniContentReference Include="..\SLMCContent\Samples.SLMCContent.mgcb">
+    <KniContentReference Include="..\SLMCContent\SLMCContent.mgcb">
       <Link>Content\Content.mgcb</Link>
     </KniContentReference>
   </ItemGroup>

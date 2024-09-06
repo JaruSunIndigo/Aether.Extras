@@ -45,7 +45,7 @@
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <KniContentReference Include="..\AnimationContent\Content.mgcb">
+    <KniContentReference Include="..\AnimationContent\AnimationContent.mgcb">
       <Link>Content\Content.mgcb</Link>
     </KniContentReference>
   </ItemGroup>

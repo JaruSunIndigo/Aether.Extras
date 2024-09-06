@@ -93,7 +93,7 @@
       <Project>{908EC8FF-B0ED-478A-B486-702E578AF64A}</Project>
       <Name>Aether.Shaders.InfiniteGrid.NET4.XNA</Name>
     </ProjectReference>
-    <ProjectReference Include="..\AnimationContent\Samples.AnimationContent.contentproj">
+    <ProjectReference Include="..\AnimationContent\AnimationContent.contentproj">
       <Name>Samples.AnimationContent %28Content%29</Name>
       <XnaReferenceType>Content</XnaReferenceType>
       <Project>{B02966BF-88BC-41B2-80EF-8F8C5F98FA98}</Project>

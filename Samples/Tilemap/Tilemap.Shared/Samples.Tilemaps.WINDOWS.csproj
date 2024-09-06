@@ -60,7 +60,7 @@
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <KniContentReference Include="..\TilemapContent\Samples.TilemapContent.mgcb">
+    <KniContentReference Include="..\TilemapContent\TilemapContent.mgcb">
       <Link>Content\Content.mgcb</Link>
     </KniContentReference>
     <None Include="app.config" />

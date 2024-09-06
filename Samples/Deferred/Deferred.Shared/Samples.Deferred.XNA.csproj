@@ -88,7 +88,7 @@
       <Project>{B82B862D-C728-4A10-8A56-65D688E022C8}</Project>
       <Name>Aether.Shaders.Deferred.NET4.XNA</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DeferredContent\Samples.DeferredContent.contentproj">
+    <ProjectReference Include="..\DeferredContent\DeferredContent.contentproj">
       <Project>{FEFA33C9-E197-458C-845E-5FA513C38DF4}</Project>
       <Name>Samples.DeferredContent %28Content%29</Name>
       <XnaReferenceType>Content</XnaReferenceType>

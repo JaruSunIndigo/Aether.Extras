@@ -81,7 +81,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SLMCContent\Samples.SLMCContent.contentproj">
+    <ProjectReference Include="..\SLMCContent\SLMCContent.contentproj">
       <Project>{99A5C5A9-03E3-41C6-A121-EF423F6CEB23}</Project>
       <Name>Samples.SLMCContent %28Content%29</Name>
       <XnaReferenceType>Content</XnaReferenceType>

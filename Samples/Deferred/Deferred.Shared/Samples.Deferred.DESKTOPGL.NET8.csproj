@@ -48,7 +48,7 @@
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <KniContentReference Include="..\DeferredContent\Samples.DeferredContent.mgcb">
+    <KniContentReference Include="..\DeferredContent\DeferredContent.mgcb">
       <Link>Content\Content.mgcb</Link>
     </KniContentReference>
   </ItemGroup>

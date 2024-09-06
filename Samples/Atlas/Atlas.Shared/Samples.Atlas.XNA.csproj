@@ -85,7 +85,7 @@
       <Project>{644629BB-1A4E-4932-8E50-4F93BC938794}</Project>
       <Name>Aether.Atlas.NET4.XNA</Name>
     </ProjectReference>
-    <ProjectReference Include="..\AtlasContent\Samples.AtlasContent.contentproj">
+    <ProjectReference Include="..\AtlasContent\AtlasContent.contentproj">
       <Project>{4CA82D0E-2414-460C-9A70-2DA3C3AF96B6}</Project>
       <Name>Samples.AtlasContent %28Content%29</Name>
       <XnaReferenceType>Content</XnaReferenceType>

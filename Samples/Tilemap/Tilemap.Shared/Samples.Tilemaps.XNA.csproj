@@ -93,7 +93,7 @@
       <Project>{746551BA-FB64-43B0-8479-0506B930D3E5}</Project>
       <Name>Aether.Tilemap.NET4.XNA</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TilemapContent\Samples.TilemapContent.contentproj">
+    <ProjectReference Include="..\TilemapContent\TilemapContent.contentproj">
       <Project>{CC95FC77-31DC-4120-895C-4764ED092F4E}</Project>
       <Name>Samples.TilemapContent %28Content%29</Name>
       <XnaReferenceType>Content</XnaReferenceType>

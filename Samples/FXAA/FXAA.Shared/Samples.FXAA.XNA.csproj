@@ -87,7 +87,7 @@
       <Project>{89E0198E-7298-411A-B5C1-61F2754A3F80}</Project>
       <Name>Aether.Shaders.FXAA.NET4.XNA</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FXAAContent\Samples.FXAAContent.contentproj">
+    <ProjectReference Include="..\FXAAContent\FXAAContent.contentproj">
       <Project>{578BBDBD-874B-4738-B956-93AAADD67D60}</Project>
       <Name>Samples.FXAAContent %28Content%29</Name>
       <XnaReferenceType>Content</XnaReferenceType>
