@@ -1,0 +1,100 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Animation", "Animation", "{0DED01C6-E636-4F1D-8AAD-DED2DC2ACF92}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Animation.Shared", "Animation\Animation.Shared\Animation.Shared.shproj", "{E0C5DE88-2E37-44B3-AC78-2E4E9ECF5C19}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Animation.Android", "Animation\Animation.Android\Animation.Android.csproj", "{599AD820-3BB4-49AD-88D3-22573207AD1F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Animation.WindowsDX", "Animation\Animation.WindowsDX\Animation.WindowsDX.csproj", "{8543BF7A-A5CA-480F-89DE-AA0E9522844A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Animation.DesktopGL", "Animation\Animation.DesktopGL\Animation.DesktopGL.csproj", "{0EB5B5EB-23F9-4A21-B695-C01566558376}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Animation.BlazorGL", "Animation\Animation.BlazorGL\Animation.BlazorGL.csproj", "{E068E22E-EE09-43E7-8346-5EAD7F7E5BDB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aether.Content.Pipeline", "Aether.Content.Pipeline", "{A103934A-7F55-42B5-A112-3F1BA6719880}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aether.Shaders", "Aether.Shaders", "{FA68C046-9140-4400-AE24-8B8CAD97FEE6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Animation.NETSTANDARD", "..\Animation\Aether.Animation.NETSTANDARD.csproj", "{56E77865-1779-4169-9836-8DE461CC21DD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Graphics.NETSTANDARD", "..\Graphics\Aether.Graphics.NETSTANDARD.csproj", "{37BD292A-89C2-419F-9026-575BEFF2A3D9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Shaders.InfiniteGrid.NETSTANDARD", "..\Shaders\InfiniteGrid\Aether.Shaders.InfiniteGrid.NETSTANDARD.csproj", "{E596EED9-95B1-49DB-852C-445C139A90CC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphicsImporters.NETSTANDARD", "..\Content.Pipeline\GraphicsImporters\GraphicsImporters.NETSTANDARD.csproj", "{D81FBBF9-4686-4C7D-9D64-6D92A6748CE0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimationImporters.NETSTANDARD", "..\Content.Pipeline\AnimationImporters\AnimationImporters.NETSTANDARD.csproj", "{A9CC70CE-7361-462E-ABB5-D904F681D0BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{599AD820-3BB4-49AD-88D3-22573207AD1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{599AD820-3BB4-49AD-88D3-22573207AD1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{599AD820-3BB4-49AD-88D3-22573207AD1F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{599AD820-3BB4-49AD-88D3-22573207AD1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{599AD820-3BB4-49AD-88D3-22573207AD1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{599AD820-3BB4-49AD-88D3-22573207AD1F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{8543BF7A-A5CA-480F-89DE-AA0E9522844A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8543BF7A-A5CA-480F-89DE-AA0E9522844A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8543BF7A-A5CA-480F-89DE-AA0E9522844A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8543BF7A-A5CA-480F-89DE-AA0E9522844A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EB5B5EB-23F9-4A21-B695-C01566558376}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EB5B5EB-23F9-4A21-B695-C01566558376}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EB5B5EB-23F9-4A21-B695-C01566558376}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EB5B5EB-23F9-4A21-B695-C01566558376}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E068E22E-EE09-43E7-8346-5EAD7F7E5BDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E068E22E-EE09-43E7-8346-5EAD7F7E5BDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E068E22E-EE09-43E7-8346-5EAD7F7E5BDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E068E22E-EE09-43E7-8346-5EAD7F7E5BDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56E77865-1779-4169-9836-8DE461CC21DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56E77865-1779-4169-9836-8DE461CC21DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56E77865-1779-4169-9836-8DE461CC21DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56E77865-1779-4169-9836-8DE461CC21DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37BD292A-89C2-419F-9026-575BEFF2A3D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37BD292A-89C2-419F-9026-575BEFF2A3D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37BD292A-89C2-419F-9026-575BEFF2A3D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37BD292A-89C2-419F-9026-575BEFF2A3D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E596EED9-95B1-49DB-852C-445C139A90CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E596EED9-95B1-49DB-852C-445C139A90CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E596EED9-95B1-49DB-852C-445C139A90CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E596EED9-95B1-49DB-852C-445C139A90CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D81FBBF9-4686-4C7D-9D64-6D92A6748CE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D81FBBF9-4686-4C7D-9D64-6D92A6748CE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D81FBBF9-4686-4C7D-9D64-6D92A6748CE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D81FBBF9-4686-4C7D-9D64-6D92A6748CE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9CC70CE-7361-462E-ABB5-D904F681D0BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9CC70CE-7361-462E-ABB5-D904F681D0BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9CC70CE-7361-462E-ABB5-D904F681D0BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9CC70CE-7361-462E-ABB5-D904F681D0BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E0C5DE88-2E37-44B3-AC78-2E4E9ECF5C19} = {0DED01C6-E636-4F1D-8AAD-DED2DC2ACF92}
+		{599AD820-3BB4-49AD-88D3-22573207AD1F} = {0DED01C6-E636-4F1D-8AAD-DED2DC2ACF92}
+		{8543BF7A-A5CA-480F-89DE-AA0E9522844A} = {0DED01C6-E636-4F1D-8AAD-DED2DC2ACF92}
+		{0EB5B5EB-23F9-4A21-B695-C01566558376} = {0DED01C6-E636-4F1D-8AAD-DED2DC2ACF92}
+		{E068E22E-EE09-43E7-8346-5EAD7F7E5BDB} = {0DED01C6-E636-4F1D-8AAD-DED2DC2ACF92}
+		{E596EED9-95B1-49DB-852C-445C139A90CC} = {FA68C046-9140-4400-AE24-8B8CAD97FEE6}
+		{D81FBBF9-4686-4C7D-9D64-6D92A6748CE0} = {A103934A-7F55-42B5-A112-3F1BA6719880}
+		{A9CC70CE-7361-462E-ABB5-D904F681D0BE} = {A103934A-7F55-42B5-A112-3F1BA6719880}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {45AD8EC6-459B-4F21-9065-FE2783311117}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Animation\Animation.Shared\Animation.Shared.projitems*{0eb5b5eb-23f9-4a21-b695-c01566558376}*SharedItemsImports = 5
+		Animation\Animation.Shared\Animation.Shared.projitems*{599ad820-3bb4-49ad-88d3-22573207ad1f}*SharedItemsImports = 5
+		Animation\Animation.Shared\Animation.Shared.projitems*{8543bf7a-a5ca-480f-89de-aa0e9522844a}*SharedItemsImports = 5
+		Animation\Animation.Shared\Animation.Shared.projitems*{e068e22e-ee09-43e7-8346-5ead7f7e5bdb}*SharedItemsImports = 5
+		Animation\Animation.Shared\Animation.Shared.projitems*{e0c5de88-2e37-44b3-ac78-2e4e9ecf5c19}*SharedItemsImports = 13
+	EndGlobalSection
+EndGlobal

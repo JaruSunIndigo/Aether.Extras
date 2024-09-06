@@ -18,6 +18,8 @@ namespace Samples.Animation
 
             _animationSampleComponent = new AnimationSampleComponent(this);
             Components.Add(_animationSampleComponent);
+
+            graphics.GraphicsProfile = GraphicsProfile.HiDef;
         }
 
         protected override void Initialize()
