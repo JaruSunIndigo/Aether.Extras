@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deferred", "Deferred", "{D7BCCD0B-1814-426F-82C4-133AADFF3A8E}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Deferred.Shared", "Deferred\Deferred.Shared\Deferred.Shared.shproj", "{710E05C6-C4B4-4762-A685-02A8E4015174}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Deferred.Android", "Deferred\Deferred.Android\Deferred.Android.csproj", "{E6256BEE-7707-482C-B9F0-044C5C210F86}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Deferred.WindowsDX", "Deferred\Deferred.WindowsDX\Deferred.WindowsDX.csproj", "{F46F73C9-E79E-41E5-9498-B587E9701B07}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Deferred.DesktopGL", "Deferred\Deferred.DesktopGL\Deferred.DesktopGL.csproj", "{E126359E-513F-4623-B2EF-39EEEC6225F3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Deferred.BlazorGL", "Deferred\Deferred.BlazorGL\Deferred.BlazorGL.csproj", "{D188F761-8910-4442-8552-BB30BC451870}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aether.Shaders", "Aether.Shaders", "{E0EC3ECF-86A0-4DB9-80FB-EABB5E3C3534}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Shaders.Deferred.NETSTANDARD", "..\Shaders\Deferred\Aether.Shaders.Deferred.NETSTANDARD.csproj", "{4CDE0225-870D-4F11-B4C8-333DD42ED6DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6256BEE-7707-482C-B9F0-044C5C210F86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6256BEE-7707-482C-B9F0-044C5C210F86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6256BEE-7707-482C-B9F0-044C5C210F86}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E6256BEE-7707-482C-B9F0-044C5C210F86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6256BEE-7707-482C-B9F0-044C5C210F86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6256BEE-7707-482C-B9F0-044C5C210F86}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F46F73C9-E79E-41E5-9498-B587E9701B07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F46F73C9-E79E-41E5-9498-B587E9701B07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F46F73C9-E79E-41E5-9498-B587E9701B07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F46F73C9-E79E-41E5-9498-B587E9701B07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E126359E-513F-4623-B2EF-39EEEC6225F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E126359E-513F-4623-B2EF-39EEEC6225F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E126359E-513F-4623-B2EF-39EEEC6225F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E126359E-513F-4623-B2EF-39EEEC6225F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D188F761-8910-4442-8552-BB30BC451870}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D188F761-8910-4442-8552-BB30BC451870}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D188F761-8910-4442-8552-BB30BC451870}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D188F761-8910-4442-8552-BB30BC451870}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CDE0225-870D-4F11-B4C8-333DD42ED6DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CDE0225-870D-4F11-B4C8-333DD42ED6DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CDE0225-870D-4F11-B4C8-333DD42ED6DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CDE0225-870D-4F11-B4C8-333DD42ED6DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{710E05C6-C4B4-4762-A685-02A8E4015174} = {D7BCCD0B-1814-426F-82C4-133AADFF3A8E}
+		{E6256BEE-7707-482C-B9F0-044C5C210F86} = {D7BCCD0B-1814-426F-82C4-133AADFF3A8E}
+		{F46F73C9-E79E-41E5-9498-B587E9701B07} = {D7BCCD0B-1814-426F-82C4-133AADFF3A8E}
+		{E126359E-513F-4623-B2EF-39EEEC6225F3} = {D7BCCD0B-1814-426F-82C4-133AADFF3A8E}
+		{D188F761-8910-4442-8552-BB30BC451870} = {D7BCCD0B-1814-426F-82C4-133AADFF3A8E}
+		{4CDE0225-870D-4F11-B4C8-333DD42ED6DB} = {E0EC3ECF-86A0-4DB9-80FB-EABB5E3C3534}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1187198A-FAF0-489D-B019-DCD818F676F3}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Deferred\Deferred.Shared\Deferred.Shared.projitems*{710e05c6-c4b4-4762-a685-02a8e4015174}*SharedItemsImports = 13
+		Deferred\Deferred.Shared\Deferred.Shared.projitems*{d188f761-8910-4442-8552-bb30bc451870}*SharedItemsImports = 5
+		Deferred\Deferred.Shared\Deferred.Shared.projitems*{e126359e-513f-4623-b2ef-39eeec6225f3}*SharedItemsImports = 5
+		Deferred\Deferred.Shared\Deferred.Shared.projitems*{e6256bee-7707-482c-b9f0-044c5c210f86}*SharedItemsImports = 5
+		Deferred\Deferred.Shared\Deferred.Shared.projitems*{f46f73c9-e79e-41e5-9498-b587e9701b07}*SharedItemsImports = 5
+	EndGlobalSection
+EndGlobal

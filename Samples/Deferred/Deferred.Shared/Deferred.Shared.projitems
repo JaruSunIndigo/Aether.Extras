@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>710e05c6-c4b4-4762-a685-02a8e4015174</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Deferred</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)DeferredGame.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DeferredRendering.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DeferredSampleComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QuadRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Spaceship.cs" />
+  </ItemGroup>
+</Project>
