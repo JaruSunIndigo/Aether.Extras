@@ -23,7 +23,8 @@ float lightRadius;
 float lightIntensity = 1.0f;
 
 // diffuse color, and specularIntensity in the alpha channel
-DECLARE_TEXTURE(colorMap, 0) = sampler_state
+texture2D colorMap : register(t0);
+sampler colorMapSampler : register(s0) = sampler_state
 {
     Texture = (colorMap);
     AddressU = CLAMP;
@@ -34,7 +35,8 @@ DECLARE_TEXTURE(colorMap, 0) = sampler_state
 };
 
 // normals, and specularPower in the alpha channel
-DECLARE_TEXTURE(normalMap, 1) = sampler_state
+texture2D normalMap : register(t1);
+sampler normalMapSampler : register(s1) = sampler_state
 {
     Texture = (normalMap);
     AddressU = CLAMP;
@@ -45,7 +47,8 @@ DECLARE_TEXTURE(normalMap, 1) = sampler_state
 };
 
 //depth
-DECLARE_TEXTURE(depthMap, 2) = sampler_state
+texture2D depthMap : register(t2);
+sampler depthMapSampler : register(s2) = sampler_state
 {
     Texture = (depthMap);
     AddressU = CLAMP;
@@ -91,17 +94,17 @@ float4 PixelShaderFunction(VertexShaderOutput input) : COLOR0
     texCoord -=halfPixel;
 
     //get normal data from the normalMap
-    float4 normalData = SAMPLE_TEXTURE(normalMap,texCoord);
+    float4 normalData = tex2D(normalMapSampler, texCoord);
     //tranform normal back into [-1,1] range
     float3 normal = 2.0f * normalData.xyz - 1.0f;
 
     //get specular power
     float specularPower = normalData.a * 255;
     //get specular intensity from the colorMap
-    float specularIntensity = SAMPLE_TEXTURE(colorMap,texCoord).a;
+    float specularIntensity = tex2D(colorMapSampler, texCoord).a;
 
     //read depth
-    float depthVal = SAMPLE_TEXTURE(depthMap,texCoord).r;
+    float depthVal = tex2D(depthMapSampler, texCoord).r;
 
     //compute screen-space position
     float4 position;

@@ -1,6 +1,7 @@
 #include "Macros.fxh"
 
-DECLARE_TEXTURE(colorMap, 0) = sampler_state
+texture2D colorMap : register(t0);
+sampler colorMapSampler : register(s0) = sampler_state
 {
     Texture = (colorMap);
     AddressU = CLAMP;
@@ -10,7 +11,8 @@ DECLARE_TEXTURE(colorMap, 0) = sampler_state
     Mipfilter = LINEAR;
 };
 
-DECLARE_TEXTURE(lightMap, 1) = sampler_state
+texture2D lightMap : register(t1);
+sampler lightMapSampler : register(s1) = sampler_state
 {
     Texture = (lightMap);
     AddressU = CLAMP;
@@ -44,8 +46,8 @@ VertexShaderOutput VertexShaderFunction(VertexShaderInput input)
 
 float4 PixelShaderFunction(VertexShaderOutput input) : COLOR0
 {
-    float3 diffuseColor = SAMPLE_TEXTURE(colorMap,input.TexCoord).rgb;
-    float4 light = SAMPLE_TEXTURE(lightMap,input.TexCoord);
+    float3 diffuseColor = tex2D(colorMapSampler, input.TexCoord).rgb;
+    float4 light = tex2D(lightMapSampler, input.TexCoord);
     float3 diffuseLight = light.rgb;
     float specularLight = light.a;
 	return float4((diffuseColor * diffuseLight + specularLight),1);

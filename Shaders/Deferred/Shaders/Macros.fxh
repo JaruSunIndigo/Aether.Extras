@@ -9,17 +9,7 @@
 #define TECHNIQUE(name, vsname, psname ) \
 	technique name { pass { VertexShader = compile vs_2_0 vsname (); PixelShader = compile ps_2_0 psname(); } }
 
-
-#define DECLARE_TEXTURE(Name, index) \
-    texture2D Name : register(t##index); \
-    sampler Name##Sampler : register(s##index) 
-
-#define DECLARE_CUBEMAP(Name, index) \
-    textureCUBE Name : register(t##index); \
-    sampler Name##Sampler : register(s##index) 
-
 #define SAMPLE_TEXTURE(Name, texCoord)  tex2D(Name##Sampler, texCoord)
-#define SAMPLE_CUBEMAP(Name, texCoord)  texCUBE(Name##Sampler, texCoord)
 
 
 #ifdef SM4  // Macros for targetting HLSL 4.0

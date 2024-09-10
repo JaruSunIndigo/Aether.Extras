@@ -6,9 +6,10 @@ float4x4 Projection;
 float specularIntensity = 0.8f;
 float specularPower = 0.5f; 
 
-DECLARE_TEXTURE(Diffuse, 0) = sampler_state
+//texture2D Diffuse : register(t0);
+sampler DiffuseSampler : register(s0) = sampler_state
 {
-    //Texture = (Diffuse);
+    Texture = (Diffuse);
     MAGFILTER = LINEAR;
     MINFILTER = LINEAR;
     MIPFILTER = LINEAR;
@@ -16,9 +17,10 @@ DECLARE_TEXTURE(Diffuse, 0) = sampler_state
     AddressV = Wrap;
 };
 
-DECLARE_TEXTURE(SpecularMap, 1) = sampler_state
+//texture2D SpecularMap : register(t1);
+sampler SpecularMapSampler : register(s1) = sampler_state
 {
-    //Texture = (SpecularMap);
+    Texture = (SpecularMap);
     MagFilter = LINEAR;
     MinFilter = LINEAR;
     Mipfilter = LINEAR;
@@ -26,9 +28,10 @@ DECLARE_TEXTURE(SpecularMap, 1) = sampler_state
     AddressV = Wrap;
 };
 
-DECLARE_TEXTURE(NormalMap, 2) = sampler_state
+//texture2D NormalMap : register(t2);
+sampler NormalMapSampler : register(s2) = sampler_state
 {
-    //Texture = (NormalMap);
+    Texture = (NormalMap);
     MagFilter = LINEAR;
     MinFilter = LINEAR;
     Mipfilter = LINEAR;
@@ -83,14 +86,14 @@ struct PixelShaderOutput
 PixelShaderOutput PixelShaderFunction(VertexShaderOutput input)
 {
     PixelShaderOutput output;
-    output.Color = SAMPLE_TEXTURE(Diffuse, input.TexCoord);
+    output.Color = tex2D(DiffuseSampler, input.TexCoord);
     
-    float4 specularAttributes = SAMPLE_TEXTURE(SpecularMap, input.TexCoord);
+    float4 specularAttributes = tex2D(SpecularMapSampler, input.TexCoord);
     //specular Intensity
     output.Color.a = specularAttributes.r;
     
     // read the normal from the normal map
-    float3 normalFromMap = SAMPLE_TEXTURE(NormalMap, input.TexCoord);
+    float3 normalFromMap = tex2D(NormalMapSampler, input.TexCoord);
     //tranform to [-1,1]
     normalFromMap = 2.0f * normalFromMap - 1.0f;
 	normalFromMap = float3(0,0,1); //if we don't have a normalMap do this!
