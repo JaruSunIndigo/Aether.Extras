@@ -18,7 +18,7 @@ namespace Samples.Deferred
         
         bool useLightA = true;
         bool useLightB = true;
-        bool useLightC = true; 
+        bool useLightC = true;
         bool rotate = true;
 
         Vector3 cameraPosition;
@@ -33,9 +33,9 @@ namespace Samples.Deferred
 
         DeferredRendering _deferredRendering;
 
-        const float LightAIntensity = 10f;
+        const float LightAIntensity = 3f;
         const float LightBIntensity = 1f;
-        const float LightCIntensity = 3f;
+        const float LightCIntensity = 10f;
 
         float lightAcurrentIntensity = LightAIntensity;
         float lightBcurrentIntensity = LightBIntensity;
@@ -133,9 +133,11 @@ namespace Samples.Deferred
             //float ambient = 0.1f;
             //GraphicsDevice.Clear(new Color(ambient, ambient, ambient, 0f));
 
-            var lightPos = spaceshipPos + new Vector3(2000,100,0);
-            _deferredRendering.DrawPointLight(
-                lightPos, Color.Goldenrod, 2000f, lightAcurrentIntensity,
+            var spotLight1Pos = spaceshipPos + new Vector3(-1000,1000,0);
+            var lightDirection = spaceshipPos - spotLight1Pos;
+            _deferredRendering.DrawSpotLight(
+                spotLight1Pos, Color.White, 1000f, lightAcurrentIntensity, lightDirection,
+                MathHelper.ToRadians(3f), MathHelper.ToRadians(3f),
                 view, projection, cameraPosition);
 
             var light2Pos = spaceshipPos + new Vector3(0, 800, 1000);
@@ -143,11 +145,9 @@ namespace Samples.Deferred
                 light2Pos, Color.CornflowerBlue, 900f, lightBcurrentIntensity,
                 view, projection, cameraPosition);
 
-            var spotLightPos = spaceshipPos + new Vector3(-1000,1000,0);
-            var lightDirection = spaceshipPos - spotLightPos;
-            _deferredRendering.DrawSpotLight(
-                spotLightPos, Color.White, 1000f, lightCcurrentIntensity, lightDirection,
-                MathHelper.ToRadians(3f), MathHelper.ToRadians(3f),
+            var light3Pos = spaceshipPos + new Vector3(2000,100,0);
+            _deferredRendering.DrawPointLight(
+                light3Pos, Color.Goldenrod, 2000f, lightCcurrentIntensity,
                 view, projection, cameraPosition);
             
             _deferredRendering.Combine();
@@ -157,9 +157,9 @@ namespace Samples.Deferred
             _deferredRendering.DrawRTs(spriteBatch);
             spriteBatch.End();
             spriteBatch.Begin();
-            spriteBatch.DrawString(font, String.Format("[F] PointLight A - ({0})", useLightA ? "ON" : "OFF"), new Vector2(20, 20), Color.White);
+            spriteBatch.DrawString(font, String.Format("[1] SpotLight  A - ({0})", useLightA ? "ON" : "OFF"), new Vector2(20, 20), Color.White);
             spriteBatch.DrawString(font, String.Format("[2] PointLight B - ({0})", useLightB ? "ON" : "OFF"), new Vector2(20, 40), Color.White);
-            spriteBatch.DrawString(font, String.Format("[3] SpotLight C - ({0})", useLightC ? "ON" : "OFF"), new Vector2(20, 60), Color.White);
+            spriteBatch.DrawString(font, String.Format("[3] PointLight C - ({0})", useLightC ? "ON" : "OFF"), new Vector2(20, 60), Color.White);
             spriteBatch.DrawString(font, String.Format("[4] Rotate - ({0})", rotate ? "ON" : "OFF"), new Vector2(20, 80), Color.White);
             spriteBatch.End();
         }
