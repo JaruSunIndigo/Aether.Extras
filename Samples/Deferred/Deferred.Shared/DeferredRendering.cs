@@ -54,10 +54,10 @@ namespace Samples.Deferred
                 
         internal void DrawRTs(SpriteBatch spriteBatch)
         {
-            float scale = 1f / 8f;
-            float height = colorRT.Height * scale;
+            float height = this._graphicsDevice.Viewport.Height / 8;
+            float scale = height/colorRT.Height;
             Vector2 pos = new Vector2(0, height);
-            Vector2 off = new Vector2(0, height*4);
+            Vector2 off = new Vector2(0, this._graphicsDevice.Viewport.Height - height*4);
             spriteBatch.Draw(colorRT, pos * 0 + off, null, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0);
             spriteBatch.Draw(normalRT,pos * 1 + off, null, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0);
             spriteBatch.Draw(depthRT, pos * 2 + off, null, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0);
