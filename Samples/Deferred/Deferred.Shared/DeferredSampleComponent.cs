@@ -82,13 +82,13 @@ namespace Samples.Deferred
             KeyboardState keyState = Keyboard.GetState();
             GamePadState gamePadState = GamePad.GetState(PlayerIndex.One);
 
-            if (keyState.IsKeyDown(Keys.F1) && !previousKeyboardState.IsKeyDown(Keys.F1))
+            if (keyState.IsKeyDown(Keys.D1) && !previousKeyboardState.IsKeyDown(Keys.D1))
                 useLightA = !useLightA;
-            if (keyState.IsKeyDown(Keys.F2) && !previousKeyboardState.IsKeyDown(Keys.F2))
+            if (keyState.IsKeyDown(Keys.D2) && !previousKeyboardState.IsKeyDown(Keys.D2))
                 useLightB = !useLightB;
-            if (keyState.IsKeyDown(Keys.F3) && !previousKeyboardState.IsKeyDown(Keys.F3))
+            if (keyState.IsKeyDown(Keys.D3) && !previousKeyboardState.IsKeyDown(Keys.D3))
                 useLightC = !useLightC;
-            if (keyState.IsKeyDown(Keys.F4) && !previousKeyboardState.IsKeyDown(Keys.F4))
+            if (keyState.IsKeyDown(Keys.D4) && !previousKeyboardState.IsKeyDown(Keys.D4))
                 rotate = !rotate;
 
             if (rotate)
@@ -157,10 +157,10 @@ namespace Samples.Deferred
             _deferredRendering.DrawRTs(spriteBatch);
             spriteBatch.End();
             spriteBatch.Begin();
-            spriteBatch.DrawString(font, String.Format("[F1] PointLight A - ({0})", useLightA ? "ON" : "OFF"), new Vector2(20, 20), Color.White);
-            spriteBatch.DrawString(font, String.Format("[F2] PointLight B - ({0})", useLightB ? "ON" : "OFF"), new Vector2(20, 40), Color.White);
-            spriteBatch.DrawString(font, String.Format("[F3] SpotLight C - ({0})", useLightC ? "ON" : "OFF"), new Vector2(20, 60), Color.White);
-            spriteBatch.DrawString(font, String.Format("[F4] Rotate - ({0})", rotate ? "ON" : "OFF"), new Vector2(20, 80), Color.White);
+            spriteBatch.DrawString(font, String.Format("[F] PointLight A - ({0})", useLightA ? "ON" : "OFF"), new Vector2(20, 20), Color.White);
+            spriteBatch.DrawString(font, String.Format("[2] PointLight B - ({0})", useLightB ? "ON" : "OFF"), new Vector2(20, 40), Color.White);
+            spriteBatch.DrawString(font, String.Format("[3] SpotLight C - ({0})", useLightC ? "ON" : "OFF"), new Vector2(20, 60), Color.White);
+            spriteBatch.DrawString(font, String.Format("[4] Rotate - ({0})", rotate ? "ON" : "OFF"), new Vector2(20, 80), Color.White);
             spriteBatch.End();
         }
 
