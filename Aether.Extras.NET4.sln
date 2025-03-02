@@ -23,17 +23,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Animation.NET4.DX", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aether.Shaders", "Aether.Shaders", "{13D47E11-4A7C-49C8-942E-2543E9C0098A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Shaders.FXAA.NET4", "Shaders\FXAA\Aether.Shaders.FXAA.NET4.csproj", "{FBBDE2BA-F9F3-4041-8584-2C912C235E26}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Shaders.FXAA", "Shaders\FXAA\Aether.Shaders.FXAA.csproj", "{FBBDE2BA-F9F3-4041-8584-2C912C235E26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Shaders.Deferred.NET4", "Shaders\Deferred\Aether.Shaders.Deferred.NET4.csproj", "{96105100-20DB-4187-9BCA-0A20AC9F1298}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Shaders.Deferred", "Shaders\Deferred\Aether.Shaders.Deferred.csproj", "{96105100-20DB-4187-9BCA-0A20AC9F1298}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtlasImporter", "Content.Pipeline\AtlasImporter\AtlasImporter.csproj", "{E710FBEA-8C75-405D-B6B4-CFC82CB48FB5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Atlas.NET4", "Atlas\Aether.Atlas.NET4.csproj", "{C7522B5E-B255-4FB6-A17A-9E6D217AEBD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Shaders.InfiniteGrid.NET4", "Shaders\InfiniteGrid\Aether.Shaders.InfiniteGrid.NET4.csproj", "{08296A2E-BECF-4DB9-A518-8A613D07B80E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Shaders.InfiniteGrid", "Shaders\InfiniteGrid\Aether.Shaders.InfiniteGrid.csproj", "{08296A2E-BECF-4DB9-A518-8A613D07B80E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Shaders.Tilemap.NET4", "Shaders\Tilemap\Aether.Shaders.Tilemap.NET4.csproj", "{6721CD07-0880-4154-85AF-EBE6043EF178}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Shaders.Tilemap", "Shaders\Tilemap\Aether.Shaders.Tilemap.csproj", "{6721CD07-0880-4154-85AF-EBE6043EF178}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SLMCImporter", "Content.Pipeline\SLMCImporter\SLMCImporter.csproj", "{C9FA924B-DA91-4641-8B7D-CBC09E5560AE}"
 EndProject

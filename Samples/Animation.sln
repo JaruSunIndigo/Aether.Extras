@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Animation.NETSTANDAR
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Graphics.NETSTANDARD", "..\Graphics\Aether.Graphics.NETSTANDARD.csproj", "{37BD292A-89C2-419F-9026-575BEFF2A3D9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Shaders.InfiniteGrid.NETSTANDARD", "..\Shaders\InfiniteGrid\Aether.Shaders.InfiniteGrid.NETSTANDARD.csproj", "{E596EED9-95B1-49DB-852C-445C139A90CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Shaders.InfiniteGrid", "..\Shaders\InfiniteGrid\Aether.Shaders.InfiniteGrid.csproj", "{E596EED9-95B1-49DB-852C-445C139A90CC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphicsImporters", "..\Content.Pipeline\GraphicsImporters\GraphicsImporters.csproj", "{D81FBBF9-4686-4C7D-9D64-6D92A6748CE0}"
 EndProject

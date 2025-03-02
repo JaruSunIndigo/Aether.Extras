@@ -74,9 +74,9 @@
       <Project>{c7522b5e-b255-4fb6-a17a-9e6d217aebd2}</Project>
       <Name>Aether.Atlas.NET4</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Shaders\Tilemap\Aether.Shaders.Tilemap.NET4.csproj">
+    <ProjectReference Include="..\..\..\Shaders\Tilemap\Aether.Shaders.Tilemap.csproj">
       <Project>{6721cd07-0880-4154-85af-ebe6043ef178}</Project>
-      <Name>Aether.Shaders.Tilemap.NET4</Name>
+      <Name>Aether.Shaders.Tilemap</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Tilemap\Aether.Tilemap.NET4.csproj">
       <Project>{7bd9f460-f3f9-40a0-b298-066ea975c06c}</Project>

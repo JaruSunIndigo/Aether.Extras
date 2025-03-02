@@ -54,7 +54,7 @@
     <None Include="app.manifest" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Shaders\Deferred\Aether.Shaders.Deferred.NETSTANDARD.csproj" />
+    <ProjectReference Include="..\..\..\Shaders\Deferred\Aether.Shaders.Deferred.csproj" />
   </ItemGroup>
   <Import Project="..\Deferred.Shared\Deferred.Shared.projitems" Label="Shared" />
 

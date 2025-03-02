@@ -57,9 +57,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Shaders\Tilemap\Aether.Shaders.Tilemap.NET4.csproj">
+    <ProjectReference Include="..\Shaders\Tilemap\Aether.Shaders.Tilemap.csproj">
       <Project>{6721cd07-0880-4154-85af-ebe6043ef178}</Project>
-      <Name>Aether.Shaders.Tilemap.NET4</Name>
+      <Name>Aether.Shaders.Tilemap</Name>
       <Private>False</Private>
     </ProjectReference>
   </ItemGroup>

@@ -55,7 +55,7 @@
     </KniContentReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Shaders\FXAA\Aether.Shaders.FXAA.NETSTANDARD.csproj" />
+    <ProjectReference Include="..\..\..\Shaders\FXAA\Aether.Shaders.FXAA.csproj" />
   </ItemGroup>
 
 </Project>

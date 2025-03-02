@@ -72,9 +72,9 @@
     <None Include="app.manifest" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Shaders\FXAA\Aether.Shaders.FXAA.NET4.csproj">
+    <ProjectReference Include="..\..\..\Shaders\FXAA\Aether.Shaders.FXAA.csproj">
       <Project>{fbbde2ba-f9f3-4041-8584-2c912c235e26}</Project>
-      <Name>Aether.Shaders.FXAA.NET4</Name>
+      <Name>Aether.Shaders.FXAA</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

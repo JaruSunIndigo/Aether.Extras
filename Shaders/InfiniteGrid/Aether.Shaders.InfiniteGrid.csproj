@@ -1,10 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <ProjectGuid>{08296A2E-BECF-4DB9-A518-8A613D07B80E}</ProjectGuid>
     <EnableDefaultItems>false</EnableDefaultItems>
-    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net40;netstandard2.0</TargetFrameworks>
     <OutputType>Library</OutputType>
     <RootNamespace>nkast.Aether.Shaders</RootNamespace>
-    <AssemblyName>Aether.Shaders.Tilemap</AssemblyName>
+    <AssemblyName>Aether.Shaders.InfiniteGrid</AssemblyName>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 	<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <OutputPath>..\..\Artifacts\$(Configuration)\Libraries\$(TargetFramework)\</OutputPath>
@@ -17,23 +18,21 @@
     <DefineConstants>TRACE;WINDOWS MG</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="TilemapEffect.cs" />
+    <PackageReference Include="nkast.Xna.Framework" Version="4.0.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Graphics" Version="4.0.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Game" Version="4.0.9001" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\InfiniteGridComponent.cs" />
+    <Compile Include="InfiniteGridEffect.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\TilemapEffect.dx11.fxo.10" />
-    <EmbeddedResource Include="Resources\TilemapEffect.ogl.fxo.10" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="nkast.Xna.Framework" Version="4.0.9001">
-      <PrivateAssets>all</PrivateAssets>
-      <ExcludeAssets>runtime</ExcludeAssets>
-    </PackageReference>
-    <PackageReference Include="nkast.Xna.Framework.Graphics" Version="4.0.9001">
-      <PrivateAssets>all</PrivateAssets>
-      <ExcludeAssets>runtime</ExcludeAssets>
-    </PackageReference>
+    <EmbeddedResource Include="Resources\InfiniteGridEffect.HiDef.dx11.fxo.10" />
+    <EmbeddedResource Include="Resources\InfiniteGridEffect.Reach.dx11.fxo.10" />
+    <EmbeddedResource Include="Resources\InfiniteGridEffect.HiDef.ogl.fxo.10" />
+    <EmbeddedResource Include="Resources\InfiniteGridEffect.Reach.ogl.fxo.10" />
   </ItemGroup>
 </Project>

@@ -56,7 +56,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Animation\Aether.Animation.NETSTANDARD.csproj" />
-    <ProjectReference Include="..\..\..\Shaders\InfiniteGrid\Aether.Shaders.InfiniteGrid.NETSTANDARD.csproj" />
+    <ProjectReference Include="..\..\..\Shaders\InfiniteGrid\Aether.Shaders.InfiniteGrid.csproj" />
   </ItemGroup>
   <Import Project="..\Animation.Shared\Animation.Shared.projitems" Label="Shared" />
 

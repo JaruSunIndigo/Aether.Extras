@@ -23,17 +23,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Animation.NETSTANDAR
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aether.Shaders", "Aether.Shaders", "{13D47E11-4A7C-49C8-942E-2543E9C0098A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Shaders.FXAA.NETSTANDARD", "Shaders\FXAA\Aether.Shaders.FXAA.NETSTANDARD.csproj", "{FBBDE2BA-F9F3-4041-8584-2C912C235E26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Shaders.FXAA", "Shaders\FXAA\Aether.Shaders.FXAA.csproj", "{FBBDE2BA-F9F3-4041-8584-2C912C235E26}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Shaders.Deferred.NETSTANDARD", "Shaders\Deferred\Aether.Shaders.Deferred.NETSTANDARD.csproj", "{96105100-20DB-4187-9BCA-0A20AC9F1298}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Shaders.Deferred", "Shaders\Deferred\Aether.Shaders.Deferred.csproj", "{96105100-20DB-4187-9BCA-0A20AC9F1298}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtlasImporter", "Content.Pipeline\AtlasImporter\AtlasImporter.csproj", "{E710FBEA-8C75-405D-B6B4-CFC82CB48FB5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Atlas.NETSTANDARD", "Atlas\Aether.Atlas.NETSTANDARD.csproj", "{C7522B5E-B255-4FB6-A17A-9E6D217AEBD2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Shaders.InfiniteGrid.NETSTANDARD", "Shaders\InfiniteGrid\Aether.Shaders.InfiniteGrid.NETSTANDARD.csproj", "{08296A2E-BECF-4DB9-A518-8A613D07B80E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Shaders.InfiniteGrid", "Shaders\InfiniteGrid\Aether.Shaders.InfiniteGrid.csproj", "{08296A2E-BECF-4DB9-A518-8A613D07B80E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Shaders.Tilemap.NETSTANDARD", "Shaders\Tilemap\Aether.Shaders.Tilemap.NETSTANDARD.csproj", "{6721CD07-0880-4154-85AF-EBE6043EF178}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Shaders.Tilemap", "Shaders\Tilemap\Aether.Shaders.Tilemap.csproj", "{6721CD07-0880-4154-85AF-EBE6043EF178}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SLMCImporter", "Content.Pipeline\SLMCImporter\SLMCImporter.csproj", "{C9FA924B-DA91-4641-8B7D-CBC09E5560AE}"
 EndProject

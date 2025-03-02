@@ -73,9 +73,9 @@
     <None Include="app.manifest" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Shaders\Deferred\Aether.Shaders.Deferred.NET4.csproj">
+    <ProjectReference Include="..\..\..\Shaders\Deferred\Aether.Shaders.Deferred.csproj">
       <Project>{96105100-20db-4187-9bca-0a20ac9f1298}</Project>
-      <Name>Aether.Shaders.Deferred.NET4</Name>
+      <Name>Aether.Shaders.Deferred</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

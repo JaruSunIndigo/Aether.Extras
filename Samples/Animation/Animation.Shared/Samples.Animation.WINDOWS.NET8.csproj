@@ -55,7 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Animation\Aether.Animation.NETSTANDARD.DX.csproj" />
-    <ProjectReference Include="..\..\..\Shaders\InfiniteGrid\Aether.Shaders.InfiniteGrid.NETSTANDARD.csproj" />
+    <ProjectReference Include="..\..\..\Shaders\InfiniteGrid\Aether.Shaders.InfiniteGrid.csproj" />
   </ItemGroup>
 
 </Project>

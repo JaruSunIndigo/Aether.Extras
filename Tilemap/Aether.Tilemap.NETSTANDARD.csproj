@@ -39,6 +39,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Shaders\Tilemap\Aether.Shaders.Tilemap.NETSTANDARD.csproj" />
+    <ProjectReference Include="..\Shaders\Tilemap\Aether.Shaders.Tilemap.csproj" />
   </ItemGroup>
 </Project>
