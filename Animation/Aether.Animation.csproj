@@ -37,4 +37,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Graphics\Aether.Graphics.csproj" />
+  </ItemGroup>
 </Project>
