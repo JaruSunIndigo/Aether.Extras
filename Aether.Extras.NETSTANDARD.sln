@@ -29,7 +29,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Shaders.Deferred", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtlasImporter", "Content.Pipeline\AtlasImporter\AtlasImporter.csproj", "{E710FBEA-8C75-405D-B6B4-CFC82CB48FB5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Atlas.NETSTANDARD", "Atlas\Aether.Atlas.NETSTANDARD.csproj", "{C7522B5E-B255-4FB6-A17A-9E6D217AEBD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Atlas", "Atlas\Aether.Atlas.csproj", "{C7522B5E-B255-4FB6-A17A-9E6D217AEBD2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Shaders.InfiniteGrid", "Shaders\InfiniteGrid\Aether.Shaders.InfiniteGrid.csproj", "{08296A2E-BECF-4DB9-A518-8A613D07B80E}"
 EndProject

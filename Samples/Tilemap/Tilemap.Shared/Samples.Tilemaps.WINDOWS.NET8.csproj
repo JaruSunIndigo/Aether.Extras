@@ -54,7 +54,7 @@
     </KniContentReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Atlas\Aether.Atlas.NETSTANDARD.csproj" />
+    <ProjectReference Include="..\..\..\Atlas\Aether.Atlas.csproj" />
     <ProjectReference Include="..\..\..\Shaders\Tilemap\Aether.Shaders.Tilemap.csproj" />
     <ProjectReference Include="..\..\..\Tilemap\Aether.Tilemap.csproj" />
   </ItemGroup>

@@ -70,9 +70,9 @@
     <None Include="app.manifest" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Atlas\Aether.Atlas.NET4.csproj">
+    <ProjectReference Include="..\..\..\Atlas\Aether.Atlas.csproj">
       <Project>{c7522b5e-b255-4fb6-a17a-9e6d217aebd2}</Project>
-      <Name>Aether.Atlas.NET4</Name>
+      <Name>Aether.Atlas</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

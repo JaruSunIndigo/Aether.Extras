@@ -53,7 +53,7 @@
     </KniContentReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Atlas\Aether.Atlas.NETSTANDARD.csproj" />
+    <ProjectReference Include="..\..\..\Atlas\Aether.Atlas.csproj" />
   </ItemGroup>
 
 </Project>

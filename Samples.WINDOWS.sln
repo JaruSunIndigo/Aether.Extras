@@ -31,7 +31,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Shaders.Tilemap", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtlasImporter", "Content.Pipeline\AtlasImporter\AtlasImporter.csproj", "{E710FBEA-8C75-405D-B6B4-CFC82CB48FB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Atlas.NET4", "Atlas\Aether.Atlas.NET4.csproj", "{C7522B5E-B255-4FB6-A17A-9E6D217AEBD2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Atlas", "Atlas\Aether.Atlas.csproj", "{C7522B5E-B255-4FB6-A17A-9E6D217AEBD2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Shaders.InfiniteGrid", "Shaders\InfiniteGrid\Aether.Shaders.InfiniteGrid.csproj", "{08296A2E-BECF-4DB9-A518-8A613D07B80E}"
 EndProject
