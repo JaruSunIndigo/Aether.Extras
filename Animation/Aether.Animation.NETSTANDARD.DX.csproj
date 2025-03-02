@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <EnableDefaultItems>false</EnableDefaultItems>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <OutputType>Library</OutputType>
     <RootNamespace>nkast.Aether.Animation</RootNamespace>
     <AssemblyName>Aether.Animation</AssemblyName>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 	<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <OutputPath>..\Artifacts\$(Configuration)\Libraries\netstandard2.0.DX\</OutputPath>
-    <BaseIntermediateOutputPath>obj\netstandard2.0.DX\</BaseIntermediateOutputPath>
+    <OutputPath>..\Artifacts\$(Configuration)\Libraries\$(TargetFramework).DX\</OutputPath>
+    <BaseIntermediateOutputPath>obj\$(TargetFramework).DX\</BaseIntermediateOutputPath>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
