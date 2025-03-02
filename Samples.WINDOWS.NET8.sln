@@ -17,9 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimationImporters", "Conte
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TilemapImporter", "Content.Pipeline\TilemapImporters\TilemapImporter.csproj", "{9B0F9C6B-3C43-472D-B0C1-91E11A9FDE89}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Animation.NETSTANDARD", "Animation\Aether.Animation.NETSTANDARD.csproj", "{F08D6D4C-60FB-4543-8D81-594080EB8051}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Animation", "Animation\Aether.Animation.csproj", "{F08D6D4C-60FB-4543-8D81-594080EB8051}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Animation.NETSTANDARD.DX", "Animation\Aether.Animation.NETSTANDARD.DX.csproj", "{57903A6B-1576-4361-8F03-1D5F038A782A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Animation.DX", "Animation\Aether.Animation.DX.csproj", "{57903A6B-1576-4361-8F03-1D5F038A782A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aether.Shaders", "Aether.Shaders", "{13D47E11-4A7C-49C8-942E-2543E9C0098A}"
 EndProject

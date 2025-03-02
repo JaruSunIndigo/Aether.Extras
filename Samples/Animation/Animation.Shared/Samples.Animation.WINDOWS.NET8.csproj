@@ -54,7 +54,7 @@
     </KniContentReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Animation\Aether.Animation.NETSTANDARD.DX.csproj" />
+    <ProjectReference Include="..\..\..\Animation\Aether.Animation.DX.csproj" />
     <ProjectReference Include="..\..\..\Shaders\InfiniteGrid\Aether.Shaders.InfiniteGrid.csproj" />
   </ItemGroup>
 
