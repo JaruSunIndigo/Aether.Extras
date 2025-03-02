@@ -21,7 +21,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aether.Shaders", "Aether.Sh
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Animation.NETSTANDARD", "..\Animation\Aether.Animation.NETSTANDARD.csproj", "{56E77865-1779-4169-9836-8DE461CC21DD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Graphics.NETSTANDARD", "..\Graphics\Aether.Graphics.NETSTANDARD.csproj", "{37BD292A-89C2-419F-9026-575BEFF2A3D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Graphics", "..\Graphics\Aether.Graphics.csproj", "{37BD292A-89C2-419F-9026-575BEFF2A3D9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Shaders.InfiniteGrid", "..\Shaders\InfiniteGrid\Aether.Shaders.InfiniteGrid.csproj", "{E596EED9-95B1-49DB-852C-445C139A90CC}"
 EndProject

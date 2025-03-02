@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RawModelProcessor", "Conten
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphicsImporters", "Content.Pipeline\GraphicsImporters\GraphicsImporters.csproj", "{400DC7B2-739D-4156-916D-2F2E1920310D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Graphics.NET4", "Graphics\Aether.Graphics.NET4.csproj", "{0A4ED2DF-9CDD-4C98-83AA-1898A394AC27}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Graphics", "Graphics\Aether.Graphics.csproj", "{0A4ED2DF-9CDD-4C98-83AA-1898A394AC27}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimationImporters", "Content.Pipeline\AnimationImporters\AnimationImporters.csproj", "{D9A47306-DEE0-4410-BC2C-BA8FFCE682A3}"
 EndProject
