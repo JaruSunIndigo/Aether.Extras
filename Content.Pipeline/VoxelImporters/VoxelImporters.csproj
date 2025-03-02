@@ -1,7 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <ProjectGuid>{AA15CF95-0AF2-4346-9465-CB6EDBE22ED9}</ProjectGuid>
     <EnableDefaultItems>false</EnableDefaultItems>
-    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net40;netstandard2.0</TargetFrameworks>
     <OutputType>Library</OutputType>
     <RootNamespace>nkast.Aether.Content.Pipeline</RootNamespace>
     <AssemblyName>Aether.Content.Pipeline.VoxelImporters</AssemblyName>
@@ -18,9 +19,6 @@
     <DefineConstants>TRACE;WINDOWS MG</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Vox\VoxImporter.cs" />
     <Compile Include="Vox\VoxHeader.cs" />
     <Compile Include="VertexPositionNormalColor.cs" />
@@ -31,25 +29,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="nkast.Xna.Framework" Version="4.0.9001">
-      <PrivateAssets>all</PrivateAssets>
-      <ExcludeAssets>runtime</ExcludeAssets>
-    </PackageReference>
-    <PackageReference Include="nkast.Xna.Framework.Content" Version="4.0.9001">
-      <PrivateAssets>all</PrivateAssets>
-      <ExcludeAssets>runtime</ExcludeAssets>
-    </PackageReference>
-    <PackageReference Include="nkast.Xna.Framework.Graphics" Version="4.0.9001">
-      <PrivateAssets>all</PrivateAssets>
-      <ExcludeAssets>runtime</ExcludeAssets>
-    </PackageReference>
-    <PackageReference Include="nkast.Xna.Framework.Content.Pipeline" Version="4.0.9001">
-      <PrivateAssets>all</PrivateAssets>
-      <ExcludeAssets>runtime</ExcludeAssets>
-    </PackageReference>
-    <PackageReference Include="nkast.Xna.Framework.Content.Pipeline.Graphics" Version="4.0.9001">
-      <PrivateAssets>all</PrivateAssets>
-      <ExcludeAssets>runtime</ExcludeAssets>
-    </PackageReference>
+    <PackageReference Include="nkast.Xna.Framework" Version="4.0.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Content" Version="4.0.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Graphics" Version="4.0.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Content.Pipeline" Version="4.0.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Content.Pipeline.Graphics" Version="4.0.9001" />
   </ItemGroup>
 </Project>

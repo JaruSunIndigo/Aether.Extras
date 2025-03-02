@@ -25,9 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Graphics.NETSTANDARD
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Shaders.InfiniteGrid.NETSTANDARD", "..\Shaders\InfiniteGrid\Aether.Shaders.InfiniteGrid.NETSTANDARD.csproj", "{E596EED9-95B1-49DB-852C-445C139A90CC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphicsImporters.NETSTANDARD", "..\Content.Pipeline\GraphicsImporters\GraphicsImporters.NETSTANDARD.csproj", "{D81FBBF9-4686-4C7D-9D64-6D92A6748CE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphicsImporters", "..\Content.Pipeline\GraphicsImporters\GraphicsImporters.csproj", "{D81FBBF9-4686-4C7D-9D64-6D92A6748CE0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimationImporters.NETSTANDARD", "..\Content.Pipeline\AnimationImporters\AnimationImporters.NETSTANDARD.csproj", "{A9CC70CE-7361-462E-ABB5-D904F681D0BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimationImporters", "..\Content.Pipeline\AnimationImporters\AnimationImporters.csproj", "{A9CC70CE-7361-462E-ABB5-D904F681D0BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
