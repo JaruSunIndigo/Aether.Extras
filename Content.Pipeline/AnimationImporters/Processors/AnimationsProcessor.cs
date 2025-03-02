@@ -48,7 +48,7 @@ namespace nkast.Aether.Content.Pipeline.Processors
             set { _generateKeyframesFrequency = value; }
         }
 
-        [DisplayName("Fix BoneRoot from MG importer")]
+        [DisplayName("Fix BoneRoot from FBX importer")]
         [DefaultValue(false)]
         public virtual bool FixRealBoneRoot
         {
@@ -59,7 +59,7 @@ namespace nkast.Aether.Content.Pipeline.Processors
         public override AnimationsContent Process(NodeContent input, ContentProcessorContext context)
         {
             if(_fixRealBoneRoot)
-                MGFixRealBoneRoot(input, context);
+                FbxFixRealBoneRoot(input, context);
 
             ValidateMesh(input, context, null);
 
@@ -106,7 +106,7 @@ namespace nkast.Aether.Content.Pipeline.Processors
         /// Here we revert that to get the original Skeleton and  
         /// add the real boneRoot to the root node.
         /// </summary>
-        private void MGFixRealBoneRoot(NodeContent input, ContentProcessorContext context)
+        private void FbxFixRealBoneRoot(NodeContent input, ContentProcessorContext context)
         {
             for (int i = input.Children.Count - 1; i >= 0; i--)
             {

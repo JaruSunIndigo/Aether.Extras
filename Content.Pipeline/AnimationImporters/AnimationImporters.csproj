@@ -12,10 +12,10 @@
     <BaseIntermediateOutputPath>obj\$(TargetFramework)\</BaseIntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DefineConstants>TRACE;DEBUG;WINDOWS MG</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;WINDOWS KNI</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DefineConstants>TRACE;WINDOWS MG</DefineConstants>
+    <DefineConstants>TRACE;WINDOWS KNI</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Animation\AnimationsContent.cs" />
@@ -30,7 +30,7 @@
     <Compile Include="Serialization\CpuAnimatedVertexBufferWriter.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.MG.cs" />
+    <Compile Include="Properties\AssemblyInfo.KNI.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="nkast.Xna.Framework" Version="4.0.9001" />

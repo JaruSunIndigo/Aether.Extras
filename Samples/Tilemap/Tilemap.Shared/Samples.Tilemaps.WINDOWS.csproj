@@ -20,8 +20,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\Debug\Windows\MG\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;WINDOWS MG</DefineConstants>
+    <OutputPath>bin\Debug\Windows\KNI\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;WINDOWS KNI</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
@@ -29,8 +29,8 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
-    <OutputPath>bin\Release\Windows\MG\</OutputPath>
-    <DefineConstants>TRACE;WINDOWS MG</DefineConstants>
+    <OutputPath>bin\Release\Windows\KNI\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS KNI</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>

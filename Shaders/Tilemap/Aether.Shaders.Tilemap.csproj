@@ -12,10 +12,10 @@
     <BaseIntermediateOutputPath>obj\$(TargetFramework)\</BaseIntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DefineConstants>TRACE;DEBUG;WINDOWS MG</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;WINDOWS KNI</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DefineConstants>TRACE;WINDOWS MG</DefineConstants>
+    <DefineConstants>TRACE;WINDOWS KNI</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="TilemapEffect.cs" />

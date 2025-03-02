@@ -13,10 +13,10 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DefineConstants>TRACE;DEBUG;WINDOWS MG MAPPEDMEM</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;WINDOWS KNI MAPPEDMEM</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DefineConstants>TRACE;WINDOWS MG MAPPEDMEM</DefineConstants>
+    <DefineConstants>TRACE;WINDOWS KNI MAPPEDMEM</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="nkast.Xna.Framework" Version="4.0.9001" />

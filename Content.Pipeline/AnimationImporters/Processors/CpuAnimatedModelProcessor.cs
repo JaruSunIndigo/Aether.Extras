@@ -67,7 +67,7 @@ namespace nkast.Aether.Content.Pipeline.Processors
             set { _generateKeyframesFrequency = value; }
         }
 
-        [DisplayName("Fix BoneRoot from MG importer")]
+        [DisplayName("Fix BoneRoot from FBX importer")]
         [DefaultValue(false)]
         public virtual bool FixRealBoneRoot
         {
