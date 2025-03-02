@@ -57,7 +57,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.SLMC.WINDOWS", "Sam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Tilemaps.WINDOWS", "Samples\Tilemap\Tilemap.Shared\Samples.Tilemaps.WINDOWS.csproj", "{9B99798B-72F3-4E4B-9B99-DE15F7C955E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Tilemap.NET4", "Tilemap\Aether.Tilemap.NET4.csproj", "{7BD9F460-F3F9-40A0-B298-066EA975C06C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Tilemap", "Tilemap\Aether.Tilemap.csproj", "{7BD9F460-F3F9-40A0-B298-066EA975C06C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

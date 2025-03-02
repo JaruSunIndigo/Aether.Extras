@@ -39,7 +39,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SLMCImporter", "Content.Pip
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VoxelImporters", "Content.Pipeline\VoxelImporters\VoxelImporters.csproj", "{AA15CF95-0AF2-4346-9465-CB6EDBE22ED9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Tilemap.NET4", "Tilemap\Aether.Tilemap.NET4.csproj", "{7BD9F460-F3F9-40A0-B298-066EA975C06C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aether.Tilemap", "Tilemap\Aether.Tilemap.csproj", "{7BD9F460-F3F9-40A0-B298-066EA975C06C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

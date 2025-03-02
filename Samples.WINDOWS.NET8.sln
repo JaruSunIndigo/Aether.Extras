@@ -57,7 +57,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.SLMC.WINDOWS.NET8",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.Tilemaps.WINDOWS.NET8", "Samples\Tilemap\Tilemap.Shared\Samples.Tilemaps.WINDOWS.NET8.csproj", "{9B99798B-72F3-4E4B-9B99-DE15F7C955E9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Tilemap.NETSTANDARD", "Tilemap\Aether.Tilemap.NETSTANDARD.csproj", "{7BD9F460-F3F9-40A0-B298-066EA975C06C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Tilemap", "Tilemap\Aether.Tilemap.csproj", "{7BD9F460-F3F9-40A0-B298-066EA975C06C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

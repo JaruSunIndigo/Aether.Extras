@@ -56,7 +56,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\Atlas\Aether.Atlas.NETSTANDARD.csproj" />
     <ProjectReference Include="..\..\..\Shaders\Tilemap\Aether.Shaders.Tilemap.csproj" />
-    <ProjectReference Include="..\..\..\Tilemap\Aether.Tilemap.NETSTANDARD.csproj" />
+    <ProjectReference Include="..\..\..\Tilemap\Aether.Tilemap.csproj" />
   </ItemGroup>
 
 </Project>
