@@ -7,9 +7,7 @@
     <RootNamespace>nkast.Aether.Animation</RootNamespace>
     <AssemblyName>Aether.Animation</AssemblyName>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-	<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <OutputPath>..\Artifacts\$(Configuration)\Libraries\$(TargetFramework)\</OutputPath>
-    <BaseIntermediateOutputPath>obj\$(TargetFramework)\</BaseIntermediateOutputPath>
+    <OutputPath>..\Artifacts\$(Configuration)\Libraries\</OutputPath>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

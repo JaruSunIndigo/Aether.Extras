@@ -8,9 +8,7 @@
     <RootNamespace>nkast.Aether.Graphics</RootNamespace>
     <AssemblyName>Aether.Atlas</AssemblyName>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-	<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <OutputPath>..\Artifacts\$(Configuration)\Libraries\$(TargetFramework)\</OutputPath>
-    <BaseIntermediateOutputPath>obj\$(TargetFramework)\</BaseIntermediateOutputPath>
+    <OutputPath>..\Artifacts\$(Configuration)\Libraries\</OutputPath>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

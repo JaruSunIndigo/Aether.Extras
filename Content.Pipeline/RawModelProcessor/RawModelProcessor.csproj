@@ -7,9 +7,7 @@
     <RootNamespace>nkast.Aether.Content.Pipeline</RootNamespace>
     <AssemblyName>Aether.Content.Pipeline.RawModelProcessor</AssemblyName>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-	<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <OutputPath>..\..\Artifacts\$(Configuration)\Processors\$(TargetFramework)\</OutputPath>
-    <BaseIntermediateOutputPath>obj\$(TargetFramework)\</BaseIntermediateOutputPath>
+    <OutputPath>..\..\Artifacts\$(Configuration)\Processors\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DefineConstants>TRACE;DEBUG;WINDOWS KNI</DefineConstants>

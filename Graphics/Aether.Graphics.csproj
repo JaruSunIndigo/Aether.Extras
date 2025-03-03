@@ -7,9 +7,7 @@
     <RootNamespace>nkast.Aether.Graphics</RootNamespace>
     <AssemblyName>Aether.Graphics</AssemblyName>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-	<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <OutputPath>..\Artifacts\$(Configuration)\Libraries\$(TargetFramework)\</OutputPath>
-    <BaseIntermediateOutputPath>obj\$(TargetFramework)\</BaseIntermediateOutputPath>
+    <OutputPath>..\Artifacts\$(Configuration)\Libraries\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DefineConstants>TRACE;DEBUG;WINDOWS KNI</DefineConstants>
