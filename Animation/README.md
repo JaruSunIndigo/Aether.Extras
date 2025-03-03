@@ -1,14 +1,12 @@
+# Aether.Graphics
+Graphics library for [Kni](https://github.com/kniengine/kni) framework.
 
-# nkast.Aether.Animation.*
+## Graphics
 
-Play animated 3D models and support for CPU animation.
-CPU animation is optimized using unsafe code, writing directly to mapped VertexBuffer memory using reflection (DirectX).
+* nkast.Aether.Animation.Animations
 
-## Importers
+Play animated 3D models. Support GPU and CPU animation.
 
-* 'Animation' - Import animations from a Model.
-* 'GPU AnimatedModel' - Import an animated Model.
-* 'CPU AnimatedModel' - Import an animated Model to be animated by the CPU. Based on DynamicModelProcessor, the imported asset is of type Microsoft.Xna.Framework.Graphics.Model where the VertexBuffer is replaced by a CpuAnimatedVertexBuffer. CpuAnimatedVertexBuffer inherits from DynamicVertexBuffer.
 
 ## Example
 

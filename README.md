@@ -1,5 +1,5 @@
 # Aether.Extras
-Content Importers and Shaders for [MonoGame](https://github.com/MonoGame/MonoGame) and [Kni](https://github.com/kniengine/kni) framework.
+Content Importers and Shaders for and [Kni](https://github.com/kniengine/kni) framework.
 
 ## Content Importers
 
@@ -12,21 +12,9 @@ Content Importers and Shaders for [MonoGame](https://github.com/MonoGame/MonoGam
 VertexBuffer & IndexBuffers, make them Dynamic and WriteOnly.
 * 'VoxelModelImporter' - Import .vox files as 3D Models.
 * 'AtlasImporter' - Import sprite atlas. Supports .tmx files. Mipmaps are generated individually for each sprite, no color-leak.
-* 'TilemapImporter' - Import tilemap files. Supports .tmx files.
+* 'TilemapImporter' - Import tilemap files. Supports .tmx files. Mipmaps are generated individually for each sprite, no color-leak.
 
 ## nkast.Aether.Animation
 
 Play animated 3D models and support for CPU animation.
 CPU animation is optimized using unsafe code, writing directly to mapped VertexBuffer memory using reflection (DirectX). 
-
-## nkast.Aether.Graphics
-
-Draw Atlas sprites from TextureAtlas.
-Draw Tilemaps.
-
-## nkast.Aether.Shaders
-
-* 'FXAA' - MonoGame port of NVIDIA's FXAA 3.11 shader.
-* 'Deferred' - Deferred rendering.
-* 'InfiniteGrid' - Draws an Infinite Grid.
-* 'Tilemap' - Draws a Tilemap texture.
