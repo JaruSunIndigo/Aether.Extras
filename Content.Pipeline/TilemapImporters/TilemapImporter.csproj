@@ -1,4 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\Package.props" />
+  <PropertyGroup>
+    <Version>1.4.0.0</Version>
+    <AssemblyVersion>1.4.0.0</AssemblyVersion>
+    <copyright>Copyright © Kastellanos Nikolaos 2021-2025</copyright>
+  </PropertyGroup>
+
   <PropertyGroup>
     <ProjectGuid>{9B0F9C6B-3C43-472D-B0C1-91E11A9FDE89}</ProjectGuid>
     <EnableDefaultItems>false</EnableDefaultItems>
@@ -6,7 +14,6 @@
     <OutputType>Library</OutputType>
     <RootNamespace>nkast.Aether.Content.Pipeline</RootNamespace>
     <AssemblyName>Aether.Content.Pipeline.TilemapImporter</AssemblyName>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <OutputPath>..\..\Artifacts\$(Configuration)\Processors\</OutputPath>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <DefineConstants>WINDOWS KNI</DefineConstants>
@@ -29,7 +36,5 @@
     <Compile Include="Processors\TilemapProcessor.cs" />
     <Compile Include="Serialization\TilemapWriter.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
+
 </Project>

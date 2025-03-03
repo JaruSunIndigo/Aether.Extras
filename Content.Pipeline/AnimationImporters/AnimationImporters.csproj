@@ -1,4 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\Package.props" />
+  <PropertyGroup>
+    <Version>1.4.0.0</Version>
+    <AssemblyVersion>1.4.0.0</AssemblyVersion>
+    <copyright>Copyright © Kastellanos Nikolaos 2011-2025</copyright>
+    <PackageProjectUrl>https://nkast.github.io/Aether.Extras/wasm/Animation.html</PackageProjectUrl>
+  </PropertyGroup>
+
   <PropertyGroup>
     <ProjectGuid>{D9A47306-DEE0-4410-BC2C-BA8FFCE682A3}</ProjectGuid>
     <EnableDefaultItems>false</EnableDefaultItems>
@@ -6,7 +15,6 @@
     <OutputType>Library</OutputType>
     <RootNamespace>nkast.Aether.Content.Pipeline</RootNamespace>
     <AssemblyName>Aether.Content.Pipeline.AnimationImporters</AssemblyName>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <OutputPath>..\..\Artifacts\$(Configuration)\Processors\</OutputPath>
     <DefineConstants>WINDOWS KNI</DefineConstants>
   </PropertyGroup>
@@ -23,9 +31,7 @@
     <Compile Include="Serialization\ClipWriter.cs" />
     <Compile Include="Serialization\CpuAnimatedVertexBufferWriter.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.KNI.cs" />
-  </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="nkast.Xna.Framework" Version="4.0.9001" />
     <PackageReference Include="nkast.Xna.Framework.Content" Version="4.0.9001" />

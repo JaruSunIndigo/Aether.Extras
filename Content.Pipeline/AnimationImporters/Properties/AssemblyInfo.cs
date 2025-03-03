@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Aether.Content.Pipeline.Animation")]
-[assembly: AssemblyCopyright("Copyright © Kastellanos Nikolaos 2011-2024")]
+[assembly: AssemblyCopyright("Copyright © Kastellanos Nikolaos 2011-2025")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

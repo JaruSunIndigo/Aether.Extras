@@ -1,4 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\Package.props" />
+  <PropertyGroup>
+    <Version>1.4.0.0</Version>
+    <AssemblyVersion>1.4.0.0</AssemblyVersion>
+    <copyright>Copyright © Kastellanos Nikolaos 2016-2025</copyright>
+  </PropertyGroup>
+
   <PropertyGroup>
     <ProjectGuid>{0A4ED2DF-9CDD-4C98-83AA-1898A394AC27}</ProjectGuid>
     <EnableDefaultItems>false</EnableDefaultItems>
@@ -6,7 +14,6 @@
     <OutputType>Library</OutputType>
     <RootNamespace>nkast.Aether.Graphics</RootNamespace>
     <AssemblyName>Aether.Graphics</AssemblyName>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <OutputPath>..\Artifacts\$(Configuration)\Libraries\</OutputPath>
     <DefineConstants>WINDOWS KNI</DefineConstants>
   </PropertyGroup>
@@ -20,7 +27,5 @@
     <Compile Include="ContentReaders\DynamicIndexBufferReader.cs" />
     <Compile Include="ContentReaders\DynamicVertexBufferReader.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
+
 </Project>

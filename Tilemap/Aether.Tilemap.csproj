@@ -1,4 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\Package.props" />
+  <PropertyGroup>
+    <Version>1.4.0.0</Version>
+    <AssemblyVersion>1.4.0.0</AssemblyVersion>
+    <copyright>Copyright © Kastellanos Nikolaos 2021-2025</copyright>
+  </PropertyGroup>
+
   <PropertyGroup>
     <ProjectGuid>{7BD9F460-F3F9-40A0-B298-066EA975C06C}</ProjectGuid>
     <EnableDefaultItems>false</EnableDefaultItems>
@@ -6,7 +14,6 @@
     <OutputType>Library</OutputType>
     <RootNamespace>nkast.Aether.Graphics</RootNamespace>
     <AssemblyName>Aether.Tilemap</AssemblyName>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <OutputPath>..\Artifacts\$(Configuration)\Libraries\</OutputPath>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <DefineConstants>WINDOWS KNI</DefineConstants>
@@ -22,7 +29,6 @@
     <Compile Include="Tilemap\Tile.cs" />
     <Compile Include="Tilemap\Tilemap.cs" />
     <Compile Include="ContentReaders\TilemapReader.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Shaders\Tilemap\Aether.Shaders.Tilemap.csproj" />

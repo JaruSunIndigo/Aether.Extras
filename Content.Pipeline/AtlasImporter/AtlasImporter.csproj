@@ -1,4 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\Package.props" />
+  <PropertyGroup>
+    <Version>1.4.0.0</Version>
+    <AssemblyVersion>1.4.0.0</AssemblyVersion>
+    <copyright>Copyright © Kastellanos Nikolaos 2016-2025</copyright>
+  </PropertyGroup>
+
   <PropertyGroup>
     <ProjectGuid>{E710FBEA-8C75-405D-B6B4-CFC82CB48FB5}</ProjectGuid>
     <EnableDefaultItems>false</EnableDefaultItems>
@@ -6,7 +14,6 @@
     <OutputType>Library</OutputType>
     <RootNamespace>nkast.Aether.Content.Pipeline</RootNamespace>
     <AssemblyName>Aether.Content.Pipeline.AtlasImporter</AssemblyName>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <OutputPath>..\..\Artifacts\$(Configuration)\Processors\</OutputPath>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <DefineConstants>WINDOWS KNI</DefineConstants>
@@ -28,7 +35,5 @@
     <Compile Include="Processors\TextureAtlasProcessor.cs" />
     <Compile Include="Serialization\TextureAtlasWriter.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
+
 </Project>

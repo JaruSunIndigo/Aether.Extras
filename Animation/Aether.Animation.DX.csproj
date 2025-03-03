@@ -1,4 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\Package.props" />
+  <PropertyGroup>
+    <Version>1.4.0.0</Version>
+    <AssemblyVersion>1.4.0.0</AssemblyVersion>
+    <copyright>Copyright © Kastellanos Nikolaos 2011-2025</copyright>
+    <PackageProjectUrl>https://nkast.github.io/Aether.Extras/wasm/Animation.html</PackageProjectUrl>
+  </PropertyGroup>
+
   <PropertyGroup>
     <ProjectGuid>{57903A6B-1576-4361-8F03-1D5F038A782A}</ProjectGuid>
     <EnableDefaultItems>false</EnableDefaultItems>
@@ -6,7 +15,6 @@
     <OutputType>Library</OutputType>
     <RootNamespace>nkast.Aether.Animation</RootNamespace>
     <AssemblyName>Aether.Animation</AssemblyName>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 	<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <OutputPath>..\Artifacts\$(Configuration)\Libraries\$(TargetFramework).DX\</OutputPath>
     <BaseIntermediateOutputPath>obj\$(TargetFramework).DX\</BaseIntermediateOutputPath>
@@ -33,9 +41,7 @@
     <Compile Include="ContentReaders\CpuAnimatedVertexBufferReader.cs" />
     <Compile Include="Graphics\VertexTypes\VertexIndicesWeightsPositionNormal.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\Graphics\Aether.Graphics.csproj" />
   </ItemGroup>

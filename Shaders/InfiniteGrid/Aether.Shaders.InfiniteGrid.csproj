@@ -1,4 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\Package.props" />
+  <PropertyGroup>
+    <Version>1.4.0.0</Version>
+    <AssemblyVersion>1.4.0.0</AssemblyVersion>
+    <copyright>Copyright © Kastellanos Nikolaos 2017-2025</copyright>
+  </PropertyGroup>
+
   <PropertyGroup>
     <ProjectGuid>{08296A2E-BECF-4DB9-A518-8A613D07B80E}</ProjectGuid>
     <EnableDefaultItems>false</EnableDefaultItems>
@@ -6,7 +14,6 @@
     <OutputType>Library</OutputType>
     <RootNamespace>nkast.Aether.Shaders</RootNamespace>
     <AssemblyName>Aether.Shaders.InfiniteGrid</AssemblyName>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <OutputPath>..\..\Artifacts\$(Configuration)\Libraries\</OutputPath>
     <DefineConstants>WINDOWS KNI</DefineConstants>
   </PropertyGroup>
@@ -20,9 +27,7 @@
     <Compile Include="Components\InfiniteGridComponent.cs" />
     <Compile Include="InfiniteGridEffect.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
+
   <ItemGroup>
     <EmbeddedResource Include="Resources\InfiniteGridEffect.HiDef.dx11.fxo.10" />
     <EmbeddedResource Include="Resources\InfiniteGridEffect.Reach.dx11.fxo.10" />
