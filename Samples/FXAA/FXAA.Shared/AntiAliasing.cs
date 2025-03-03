@@ -12,7 +12,7 @@ namespace Samples.FXAA
         RenderTarget2D _renderTarget;
 
         internal FXAAEffect fxaaGreenLumaLowEffect;
-        #if(WINDOWS || W10)
+        #if(WINDOWS)
         internal FXAAEffect fxaaGreenLumaMediumEffect;
         internal FXAAEffect fxaaGreenLumaHighEffect;
         #endif
@@ -38,7 +38,7 @@ namespace Samples.FXAA
             }
             catch (Exception ex1) { }
 
-			#if(WINDOWS || W10)
+			#if(WINDOWS)
             try
             {
                 if (_graphicsDevice.GraphicsProfile >= GraphicsProfile.HiDef)          
@@ -110,7 +110,7 @@ namespace Samples.FXAA
         public void DrawRenderTarget(int antiAliasingLevel, Viewport viewport, bool clearRenderTarget)
         {
             FXAAEffect fxaaEffect = fxaaGreenLumaLowEffect;
-            #if(WINDOWS || W10)
+            #if(WINDOWS)
             if (antiAliasingLevel == 1) fxaaEffect = fxaaGreenLumaLowEffect;
             if (antiAliasingLevel == 2) fxaaEffect = fxaaGreenLumaMediumEffect;
             if (antiAliasingLevel == 3) fxaaEffect = fxaaGreenLumaHighEffect;

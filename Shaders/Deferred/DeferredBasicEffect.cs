@@ -41,7 +41,7 @@ namespace nkast.Aether.Shaders
         internal static byte[] LoadEffectResource(GraphicsDevice graphicsDevice, string name)
         {
             name = GetResourceName(graphicsDevice, name);
-            using (Stream stream = GetAssembly(typeof(DeferredBasicEffect)).GetManifestResourceStream(name))
+            using (Stream stream = typeof(DeferredBasicEffect).Assembly.GetManifestResourceStream(name))
             {
                 byte[] bytecode = new byte[stream.Length];
                 stream.Read(bytecode, 0, (int)stream.Length);
@@ -73,7 +73,7 @@ namespace nkast.Aether.Shaders
 
             // Detect version
             version = ".10";
-            Version kniVersion = GetAssembly(typeof(Effect)).GetName().Version;
+            Version kniVersion = typeof(Effect).Assembly.GetName().Version;
             if (kniVersion.Major == 3)
             {
                 if (kniVersion.Minor == 9)
@@ -88,15 +88,6 @@ namespace nkast.Aether.Shaders
 #endif
 
             return name + platformName + version;
-        }
-
-        private static Assembly GetAssembly(Type type)
-        {            
-            #if W10 
-            return type.GetTypeInfo().Assembly;
-            #else
-            return type.Assembly;
-            #endif
         }
 
         #endregion
