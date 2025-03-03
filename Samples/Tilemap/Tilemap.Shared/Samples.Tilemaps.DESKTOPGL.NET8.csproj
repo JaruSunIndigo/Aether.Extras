@@ -9,19 +9,14 @@
     <KniPlatform>Windows</KniPlatform>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <OutputPath>bin\$(Configuration)\DesktopGL\</OutputPath>
+    <DefineConstants>WINDOWS KNI</DefineConstants>
   </PropertyGroup>
+	
   <PropertyGroup>
     <ApplicationIcon>Icon.ico</ApplicationIcon>
-  </PropertyGroup>
-  <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <DefineConstants>TRACE;DEBUG;WINDOWS KNI</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
-    <DefineConstants>TRACE;WINDOWS KNI</DefineConstants>
-  </PropertyGroup>
+	
   <ItemGroup>
     <Compile Include="TilemapSampleComponent.cs" />
     <Compile Include="TilemapGame.cs" />

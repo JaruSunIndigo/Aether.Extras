@@ -9,13 +9,9 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <OutputPath>..\..\Artifacts\$(Configuration)\Processors\</OutputPath>
+    <DefineConstants>WINDOWS KNI</DefineConstants>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DefineConstants>TRACE;DEBUG;WINDOWS KNI</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DefineConstants>TRACE;WINDOWS KNI</DefineConstants>
-  </PropertyGroup>
+	
   <ItemGroup>
     <Compile Include="Vox\VoxImporter.cs" />
     <Compile Include="Vox\VoxHeader.cs" />

@@ -4,25 +4,20 @@
     <EnableDefaultItems>false</EnableDefaultItems>
     <TargetFramework>net8.0-windows</TargetFramework>
     <OutputType>WinExe</OutputType>
+    <UseWindowsForms>True</UseWindowsForms>
     <RootNamespace>Samples.Animation</RootNamespace>
     <AssemblyName>Samples.Animation</AssemblyName>
     <KniPlatform>Windows</KniPlatform>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <OutputPath>bin\$(Configuration)\WindowsDX\</OutputPath>
+    <DefineConstants>WINDOWS KNI</DefineConstants>
   </PropertyGroup>
+	
   <PropertyGroup>
     <ApplicationIcon>Icon.ico</ApplicationIcon>
-  </PropertyGroup>
-  <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
-    <UseWindowsForms>True</UseWindowsForms>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <DefineConstants>TRACE;DEBUG;WINDOWS KNI</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
-    <DefineConstants>TRACE;WINDOWS KNI</DefineConstants>
-  </PropertyGroup>
+	
   <ItemGroup>
     <Compile Include="AnimationSampleComponent.cs" />
     <Compile Include="AnimationGame.cs" />

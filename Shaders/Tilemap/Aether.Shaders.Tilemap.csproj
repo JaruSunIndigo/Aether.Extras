@@ -8,13 +8,9 @@
     <AssemblyName>Aether.Shaders.Tilemap</AssemblyName>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <OutputPath>..\..\Artifacts\$(Configuration)\Libraries\</OutputPath>
+    <DefineConstants>WINDOWS KNI</DefineConstants>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DefineConstants>TRACE;DEBUG;WINDOWS KNI</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DefineConstants>TRACE;WINDOWS KNI</DefineConstants>
-  </PropertyGroup>
+	
   <ItemGroup>
     <Compile Include="TilemapEffect.cs" />
   </ItemGroup>
