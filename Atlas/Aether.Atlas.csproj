@@ -5,6 +5,10 @@
     <Version>1.4.0.0</Version>
     <AssemblyVersion>1.4.0.0</AssemblyVersion>
     <copyright>Copyright © Kastellanos Nikolaos 2016-2025</copyright>
+    <PackageId>nkast.Aether.Atlas</PackageId>
+    <Description>TextureAtlas for Kni game framework</Description>
+    <PackageTags>C# Graphics TextureAtlas KNI</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -35,6 +39,13 @@
     <Compile Include="Atlas\Sprite.cs" />
     <Compile Include="Atlas\TextureAtlas.cs" />
     <Compile Include="ContentReaders\TextureAtlasReader.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

@@ -6,6 +6,10 @@
     <AssemblyVersion>1.4.0.0</AssemblyVersion>
     <copyright>Copyright © Kastellanos Nikolaos 2014-2025</copyright>
     <PackageProjectUrl>https://nkast.github.io/Aether.Extras/wasm/Deferred.html</PackageProjectUrl>
+    <PackageId>nkast.Aether.Shaders.Deferred</PackageId>
+    <Description>Shaders for Kni game framework</Description>
+    <PackageTags>C# Graphics Deferred KNI Shaders</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -43,4 +47,12 @@
     <EmbeddedResource Include="Resources\DeferredPointLight.ogl.fxo.10" />
     <EmbeddedResource Include="Resources\DeferredSpotLight.ogl.fxo.10" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
 </Project>

@@ -6,6 +6,10 @@
     <AssemblyVersion>1.4.0.0</AssemblyVersion>
     <copyright>Copyright © Kastellanos Nikolaos 2011-2025</copyright>
     <PackageProjectUrl>https://nkast.github.io/Aether.Extras/wasm/Animation.html</PackageProjectUrl>
+    <PackageId>nkast.Aether.Content.Pipeline.AnimationImporters</PackageId>
+    <Description>Content Importers for Kni Content Pipeline</Description>
+    <PackageTags>C# Graphics Animation KNI Content Pipeline</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -43,4 +47,12 @@
     <ProjectReference Include="..\GraphicsImporters\GraphicsImporters.csproj">
     </ProjectReference>
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
 </Project>

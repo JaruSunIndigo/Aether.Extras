@@ -5,6 +5,10 @@
     <Version>1.4.0.0</Version>
     <AssemblyVersion>1.4.0.0</AssemblyVersion>
     <copyright>Copyright © Kastellanos Nikolaos 2016-2025</copyright>
+    <PackageId>nkast.Aether.Content.Pipeline.GraphicsImporters</PackageId>
+    <Description>Content Importers for Kni Content Pipeline</Description>
+    <PackageTags>C# Graphics KNI Content Pipeline</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -35,6 +39,13 @@
     <Compile Include="Serialization\DynamicIndexBufferWriter.cs" />
     <Compile Include="Serialization\DynamicModelWriter.cs" />
     <Compile Include="Serialization\DynamicVertexBufferWriter.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

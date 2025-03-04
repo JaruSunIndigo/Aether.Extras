@@ -6,6 +6,10 @@
     <AssemblyVersion>1.4.0.0</AssemblyVersion>
     <copyright>Copyright © Kastellanos Nikolaos 2011-2025</copyright>
     <PackageProjectUrl>https://nkast.github.io/Aether.Extras/wasm/Animation.html</PackageProjectUrl>
+    <PackageId>nkast.Aether.Animation</PackageId>
+    <Description>Animation for Kni game framework</Description>
+    <PackageTags>C# Graphics Animation KNI</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -40,4 +44,12 @@
   <ItemGroup>
     <ProjectReference Include="..\Graphics\Aether.Graphics.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
 </Project>
