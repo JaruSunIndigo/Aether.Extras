@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\Artifacts\Debug\Processors\net4.XNA\</OutputPath>
+    <OutputPath>..\..\Artifacts\Debug\Processors\net40.XNA\</OutputPath>
     <DefineConstants>TRACE;DEBUG;WINDOWS XNA</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -26,7 +26,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\Artifacts\Release\Processors\net4.XNA\</OutputPath>
+    <OutputPath>..\..\Artifacts\Release\Processors\net40.XNA\</OutputPath>
     <DefineConstants>TRACE;WINDOWS XNA</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
