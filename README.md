@@ -1,5 +1,7 @@
 # Aether.Extras
-Content Importers and Shaders for and [Kni](https://github.com/kniengine/kni) framework.
+Content Importers and Shaders for [Kni](https://github.com/kniengine/kni) framework.
+
+note: For the [MonoGame](https://github.com/MonoGame/MonoGame) libraries, download the .zip files from release v1.1 or v1.0.
 
 ## Content Importers
 
