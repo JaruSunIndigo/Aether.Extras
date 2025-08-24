@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "TilemapImporter": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files (x86)\\KNI\\v4.1\\Tools\\MGCB.exe",
+      "commandLineArgs": "/reference:..\\..\\..\\Artifacts\\Debug\\Processors\\netstandard2.0\\Aether.Content.Pipeline.TilemapImporter.dll /importer:TilemapImporter /processor:TilemapProcessor /build:tilemapNoMipmap.tmx",
+      "workingDirectory": "P:\\nkast\\Aether.Extras\\Samples\\Tilemap\\TilemapContent",
+      "remoteDebugEnabled": false
+    }
+  }
+}
