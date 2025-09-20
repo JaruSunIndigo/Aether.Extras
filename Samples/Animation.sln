@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aether.Content.Pipeline", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aether.Shaders", "Aether.Shaders", "{FA68C046-9140-4400-AE24-8B8CAD97FEE6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Animation.NETSTANDARD", "..\Animation\Aether.Animation.NETSTANDARD.csproj", "{56E77865-1779-4169-9836-8DE461CC21DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Animation", "..\Animation\Aether.Animation.csproj", "{56E77865-1779-4169-9836-8DE461CC21DD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aether.Graphics", "..\Graphics\Aether.Graphics.csproj", "{37BD292A-89C2-419F-9026-575BEFF2A3D9}"
 EndProject
