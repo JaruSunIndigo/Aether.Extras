@@ -74,9 +74,9 @@ namespace Samples.FXAA
             GamePadState gamePadState = GamePad.GetState(PlayerIndex.One);
 
 
-            if (keyState.IsKeyDown(Keys.F1) && !previousKeyboardState.IsKeyDown(Keys.F1))
+            if (keyState.IsKeyDown(Keys.D1) && !previousKeyboardState.IsKeyDown(Keys.D1))
                 useFXAA = !useFXAA;
-            if (keyState.IsKeyDown(Keys.F2) && !previousKeyboardState.IsKeyDown(Keys.F2))
+            if (keyState.IsKeyDown(Keys.D2) && !previousKeyboardState.IsKeyDown(Keys.D2))
                 rotate = !rotate;
 
             if (rotate)
@@ -107,8 +107,8 @@ namespace Samples.FXAA
             _antiAliasing.DrawRenderTarget( (useFXAA ? 3 : 0), GraphicsDevice.Viewport, false);
 
             spriteBatch.Begin();
-            spriteBatch.DrawString(font, String.Format("[F1] FXAA - ({0})", useFXAA ? "ON" : "OFF"), new Vector2(20, 20), Color.White);
-            spriteBatch.DrawString(font, String.Format("[F2] Rotate - ({0})", rotate ? "ON" : "OFF"), new Vector2(20, 40), Color.White);
+            spriteBatch.DrawString(font, String.Format("[1] FXAA - ({0})", useFXAA ? "ON" : "OFF"), new Vector2(20, 20), Color.White);
+            spriteBatch.DrawString(font, String.Format("[2] Rotate - ({0})", rotate ? "ON" : "OFF"), new Vector2(20, 40), Color.White);
             spriteBatch.End();
         }
 

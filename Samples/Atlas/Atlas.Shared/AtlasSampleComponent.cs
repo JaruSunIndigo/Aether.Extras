@@ -73,11 +73,11 @@ namespace Samples.Atlas
             KeyboardState keyState = Keyboard.GetState();
             GamePadState gamePadState = GamePad.GetState(PlayerIndex.One);
 
-            if (keyState.IsKeyDown(Keys.F1) && !previousKeyboardState.IsKeyDown(Keys.F1))
+            if (keyState.IsKeyDown(Keys.D1) && !previousKeyboardState.IsKeyDown(Keys.D1))
                 useMipmapPerSprite = !useMipmapPerSprite;
-            if (keyState.IsKeyDown(Keys.F2) && !previousKeyboardState.IsKeyDown(Keys.F2))
+            if (keyState.IsKeyDown(Keys.D2) && !previousKeyboardState.IsKeyDown(Keys.D2))
                 useGenerateBitmap = !useGenerateBitmap;
-            if (keyState.IsKeyDown(Keys.F3) && !previousKeyboardState.IsKeyDown(Keys.F3))
+            if (keyState.IsKeyDown(Keys.D3) && !previousKeyboardState.IsKeyDown(Keys.D3))
                 showAtlas = !showAtlas;
             if (keyState.IsKeyDown(Keys.OemPlus) && !previousKeyboardState.IsKeyDown(Keys.OemPlus) && mipLevel < 10)
                 mipLevel++;
@@ -143,9 +143,9 @@ namespace Samples.Atlas
             spriteBatch.End();
 
             spriteBatch.Begin();
-            spriteBatch.DrawString(font, String.Format("[F1] MipmapPerSprite - ({0})", useMipmapPerSprite ? "ON" : "OFF"), new Vector2(20, 20), Color.White);
-            spriteBatch.DrawString(font, String.Format("[F2] GenerateMipmap - ({0})", useGenerateBitmap ? "ON" : "OFF"), new Vector2(20, 40), Color.White);
-            spriteBatch.DrawString(font, String.Format("[F3] {0}", showAtlas ? "Show Sprites" : "Show Atlas"), new Vector2(20, 60), Color.White);
+            spriteBatch.DrawString(font, String.Format("[1] MipmapPerSprite - ({0})", useMipmapPerSprite ? "ON" : "OFF"), new Vector2(20, 20), Color.White);
+            spriteBatch.DrawString(font, String.Format("[2] GenerateMipmap - ({0})", useGenerateBitmap ? "ON" : "OFF"), new Vector2(20, 40), Color.White);
+            spriteBatch.DrawString(font, String.Format("[3] {0}", showAtlas ? "Show Sprites" : "Show Atlas"), new Vector2(20, 60), Color.White);
             spriteBatch.DrawString(font, String.Format("[+/-] MipLevel - ({0})", mipLevel), new Vector2(20, 80), Color.White);
             spriteBatch.End();
         }
